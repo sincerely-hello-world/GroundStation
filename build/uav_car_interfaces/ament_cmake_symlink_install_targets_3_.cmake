@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces/rosidl_generator_py/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "uav_car_interfaces__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "lib/python3.8/site-packages/uav_car_interfaces")

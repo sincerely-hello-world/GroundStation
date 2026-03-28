@@ -1,0 +1,22 @@
+1774013833.5735903 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-20-06-37-13-569241-ubuntu-6381
+1774013833.5740798 [INFO] [launch]: Default logging verbosity is set to INFO
+1774013833.7540748 [INFO] [logical-1]: process started with pid [6387]
+1774013836.8329329 [logical-1] [INFO] [1774013836.832514910] [Ground]: ros2 node launch success:Ground!
+1774014797.9662638 [logical-1] [INFO] [1774014797.896862283] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774014802.1998663 [logical-1] [INFO] [1774014802.199481471] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774014805.3223126 [logical-1] [INFO] [1774014805.321737830] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774014806.8007913 [logical-1] [INFO] [1774014806.800448654] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774014933.6263289 [logical-1] [INFO] [1774014933.625551568] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774014934.8216002 [logical-1] [INFO] [1774014934.821201775] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774017597.3271425 [logical-1] Exception in thread Thread-1:
+1774017597.3287215 [logical-1] Traceback (most recent call last):
+1774017597.3288119 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774017597.3288479 [logical-1]     self.run()
+1774017597.3288786 [logical-1]   File "/usr/lib/python3.8/threading.py", line 870, in run
+1774017597.3289070 [logical-1]     self._target(*self._args, **self._kwargs)
+1774017597.3289351 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 134, in start_bridgeNode_spin
+1774017597.3332112 [logical-1]     executor.spin()
+1774017597.3333342 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1774017597.3333702 [logical-1]     self.spin_once()
+1774017597.3334000 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 770, in spin_once
+1774017598.8593960 [INFO] [logical-1]: process has finished cleanly [pid 6387]

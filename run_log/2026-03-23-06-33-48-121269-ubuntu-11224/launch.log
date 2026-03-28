@@ -1,0 +1,15 @@
+1774272828.1253464 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-23-06-33-48-121269-ubuntu-11224
+1774272828.1257665 [INFO] [launch]: Default logging verbosity is set to INFO
+1774272828.2093854 [INFO] [logical-1]: process started with pid [11233]
+1774272829.2734392 [logical-1] [INFO] [1774272829.272910268] [Ground]: ros2 node launch success:Ground!
+1774272829.3843718 [logical-1] Traceback (most recent call last):
+1774272829.3846121 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical", line 11, in <module>
+1774272829.3846722 [logical-1]     load_entry_point('GroundStation', 'console_scripts', 'logical')()
+1774272829.3847179 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 151, in main
+1774272829.3847556 [logical-1]     uiC = UIController()
+1774272829.3848574 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 32, in __init__
+1774272829.3849092 [logical-1]     self.ros_node = ROS2_bridgeNode("Ground") # 创建ROS2节点类的实例，节点名称为"Ground" # 主窗口持有 ros2 node的实例，方便在主窗口中调用ROS2节点的方法
+1774272829.3849659 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 52, in __init__
+1774272829.3850038 [logical-1]     self.topic_uart4_sub_MCU2 = self.create_subscription(String, 'uart_reader4_data_topic', self.MCU2_callback)
+1774272829.3850496 [logical-1] TypeError: create_subscription() missing 1 required positional argument: 'qos_profile'
+1774272829.5461578 [ERROR] [logical-1]: process has died [pid 11233, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

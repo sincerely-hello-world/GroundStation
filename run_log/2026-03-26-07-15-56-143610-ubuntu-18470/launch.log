@@ -1,0 +1,96 @@
+1774534556.1504486 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-07-15-56-143610-ubuntu-18470
+1774534556.1509783 [INFO] [launch]: Default logging verbosity is set to INFO
+1774534556.2975941 [INFO] [logical-1]: process started with pid [18486]
+1774534559.2320547 [logical-1] [INFO] [1774534559.231443406] [Ground]: ros2 node launch success:Ground!
+1774534559.7680593 [logical-1] Exception in thread Thread-1:
+1774534559.7683349 [logical-1] Traceback (most recent call last):
+1774534559.7684038 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774534559.7684577 [logical-1]     self.run()
+1774534559.7685041 [logical-1]   File "/usr/lib/python3.8/threading.py", line 870, in run
+1774534559.7685509 [logical-1]     self._target(*self._args, **self._kwargs)
+1774534559.7685964 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 125, in start_bridgeNode_spin
+1774534559.7686429 [logical-1]     executor.spin()
+1774534559.7686918 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1774534559.7687368 [logical-1]     self.spin_once()
+1774534559.7687809 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 770, in spin_once
+1774534559.7688251 [logical-1]     self._spin_once_impl(timeout_sec)
+1774534559.7688682 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 767, in _spin_once_impl
+1774534559.7689111 [logical-1]     future.result()
+1774534559.7689567 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 94, in result
+1774534559.7690082 [logical-1]     raise self.exception()
+1774534559.7690489 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 239, in __call__
+1774534559.7691886 [logical-1]     self._handler.send(None)
+1774534559.7692840 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 429, in handler
+1774534559.7693632 [logical-1]     await call_coroutine(entity, arg)
+1774534559.7694101 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 354, in _execute_subscription
+1774534559.7694559 [logical-1]     await await_or_execute(sub.callback, msg)
+1774534559.7695055 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 118, in await_or_execute
+1774534559.7695506 [logical-1]     return callback(*args)
+1774534559.7695951 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 63, in position_callback
+1774534559.7696385 [logical-1]     self.position.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
+1774534559.7696846 [logical-1] TypeError: ROS2_bridgeNode.position[str, float, float, float] signal has 4 argument(s) but 5 provided
+1774534571.9132745 [logical-1] Traceback (most recent call last):
+1774534571.9150951 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 87, in takeoff_confirm
+1774534571.9154897 [logical-1]     if self.confidence > 0:
+1774534571.9157457 [logical-1] AttributeError: 'UIController' object has no attribute 'confidence'
+1774534572.6323190 [logical-1] Traceback (most recent call last):
+1774534572.6324985 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 87, in takeoff_confirm
+1774534572.6325500 [logical-1]     if self.confidence > 0:
+1774534572.6325798 [logical-1] AttributeError: 'UIController' object has no attribute 'confidence'
+1774534572.8255098 [logical-1] Traceback (most recent call last):
+1774534572.8257325 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 87, in takeoff_confirm
+1774534572.8258030 [logical-1]     if self.confidence > 0:
+1774534572.8258603 [logical-1] AttributeError: 'UIController' object has no attribute 'confidence'
+1774534573.0082226 [logical-1] Traceback (most recent call last):
+1774534573.0084436 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 87, in takeoff_confirm
+1774534573.0084999 [logical-1]     if self.confidence > 0:
+1774534573.0085342 [logical-1] AttributeError: 'UIController' object has no attribute 'confidence'
+1774534573.5778441 [logical-1] Traceback (most recent call last):
+1774534573.5780425 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 40, in <lambda>
+1774534573.5780988 [logical-1]     self.pushButton_takeoff.clicked.connect(lambda: self.ros_node.send_command("takeoff"))
+1774534573.5781305 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 75, in send_command
+1774534573.5781596 [logical-1]     future = self.client_command.call_async(request)
+1774534573.5781887 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/client.py", line 125, in call_async
+1774534573.5782161 [logical-1]     with self.handle as capsule:
+1774534573.5782447 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 124, in __enter__
+1774534573.5782721 [logical-1]     return self._get_capsule()
+1774534573.5783002 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 106, in _get_capsule
+1774534573.5783284 [logical-1]     raise InvalidHandle('Tried to use a handle that has been destroyed.')
+1774534573.5783572 [logical-1] rclpy.handle.InvalidHandle: Tried to use a handle that has been destroyed.
+1774534574.1383801 [logical-1] Traceback (most recent call last):
+1774534574.1386917 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 42, in <lambda>
+1774534574.1387961 [logical-1]     self.pushButton_land.clicked.connect(lambda: self.ros_node.send_command("land"))
+1774534574.1388326 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 75, in send_command
+1774534574.1388650 [logical-1]     future = self.client_command.call_async(request)
+1774534574.1388955 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/client.py", line 125, in call_async
+1774534574.1389260 [logical-1]     with self.handle as capsule:
+1774534574.1389632 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 124, in __enter__
+1774534574.1389959 [logical-1]     return self._get_capsule()
+1774534574.1390266 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 106, in _get_capsule
+1774534574.1390584 [logical-1]     raise InvalidHandle('Tried to use a handle that has been destroyed.')
+1774534574.1390901 [logical-1] rclpy.handle.InvalidHandle: Tried to use a handle that has been destroyed.
+1774534574.4438689 [logical-1] Traceback (most recent call last):
+1774534574.4440653 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 42, in <lambda>
+1774534574.4441142 [logical-1]     self.pushButton_land.clicked.connect(lambda: self.ros_node.send_command("land"))
+1774534574.4441469 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 75, in send_command
+1774534574.4441783 [logical-1]     future = self.client_command.call_async(request)
+1774534574.4442096 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/client.py", line 125, in call_async
+1774534574.4442399 [logical-1]     with self.handle as capsule:
+1774534574.4442701 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 124, in __enter__
+1774534574.4442992 [logical-1]     return self._get_capsule()
+1774534574.4443293 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 106, in _get_capsule
+1774534574.4443579 [logical-1]     raise InvalidHandle('Tried to use a handle that has been destroyed.')
+1774534574.4443862 [logical-1] rclpy.handle.InvalidHandle: Tried to use a handle that has been destroyed.
+1774534574.6190693 [logical-1] Traceback (most recent call last):
+1774534574.6193099 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 42, in <lambda>
+1774534574.6193659 [logical-1]     self.pushButton_land.clicked.connect(lambda: self.ros_node.send_command("land"))
+1774534574.6194005 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 75, in send_command
+1774534574.6194327 [logical-1]     future = self.client_command.call_async(request)
+1774534574.6194634 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/client.py", line 125, in call_async
+1774534574.6195025 [logical-1]     with self.handle as capsule:
+1774534574.6195347 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 124, in __enter__
+1774534574.6195652 [logical-1]     return self._get_capsule()
+1774534574.6195953 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 106, in _get_capsule
+1774534574.6196256 [logical-1]     raise InvalidHandle('Tried to use a handle that has been destroyed.')
+1774534574.6196556 [logical-1] rclpy.handle.InvalidHandle: Tried to use a handle that has been destroyed.
+1774534583.9558268 [INFO] [logical-1]: process has finished cleanly [pid 18486]

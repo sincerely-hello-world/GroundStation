@@ -1,0 +1,16 @@
+1774532989.4656069 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-06-49-49-457180-ubuntu-17011
+1774532989.4661961 [INFO] [launch]: Default logging verbosity is set to INFO
+1774532989.5991745 [INFO] [logical-1]: process started with pid [17016]
+1774532990.6309049 [logical-1] [INFO] [1774532990.630434365] [Ground]: ros2 node launch success:Ground!
+1774532994.4031551 [logical-1] Traceback (most recent call last):
+1774532994.4036174 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 50, in <lambda>
+1774532994.4037566 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(TGformat('G',self.pos.x+0.2, self.pos.y, self.pos.z,'')))
+1774532994.4038057 [logical-1] NameError: name 'TGformat' is not defined
+1774533087.0312445 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1774533087.0364780 [logical-1] Traceback (most recent call last):
+1774533087.0367332 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 110, in update_qrcode_image
+1774533087.0368021 [logical-1]     def update_qrcode_image(self, cv_img):
+1774533087.0368497 [logical-1] KeyboardInterrupt
+1774533092.0361440 [ERROR] [logical-1]: process[logical-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1774533092.0372095 [INFO] [logical-1]: sending signal 'SIGTERM' to process[logical-1]
+1774533092.0675504 [ERROR] [logical-1]: process has died [pid 17016, exit code -15, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

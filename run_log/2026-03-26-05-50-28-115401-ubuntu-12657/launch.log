@@ -1,0 +1,5 @@
+1774529428.1202450 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-05-50-28-115401-ubuntu-12657
+1774529428.1206357 [INFO] [launch]: Default logging verbosity is set to INFO
+1774529428.1909769 [INFO] [logical-1]: process started with pid [12662]
+1774529430.5717728 [logical-1] [INFO] [1774529430.571350770] [Ground]: ros2 node launch success:Ground!
+1774529442.2869301 [INFO] [logical-1]: process has finished cleanly [pid 12662]

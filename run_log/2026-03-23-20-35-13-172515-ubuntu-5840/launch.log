@@ -1,0 +1,13 @@
+1774323313.1757586 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-23-20-35-13-172515-ubuntu-5840
+1774323313.1767573 [INFO] [launch]: Default logging verbosity is set to INFO
+1774323313.3218467 [INFO] [logical-1]: process started with pid [5846]
+1774323315.8897381 [logical-1] [INFO] [1774323315.889429802] [Ground]: ros2 node launch success:Ground!
+1774323343.8852966 [logical-1] [INFO] [1774323343.884593498] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774323343.8922014 [logical-1] [INFO] [1774323343.891848252] [Ground]: MCU2 send back: Takeoffok
+1774323346.3380206 [logical-1] [INFO] [1774323346.337632999] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774323346.3475957 [logical-1] [INFO] [1774323346.347279857] [Ground]: MCU2 send back: Takeoffok
+1774323348.1965599 [logical-1] [INFO] [1774323348.196293641] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774323348.2090640 [logical-1] [INFO] [1774323348.208758580] [Ground]: MCU2 send back: Landok
+1774323349.8179231 [logical-1] [INFO] [1774323349.817597435] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774323349.8411386 [logical-1] [INFO] [1774323349.840368753] [Ground]: MCU2 send back: Landok
+1774323389.6978703 [INFO] [logical-1]: process has finished cleanly [pid 5846]

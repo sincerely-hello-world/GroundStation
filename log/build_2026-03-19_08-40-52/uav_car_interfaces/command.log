@@ -1,0 +1,4 @@
+Invoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4
+Invoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4
+Invoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces
+Invoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces

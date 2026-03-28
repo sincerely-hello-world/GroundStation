@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from uav_car_interfaces/msg/T265Data.msg
+// generated code does not contain a copyright notice
+
+
+module uav_car_interfaces {
+  module msg {
+    struct T265Data {
+      double pos_x;
+
+      double pos_y;
+
+      double pos_z;
+
+      int64 confidence;
+
+      double tof_z;
+    };
+  };
+};

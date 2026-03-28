@@ -1,0 +1,20 @@
+1774529247.9969995 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-05-47-27-992601-ubuntu-12278
+1774529247.9974360 [INFO] [launch]: Default logging verbosity is set to INFO
+1774529248.0781906 [INFO] [logical-1]: process started with pid [12283]
+1774529248.3204401 [logical-1] Traceback (most recent call last):
+1774529248.3205929 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical", line 11, in <module>
+1774529248.3206367 [logical-1]     load_entry_point('GroundStation', 'console_scripts', 'logical')()
+1774529248.3206716 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 490, in load_entry_point
+1774529248.3207207 [logical-1]     return get_distribution(dist).load_entry_point(group, name)
+1774529248.3207517 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2854, in load_entry_point
+1774529248.3207822 [logical-1]     return ep.load()
+1774529248.3208134 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2445, in load
+1774529248.3208439 [logical-1]     return self.resolve()
+1774529248.3208740 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2451, in resolve
+1774529248.3209043 [logical-1]     module = __import__(self.module_name, fromlist=['__name__'], level=0)
+1774529248.3209341 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 11, in <module>
+1774529248.3209643 [logical-1]     from GroundStation.myUI import *
+1774529248.3209956 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/myUI/__init__.py", line 3, in <module>
+1774529248.3210258 [logical-1]     from .Ui_show import Ui_Dialog
+1774529248.3210573 [logical-1] ImportError: cannot import name 'Ui_Dialog' from 'GroundStation.myUI.Ui_show' (/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/myUI/Ui_show.py)
+1774529248.3443131 [ERROR] [logical-1]: process has died [pid 12283, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

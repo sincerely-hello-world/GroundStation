@@ -1,0 +1,13 @@
+1774536142.3924241 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-07-42-22-385369-ubuntu-20501
+1774536142.3931103 [INFO] [launch]: Default logging verbosity is set to INFO
+1774536142.5476608 [INFO] [logical-1]: process started with pid [20518]
+1774536143.7223744 [logical-1] [INFO] [1774536143.721838862] [Ground]: ros2 node launch success:Ground!
+1774536143.9290020 [logical-1] Traceback (most recent call last):
+1774536143.9292555 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical", line 11, in <module>
+1774536143.9293921 [logical-1]     load_entry_point('GroundStation', 'console_scripts', 'logical')()
+1774536143.9294438 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 171, in main
+1774536143.9294918 [logical-1]     uiC = UIController()
+1774536143.9295456 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 51, in __init__
+1774536143.9296007 [logical-1]     self.subdialog1.pushButton_goPosXYZ.clicked.connect(lambda: self.ros_node.send_command("gopos"))
+1774536143.9296699 [logical-1] AttributeError: 'subDialog1' object has no attribute 'pushButton_goPosXYZ'
+1774536144.0782378 [ERROR] [logical-1]: process has died [pid 20518, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

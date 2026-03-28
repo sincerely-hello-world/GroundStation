@@ -1,0 +1,3 @@
+[INFO] [1774275492.112610830] [Ground]: ros2 node launch success:Ground!
+[ERROR] [1774275497.682443934] [Ground]: 发送 G+00000-02000-01300 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774275497.684070144] [Ground]: fail

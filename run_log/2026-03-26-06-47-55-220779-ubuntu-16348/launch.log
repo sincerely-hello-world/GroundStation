@@ -1,0 +1,29 @@
+1774532875.2274945 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-06-47-55-220779-ubuntu-16348
+1774532875.2280345 [INFO] [launch]: Default logging verbosity is set to INFO
+1774532875.4001310 [INFO] [logical-1]: process started with pid [16380]
+1774532877.8013837 [logical-1] [INFO] [1774532877.801013159] [Ground]: ros2 node launch success:Ground!
+1774532895.8506498 [logical-1] [INFO] [1774532895.850285244] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774532895.8717332 [logical-1] [INFO] [1774532895.871408068] [Ground]: MCU2 send back: Landok
+1774532896.8205335 [logical-1] [INFO] [1774532896.820131307] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774532896.8431494 [logical-1] [INFO] [1774532896.842830910] [Ground]: MCU2 send back: Landok
+1774532897.5353293 [logical-1] [INFO] [1774532897.534501233] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774532897.5580368 [logical-1] [INFO] [1774532897.556859257] [Ground]: MCU2 send back: Landok
+1774532898.2623076 [logical-1] [INFO] [1774532898.261918780] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774532898.2851791 [logical-1] [INFO] [1774532898.284878613] [Ground]: MCU2 send back: Landok
+1774532924.3342061 [logical-1] Traceback (most recent call last):
+1774532924.3344624 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 50, in <lambda>
+1774532924.3345299 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(TGformat('G',self.pos.x+0.2, self.pos.y, self.pos.z,'')))
+1774532924.3345652 [logical-1] NameError: name 'TGformat' is not defined
+1774532970.8744600 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1774532970.8781097 [logical-1] Traceback (most recent call last):
+1774532970.8784525 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 86, in update_pos
+1774532970.8785236 [logical-1]     def update_pos(self, info, x,y,z):
+1774532970.8785625 [logical-1] KeyboardInterrupt
+1774532971.6611359 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1774532971.6809828 [logical-1] Traceback (most recent call last):
+1774532971.6811783 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 86, in update_pos
+1774532971.6812358 [logical-1]     def update_pos(self, info, x,y,z):
+1774532971.6812809 [logical-1] KeyboardInterrupt
+1774532975.8803349 [ERROR] [logical-1]: process[logical-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1774532975.8820353 [INFO] [logical-1]: sending signal 'SIGTERM' to process[logical-1]
+1774532975.9175889 [ERROR] [logical-1]: process has died [pid 16380, exit code -15, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

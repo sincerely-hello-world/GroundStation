@@ -1,0 +1,13 @@
+1774270124.2064998 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-23-05-48-44-201054-ubuntu-6232
+1774270124.2070699 [INFO] [launch]: Default logging verbosity is set to INFO
+1774270124.3441780 [INFO] [logical-1]: process started with pid [6242]
+1774270125.2786305 [logical-1] [INFO] [1774270125.278244535] [Ground]: ros2 node launch success:Ground!
+1774270174.2174928 [logical-1] [INFO] [1774270174.217081540] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774270179.2391927 [logical-1] [INFO] [1774270179.238811468] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774270182.0338221 [logical-1] [INFO] [1774270182.033466487] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774270183.7221975 [logical-1] [INFO] [1774270183.721923735] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774270185.6985886 [logical-1] [INFO] [1774270185.698237167] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774270187.6051598 [logical-1] [INFO] [1774270187.604843754] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774270205.9151371 [logical-1] [INFO] [1774270205.914839560] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774270206.4858956 [logical-1] [INFO] [1774270206.485587926] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1774270211.9573727 [INFO] [logical-1]: process has finished cleanly [pid 6242]

@@ -1,0 +1,7 @@
+[INFO] [1773470855.852668856] [Ground]: ros2 node launch success:Ground!
+[ERROR] [1773470861.634814159] [Ground]: 发送 @L03[+1234-7774+8651|+2345-8888+9999|+0001-0002+0003|] 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1773470861.640439111] [Ground]: fail
+[ERROR] [1773470864.887050970] [Ground]: 发送 @L03[+1234-7774+8651|+2345-8888+9999|+0001-0002+0003|] 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1773470864.887595342] [Ground]: fail
+[ERROR] [1773470871.670088422] [Ground]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1773470871.670594359] [Ground]: fail

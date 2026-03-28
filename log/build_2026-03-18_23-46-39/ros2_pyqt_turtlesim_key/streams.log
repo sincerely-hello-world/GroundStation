@@ -1,0 +1,17 @@
+[2.552s] Invoking command in '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build --no-deps symlink_data
+[3.023s] running develop
+[3.291s] running egg_info
+[3.291s] writing ros2_pyqt_turtlesim_key.egg-info/PKG-INFO
+[3.292s] writing dependency_links to ros2_pyqt_turtlesim_key.egg-info/dependency_links.txt
+[3.292s] writing entry points to ros2_pyqt_turtlesim_key.egg-info/entry_points.txt
+[3.292s] writing requirements to ros2_pyqt_turtlesim_key.egg-info/requires.txt
+[3.292s] writing top-level names to ros2_pyqt_turtlesim_key.egg-info/top_level.txt
+[3.359s] reading manifest file 'ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt'
+[3.362s] writing manifest file 'ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt'
+[3.422s] running build_ext
+[3.423s] Creating /home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages/ros2-pyqt-turtlesim-key.egg-link (link to .)
+[3.425s] Installing ros2_pyqt_turtlesim_key script to /home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/ros2_pyqt_turtlesim_key
+[3.426s] 
+[3.426s] Installed /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key
+[3.427s] running symlink_data
+[3.482s] Invoked command in '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key' returned '0': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build --no-deps symlink_data

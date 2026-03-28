@@ -1,0 +1,19 @@
+1773474993.8816848 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-14-00-56-33-877379-ubuntu-7082
+1773474993.8820405 [INFO] [launch]: Default logging verbosity is set to INFO
+1773474993.9890361 [INFO] [logical-1]: process started with pid [7092]
+1773474994.2581613 [logical-1] Traceback (most recent call last):
+1773474994.2583358 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical", line 11, in <module>
+1773474994.2584009 [logical-1]     load_entry_point('GroundStation', 'console_scripts', 'logical')()
+1773474994.2584367 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 490, in load_entry_point
+1773474994.2584679 [logical-1]     return get_distribution(dist).load_entry_point(group, name)
+1773474994.2584975 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2854, in load_entry_point
+1773474994.2585273 [logical-1]     return ep.load()
+1773474994.2585557 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2445, in load
+1773474994.2585845 [logical-1]     return self.resolve()
+1773474994.2586131 [logical-1]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2451, in resolve
+1773474994.2586415 [logical-1]     module = __import__(self.module_name, fromlist=['__name__'], level=0)
+1773474994.2586696 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 31
+1773474994.2586982 [logical-1]     self.subdialog1.pushButton_goPosXYZ.clicked.connect(lambda: self.ros_node.send_command("gopos"))
+1773474994.2587271 [logical-1]     ^
+1773474994.2587557 [logical-1] SyntaxError: invalid syntax
+1773474994.2757514 [ERROR] [logical-1]: process has died [pid 7092, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

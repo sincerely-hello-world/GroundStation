@@ -1,0 +1,9 @@
+1773475632.5201201 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-14-01-07-12-515855-ubuntu-10021
+1773475632.5204973 [INFO] [launch]: Default logging verbosity is set to INFO
+1773475632.6215365 [INFO] [logical-1]: process started with pid [10023]
+1773475633.7031791 [logical-1] [INFO] [1773475633.702612782] [Ground]: ros2 node launch success:Ground!
+1773475871.6980908 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1773475872.3474641 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1773475876.7040908 [ERROR] [logical-1]: process[logical-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1773475876.7045388 [INFO] [logical-1]: sending signal 'SIGTERM' to process[logical-1]
+1773475876.7220831 [ERROR] [logical-1]: process has died [pid 10023, exit code -15, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

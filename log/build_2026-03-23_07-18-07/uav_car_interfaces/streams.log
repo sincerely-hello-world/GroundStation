@@ -1,0 +1,127 @@
+[0.493s] Invoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4
+[0.649s] [ 10%] Built target uav_car_interfaces__rosidl_generator_c
+[0.651s] [ 12%] Built target uav_car_interfaces__cpp
+[0.705s] [ 23%] Built target uav_car_interfaces__rosidl_typesupport_cpp
+[0.709s] [ 34%] Built target uav_car_interfaces__rosidl_typesupport_c
+[0.714s] [ 44%] Built target uav_car_interfaces__rosidl_typesupport_introspection_cpp
+[0.723s] [ 55%] Built target uav_car_interfaces__rosidl_typesupport_introspection_c
+[0.751s] [ 65%] Built target uav_car_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.792s] [ 76%] Built target uav_car_interfaces__rosidl_typesupport_fastrtps_c
+[0.899s] [ 76%] Built target uav_car_interfaces
+[0.980s] [ 78%] Built target uav_car_interfaces__py
+[1.058s] [ 87%] Built target uav_car_interfaces__python
+[1.168s] [ 91%] Built target uav_car_interfaces__rosidl_typesupport_c__pyext
+[1.173s] [ 95%] Built target uav_car_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.174s] [100%] Built target uav_car_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.246s] Invoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4
+[1.273s] Invoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces
+[1.291s] -- Install configuration: ""
+[1.294s] -- Execute custom install script
+[1.295s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/rosidl_interfaces/uav_car_interfaces
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__functions.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__struct.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__type_support.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__functions.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__struct.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__type_support.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/image_processor_data.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/t265_data.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/control_service.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__functions.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__struct.h
+[1.311s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__type_support.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/library_path.sh
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/library_path.dsv
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_fastrtps_c.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_fastrtps_c.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_fastrtps_c.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_fastrtps_cpp.hpp
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_introspection_c.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_introspection_c.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_introspection_c.h
+[1.312s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__builder.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__struct.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__traits.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__type_support.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__builder.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__struct.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__traits.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__type_support.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/image_processor_data.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/t265_data.hpp
+[1.313s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/control_service.hpp
+[1.318s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__builder.hpp
+[1.338s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__struct.hpp
+[1.338s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__traits.hpp
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__type_support.hpp
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_introspection_cpp.hpp
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_introspection_cpp.hpp
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_introspection_cpp.hpp
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/pythonpath.sh
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/pythonpath.dsv
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/__init__.py
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/msg/__init__.py
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/msg/_image_processor_data.py
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/msg/_t265_data.py
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/srv/__init__.py
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/srv/_control_service.py
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__python.so
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/T265Data.idl
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/ImageProcessorData.idl
+[1.339s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService.idl
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/T265Data.msg
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/ImageProcessorData.msg
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService.srv
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService_Request.msg
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService_Response.msg
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/package_run_dependencies/uav_car_interfaces
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/parent_prefix_path/uav_car_interfaces
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/ament_prefix_path.sh
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/ament_prefix_path.dsv
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/path.sh
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/path.dsv
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.bash
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.sh
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.zsh
+[1.340s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.dsv
+[1.340s] -- Symlinking: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.dsv
+[1.358s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/packages/uav_car_interfaces
+[1.358s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.358s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.358s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.358s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.362s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.362s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.362s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.363s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfacesConfig.cmake
+[1.363s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfacesConfig-version.cmake
+[1.363s] -- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.xml
+[1.363s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_generator_c.so
+[1.363s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_introspection_c.so
+[1.366s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_c.so
+[1.366s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.367s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_cpp.so
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_generator_cExport.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cExport.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_generator_cppExport.cmake
+[1.444s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.446s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.447s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cppExport.cmake
+[1.447s] -- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.451s] Invoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces

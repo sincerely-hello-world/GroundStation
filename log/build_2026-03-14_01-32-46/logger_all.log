@@ -1,0 +1,544 @@
+[0.188s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--symlink-install'][0m
+[0.188s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f3edcb60d30>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f3edcb60d30>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f3edcb52d30>)[0m
+[0.318s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.318s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.319s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.319s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.319s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.319s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.319s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/focal/Desktop/2024_GroundStation'
+[0.319s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.319s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.319s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.319s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.320s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.320s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.320s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.320s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.329s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.330s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'ignore'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'ignore_ament_install'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['colcon_pkg']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'colcon_pkg'
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['colcon_meta']
+[0.331s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'colcon_meta'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['ros']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'ros'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['cmake', 'python']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'cmake'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'python'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['python_setup_py']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'python_setup_py'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'ignore'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'ignore_ament_install'
+[0.332s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['colcon_pkg']
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'colcon_pkg'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['colcon_meta']
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'colcon_meta'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['ros']
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'ros'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['cmake', 'python']
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'cmake'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'python'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['python_setup_py']
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'python_setup_py'
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'ignore'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'ignore_ament_install'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extensions ['colcon_pkg']
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'colcon_pkg'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extensions ['colcon_meta']
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'colcon_meta'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extensions ['ros']
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'ros'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extensions ['cmake', 'python']
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'cmake'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'python'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extensions ['python_setup_py']
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-47-32-847804-ubuntu-3463) by extension 'python_setup_py'
+[0.334s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'ignore'
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'ignore_ament_install'
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extensions ['colcon_pkg']
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'colcon_pkg'
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extensions ['colcon_meta']
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'colcon_meta'
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extensions ['ros']
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'ros'
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extensions ['cmake', 'python']
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'cmake'
+[0.335s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'python'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extensions ['python_setup_py']
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-23-54-22-000400-ubuntu-4116) by extension 'python_setup_py'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'ignore'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'ignore_ament_install'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extensions ['colcon_pkg']
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'colcon_pkg'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extensions ['colcon_meta']
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'colcon_meta'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extensions ['ros']
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'ros'
+[0.336s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extensions ['cmake', 'python']
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'cmake'
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'python'
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extensions ['python_setup_py']
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-18-41-745359-ubuntu-5706) by extension 'python_setup_py'
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'ignore'
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'ignore_ament_install'
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extensions ['colcon_pkg']
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'colcon_pkg'
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extensions ['colcon_meta']
+[0.337s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'colcon_meta'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extensions ['ros']
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'ros'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extensions ['cmake', 'python']
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'cmake'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'python'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extensions ['python_setup_py']
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-56-33-877379-ubuntu-7082) by extension 'python_setup_py'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'ignore'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'ignore_ament_install'
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extensions ['colcon_pkg']
+[0.338s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'colcon_pkg'
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extensions ['colcon_meta']
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'colcon_meta'
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extensions ['ros']
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'ros'
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extensions ['cmake', 'python']
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'cmake'
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'python'
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extensions ['python_setup_py']
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-57-55-305672-ubuntu-7429) by extension 'python_setup_py'
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'ignore'
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'ignore_ament_install'
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extensions ['colcon_pkg']
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'colcon_pkg'
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extensions ['colcon_meta']
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'colcon_meta'
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extensions ['ros']
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'ros'
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extensions ['cmake', 'python']
+[0.340s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'cmake'
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'python'
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extensions ['python_setup_py']
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-00-58-46-027399-ubuntu-7752) by extension 'python_setup_py'
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'ignore'
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'ignore_ament_install'
+[0.341s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extensions ['colcon_pkg']
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'colcon_pkg'
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extensions ['colcon_meta']
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'colcon_meta'
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extensions ['ros']
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'ros'
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extensions ['cmake', 'python']
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'cmake'
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'python'
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extensions ['python_setup_py']
+[0.342s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-00-18-011248-ubuntu-8121) by extension 'python_setup_py'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'ignore'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'ignore_ament_install'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extensions ['colcon_pkg']
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'colcon_pkg'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extensions ['colcon_meta']
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'colcon_meta'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extensions ['ros']
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'ros'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extensions ['cmake', 'python']
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'cmake'
+[0.343s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'python'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extensions ['python_setup_py']
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-11-288256-ubuntu-8485) by extension 'python_setup_py'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'ignore'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'ignore_ament_install'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extensions ['colcon_pkg']
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'colcon_pkg'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extensions ['colcon_meta']
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'colcon_meta'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extensions ['ros']
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'ros'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extensions ['cmake', 'python']
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'cmake'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'python'
+[0.344s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extensions ['python_setup_py']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-01-44-003122-ubuntu-8809) by extension 'python_setup_py'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'ignore'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'ignore_ament_install'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extensions ['colcon_pkg']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'colcon_pkg'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extensions ['colcon_meta']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'colcon_meta'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extensions ['ros']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'ros'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extensions ['cmake', 'python']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'cmake'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'python'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extensions ['python_setup_py']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-03-02-046523-ubuntu-9210) by extension 'python_setup_py'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'ignore'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'ignore_ament_install'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extensions ['colcon_pkg']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'colcon_pkg'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extensions ['colcon_meta']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'colcon_meta'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extensions ['ros']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'ros'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extensions ['cmake', 'python']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'cmake'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'python'
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extensions ['python_setup_py']
+[0.345s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-06-57-127652-ubuntu-9722) by extension 'python_setup_py'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'ignore'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'ignore_ament_install'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extensions ['colcon_pkg']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'colcon_pkg'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extensions ['colcon_meta']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'colcon_meta'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extensions ['ros']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'ros'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extensions ['cmake', 'python']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'cmake'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'python'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extensions ['python_setup_py']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-07-12-515855-ubuntu-10021) by extension 'python_setup_py'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'ignore'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'ignore_ament_install'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extensions ['colcon_pkg']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'colcon_pkg'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extensions ['colcon_meta']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'colcon_meta'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extensions ['ros']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'ros'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extensions ['cmake', 'python']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'cmake'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'python'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extensions ['python_setup_py']
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-11-26-093395-ubuntu-10682) by extension 'python_setup_py'
+[0.346s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'ignore'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'ignore_ament_install'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extensions ['colcon_pkg']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'colcon_pkg'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extensions ['colcon_meta']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'colcon_meta'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extensions ['ros']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'ros'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extensions ['cmake', 'python']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'cmake'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'python'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extensions ['python_setup_py']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-12-50-818415-ubuntu-11153) by extension 'python_setup_py'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'ignore'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'ignore_ament_install'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extensions ['colcon_pkg']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'colcon_pkg'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extensions ['colcon_meta']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'colcon_meta'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extensions ['ros']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'ros'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extensions ['cmake', 'python']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'cmake'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'python'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extensions ['python_setup_py']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-13-30-213034-ubuntu-11524) by extension 'python_setup_py'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'ignore'
+[0.347s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'ignore_ament_install'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extensions ['colcon_pkg']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'colcon_pkg'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extensions ['colcon_meta']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'colcon_meta'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extensions ['ros']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'ros'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extensions ['cmake', 'python']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'cmake'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'python'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extensions ['python_setup_py']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-15-58-509978-ubuntu-11999) by extension 'python_setup_py'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'ignore'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'ignore_ament_install'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extensions ['colcon_pkg']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'colcon_pkg'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extensions ['colcon_meta']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'colcon_meta'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extensions ['ros']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'ros'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extensions ['cmake', 'python']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'cmake'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'python'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extensions ['python_setup_py']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-17-14-428147-ubuntu-12431) by extension 'python_setup_py'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'ignore'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'ignore_ament_install'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extensions ['colcon_pkg']
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'colcon_pkg'
+[0.348s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extensions ['colcon_meta']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'colcon_meta'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extensions ['ros']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'ros'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extensions ['cmake', 'python']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'cmake'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'python'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extensions ['python_setup_py']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-14-01-19-41-125768-ubuntu-12869) by extension 'python_setup_py'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'ignore'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'ignore_ament_install'
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['colcon_pkg']
+[0.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'colcon_pkg'
+[0.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['colcon_meta']
+[0.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'colcon_meta'
+[0.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['ros']
+[0.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'ros'
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/GroundStation' with type 'ros.ament_python' and name 'GroundStation'[0m
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'ignore'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'ignore_ament_install'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['colcon_pkg']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'colcon_pkg'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['colcon_meta']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'colcon_meta'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['ros']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'ros'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros2_pyqt_turtlesim_key' with type 'ros.ament_python' and name 'ros2_pyqt_turtlesim_key'[0m
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'ignore'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'ignore_ament_install'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['colcon_pkg']
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'colcon_pkg'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['colcon_meta']
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'colcon_meta'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['ros']
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'ros'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/uav_car_interfaces' with type 'ros.ament_cmake' and name 'uav_car_interfaces'[0m
+[0.354s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.355s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.355s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.355s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.355s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.376s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.376s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.378s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 256 installed packages in /opt/ros/foxy[0m
+[0.379s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.430s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_args' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_target' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_clean_first' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_force_configure' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'ament_cmake_args' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'GroundStation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/focal/Desktop/2024_GroundStation/build/GroundStation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/focal/Desktop/2024_GroundStation/install/GroundStation', 'merge_install': False, 'path': '/home/focal/Desktop/2024_GroundStation/src/GroundStation', 'symlink_install': True, 'test_result_base': None}[0m
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_args' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_target' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_clean_cache' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_clean_first' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_force_configure' from command line to 'False'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'ament_cmake_args' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'catkin_cmake_args' from command line to 'None'
+[0.431s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'ros2_pyqt_turtlesim_key' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key', 'merge_install': False, 'path': '/home/focal/Desktop/2024_GroundStation/src/ros2_pyqt_turtlesim_key', 'symlink_install': True, 'test_result_base': None}[0m
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.432s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'uav_car_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces', 'merge_install': False, 'path': '/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces', 'symlink_install': True, 'test_result_base': None}[0m
+[0.432s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.433s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.434s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/focal/Desktop/2024_GroundStation/src/GroundStation' with build type 'ament_python'
+[0.434s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('GroundStation', 'ament_prefix_path')
+[0.435s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.436s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/ament_prefix_path.ps1'
+[0.436s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/ament_prefix_path.dsv'
+[0.437s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/ament_prefix_path.sh'
+[0.438s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.438s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.442s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/focal/Desktop/2024_GroundStation/src/ros2_pyqt_turtlesim_key' with build type 'ament_python'
+[0.443s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_pyqt_turtlesim_key', 'ament_prefix_path')
+[0.443s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/ament_prefix_path.ps1'
+[0.444s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/ament_prefix_path.dsv'
+[0.445s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/ament_prefix_path.sh'
+[0.445s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.445s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.450s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces' with build type 'ament_cmake'
+[0.450s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces'
+[0.450s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.451s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.676s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/focal/Desktop/2024_GroundStation/src/GroundStation'
+[0.677s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.677s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.888s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/focal/Desktop/2024_GroundStation/src/ros2_pyqt_turtlesim_key'
+[0.889s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.889s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.900s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4[0m
+[1.309s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4[0m
+[1.321s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces[0m
+[1.397s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/GroundStation': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/GroundStation/build --no-deps symlink_data[0m
+[1.416s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build --no-deps symlink_data[0m
+[1.499s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(uav_car_interfaces)
+[1.502s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces[0m
+[1.504s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake module files
+[1.505s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake config files
+[1.506s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'cmake_prefix_path')
+[1.508s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.ps1'
+[1.509s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.dsv'
+[1.510s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.sh'
+[1.511s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib'
+[1.511s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'ld_library_path_lib')
+[1.511s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.ps1'
+[1.512s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.dsv'
+[1.513s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.sh'
+[1.513s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[1.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/pkgconfig/uav_car_interfaces.pc'
+[1.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages'
+[1.514s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'pythonpath')
+[1.514s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.ps1'
+[1.515s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.dsv'
+[1.516s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.sh'
+[1.517s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[1.517s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.ps1'
+[1.518s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.dsv'
+[1.519s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.sh'
+[1.522s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.bash'
+[1.523s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.zsh'
+[1.524s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/colcon-core/packages/uav_car_interfaces)
+[1.525s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(uav_car_interfaces)
+[1.525s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake module files
+[1.526s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake config files
+[1.527s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'cmake_prefix_path')
+[1.527s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.ps1'
+[1.528s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.dsv'
+[1.529s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.sh'
+[1.530s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib'
+[1.530s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'ld_library_path_lib')
+[1.530s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.ps1'
+[1.531s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.dsv'
+[1.532s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.sh'
+[1.532s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[1.533s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/pkgconfig/uav_car_interfaces.pc'
+[1.533s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages'
+[1.533s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'pythonpath')
+[1.533s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.ps1'
+[1.534s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.dsv'
+[1.535s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.sh'
+[1.536s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[1.536s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.ps1'
+[1.538s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.dsv'
+[1.539s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.sh'
+[1.540s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.bash'
+[1.541s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.zsh'
+[1.541s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/colcon-core/packages/uav_car_interfaces)
+[1.943s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_pyqt_turtlesim_key', 'pythonpath_develop')
+[1.944s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath_develop.ps1'
+[1.944s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key' returned '0': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build --no-deps symlink_data[0m
+[1.945s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath_develop.dsv'
+[1.946s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath_develop.sh'
+[1.947s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key' for CMake module files
+[1.948s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key' for CMake config files
+[1.948s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib'
+[1.949s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/bin'
+[1.949s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/pkgconfig/ros2_pyqt_turtlesim_key.pc'
+[1.949s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages'
+[1.949s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_pyqt_turtlesim_key', 'pythonpath')
+[1.949s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath.ps1'
+[1.950s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath.dsv'
+[1.951s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath.sh'
+[1.952s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/bin'
+[1.952s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(ros2_pyqt_turtlesim_key)
+[1.952s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.ps1'
+[1.953s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.dsv'
+[1.954s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.sh'
+[1.955s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.bash'
+[1.955s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.zsh'
+[1.956s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/colcon-core/packages/ros2_pyqt_turtlesim_key)
+[1.957s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('GroundStation', 'pythonpath_develop')
+[1.958s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/GroundStation/share/GroundStation/hook/pythonpath_develop.ps1'
+[1.959s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/build/GroundStation/share/GroundStation/hook/pythonpath_develop.dsv'
+[1.961s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/GroundStation' returned '0': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/GroundStation/build --no-deps symlink_data[0m
+[1.962s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/GroundStation/share/GroundStation/hook/pythonpath_develop.sh'
+[1.962s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation' for CMake module files
+[1.963s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation' for CMake config files
+[1.964s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib'
+[1.964s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/bin'
+[1.964s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/pkgconfig/GroundStation.pc'
+[1.964s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages'
+[1.964s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('GroundStation', 'pythonpath')
+[1.964s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/pythonpath.ps1'
+[1.965s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/pythonpath.dsv'
+[1.966s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/pythonpath.sh'
+[1.966s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/bin'
+[1.967s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(GroundStation)
+[1.967s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.ps1'
+[1.968s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.dsv'
+[1.968s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.sh'
+[1.969s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.bash'
+[1.969s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.zsh'
+[1.970s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/colcon-core/packages/GroundStation)
+[1.971s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.971s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.972s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[1.972s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.978s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.978s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.978s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[1.995s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[1.996s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.ps1'
+[1.996s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/focal/Desktop/2024_GroundStation/install/_local_setup_util_ps1.py'
+[1.998s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.ps1'
+[1.998s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.sh'
+[1.999s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/focal/Desktop/2024_GroundStation/install/_local_setup_util_sh.py'
+[2.000s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.sh'
+[2.000s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.bash'
+[2.001s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.bash'
+[2.002s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.zsh'
+[2.003s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.zsh'

@@ -1,0 +1,18 @@
+[1.201s] Invoking command in '/home/focal/Desktop/2024_GroundStation/build/GroundStation': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/GroundStation/build --no-deps symlink_data
+[1.472s] running develop
+[1.653s] running egg_info
+[1.653s] writing GroundStation.egg-info/PKG-INFO
+[1.653s] writing dependency_links to GroundStation.egg-info/dependency_links.txt
+[1.653s] writing entry points to GroundStation.egg-info/entry_points.txt
+[1.653s] writing requirements to GroundStation.egg-info/requires.txt
+[1.653s] writing top-level names to GroundStation.egg-info/top_level.txt
+[1.679s] reading manifest file 'GroundStation.egg-info/SOURCES.txt'
+[1.681s] writing manifest file 'GroundStation.egg-info/SOURCES.txt'
+[1.737s] running build_ext
+[1.737s] Creating /home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages/GroundStation.egg-link (link to .)
+[1.737s] Installing logical script to /home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation
+[1.738s] Installing qrcode script to /home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation
+[1.738s] 
+[1.738s] Installed /home/focal/Desktop/2024_GroundStation/build/GroundStation
+[1.738s] running symlink_data
+[1.778s] Invoked command in '/home/focal/Desktop/2024_GroundStation/build/GroundStation' returned '0': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/GroundStation/build --no-deps symlink_data

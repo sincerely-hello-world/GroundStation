@@ -1,0 +1,20 @@
+1773671470.3850081 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-16-07-31-10-379024-ubuntu-7662
+1773671470.3855741 [INFO] [launch]: Default logging verbosity is set to INFO
+1773671470.5016999 [INFO] [logical-1]: process started with pid [7667]
+1773671471.6937933 [logical-1] [INFO] [1773671471.693384878] [Ground]: ros2 node launch success:Ground!
+1773671644.5350771 [logical-1] Exception in thread Thread-1:
+1773671644.5353229 [logical-1] Traceback (most recent call last):
+1773671644.5353780 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1773671644.5354302 [logical-1]     self.run()
+1773671644.5354869 [logical-1]   File "/usr/lib/python3.8/threading.py", line 870, in run
+1773671644.5355256 [logical-1]     self._target(*self._args, **self._kwargs)
+1773671644.5355577 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 134, in start_bridgeNode_spin
+1773671644.5355897 [logical-1]     executor.spin()
+1773671644.5356197 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1773671644.5356500 [logical-1]     self.spin_once()
+1773671644.5356801 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 770, in spin_once
+1773671644.5357089 [logical-1]     self._spin_once_impl(timeout_sec)
+1773671644.5357378 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 767, in _spin_once_impl
+1773671644.5357671 [logical-1]     future.result()
+1773671644.5357962 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 94, in result
+1773671644.6608703 [INFO] [logical-1]: process has finished cleanly [pid 7667]

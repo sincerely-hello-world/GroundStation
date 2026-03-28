@@ -1,0 +1,9 @@
+[INFO] [1774275387.645000688] [Ground]: ros2 node launch success:Ground!
+[ERROR] [1774275395.171944331] [Ground]: 发送 G+02000+00000+00000 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774275395.177211775] [Ground]: fail
+[ERROR] [1774275401.655420389] [Ground]: 发送 G+00000+00000+00000 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774275401.655840390] [Ground]: fail
+[ERROR] [1774275410.047662237] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774275410.048099255] [Ground]: fail
+[ERROR] [1774275416.216365410] [Ground]: 发送 G+00000-02000+00000 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774275416.216816292] [Ground]: fail

@@ -1,0 +1,56 @@
+1774271654.4509931 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-23-06-14-14-445861-ubuntu-8974
+1774271654.4515080 [INFO] [launch]: Default logging verbosity is set to INFO
+1774271654.5769107 [INFO] [logical-1]: process started with pid [8977]
+1774271655.7099190 [logical-1] [INFO] [1774271655.709426349] [Ground]: ros2 node launch success:Ground!
+1774271661.7669964 [logical-1] Traceback (most recent call last):
+1774271661.7681229 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 48, in <lambda>
+1774271661.7684443 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(format('G',self.pos.x+20, self.pos.y, self.pos.z,'')))
+1774271661.7685003 [logical-1] TypeError: format expected at most 2 arguments, got 5
+1774271662.2972159 [logical-1] Traceback (most recent call last):
+1774271662.2974334 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 48, in <lambda>
+1774271662.2974818 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(format('G',self.pos.x+20, self.pos.y, self.pos.z,'')))
+1774271662.2975166 [logical-1] TypeError: format expected at most 2 arguments, got 5
+1774271662.4984686 [logical-1] Traceback (most recent call last):
+1774271662.4986751 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 48, in <lambda>
+1774271662.4987309 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(format('G',self.pos.x+20, self.pos.y, self.pos.z,'')))
+1774271662.4987650 [logical-1] TypeError: format expected at most 2 arguments, got 5
+1774271662.6824746 [logical-1] Traceback (most recent call last):
+1774271662.6826837 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 48, in <lambda>
+1774271662.6827335 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(format('G',self.pos.x+20, self.pos.y, self.pos.z,'')))
+1774271662.6827674 [logical-1] TypeError: format expected at most 2 arguments, got 5
+1774271662.8757272 [logical-1] Traceback (most recent call last):
+1774271662.8759503 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 48, in <lambda>
+1774271662.8760066 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(format('G',self.pos.x+20, self.pos.y, self.pos.z,'')))
+1774271662.8760419 [logical-1] TypeError: format expected at most 2 arguments, got 5
+1774271663.0585382 [logical-1] Traceback (most recent call last):
+1774271663.0587635 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 48, in <lambda>
+1774271663.0588305 [logical-1]     self.subdialog1.pushButton_forward.clicked.connect(lambda: self.ros_node.send_command(format('G',self.pos.x+20, self.pos.y, self.pos.z,'')))
+1774271663.0588763 [logical-1] TypeError: format expected at most 2 arguments, got 5
+1774272259.7506261 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1774272259.7556071 [logical-1] Traceback (most recent call last):
+1774272259.7558851 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 80, in update_pos
+1774272259.7564509 [logical-1]     
+1774272259.7566452 [logical-1] KeyboardInterrupt
+1774272263.0276237 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1774272263.0330808 [logical-1] Traceback (most recent call last):
+1774272263.0332735 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 80, in update_pos
+1774272263.0333264 [logical-1]     
+1774272263.0333602 [logical-1] KeyboardInterrupt
+1774272263.7068393 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1774272263.7145131 [logical-1] Traceback (most recent call last):
+1774272263.7146835 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 80, in update_pos
+1774272263.7147293 [logical-1]     
+1774272263.7147610 [logical-1] KeyboardInterrupt
+1774272263.9267302 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1774272263.9323106 [logical-1] Traceback (most recent call last):
+1774272263.9324605 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 80, in update_pos
+1774272263.9325023 [logical-1]     
+1774272263.9325347 [logical-1] KeyboardInterrupt
+1774272264.0828733 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT) again, ignoring...
+1774272264.0924611 [logical-1] Traceback (most recent call last):
+1774272264.0926256 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 80, in update_pos
+1774272264.0926642 [logical-1]     
+1774272264.0926936 [logical-1] KeyboardInterrupt
+1774272264.7546046 [ERROR] [logical-1]: process[logical-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1774272264.7549591 [INFO] [logical-1]: sending signal 'SIGTERM' to process[logical-1]
+1774272264.7839756 [ERROR] [logical-1]: process has died [pid 8977, exit code -15, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

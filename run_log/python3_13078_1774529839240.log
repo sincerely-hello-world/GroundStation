@@ -1,0 +1,5 @@
+[INFO] [1774529839.326703835] [Ground]: ros2 node launch success:Ground!
+[ERROR] [1774529842.373000036] [Ground]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774529842.375361197] [Ground]: fail
+[ERROR] [1774529846.854004886] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1774529846.854469038] [Ground]: fail

@@ -1,0 +1,27 @@
+1774534766.0659366 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-07-19-26-060982-ubuntu-19201
+1774534766.0663450 [INFO] [launch]: Default logging verbosity is set to INFO
+1774534766.2206869 [INFO] [logical-1]: process started with pid [19207]
+1774534767.4929016 [logical-1] [INFO] [1774534767.492252547] [Ground]: ros2 node launch success:Ground!
+1774534961.1873751 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1774534961.1939068 [logical-1] Traceback (most recent call last):
+1774534961.1941793 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 99, in update_pos
+1774534961.1942611 [logical-1]     QMessageBox.information(self,'参数设置',"参数设置成功")
+1774534961.1943181 [logical-1] KeyboardInterrupt
+1774534964.9626083 [logical-1] Exception in thread Thread-1:
+1774534964.9629273 [logical-1] Traceback (most recent call last):
+1774534964.9630072 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774534964.9630632 [logical-1]     self.run()
+1774534964.9631057 [logical-1]   File "/usr/lib/python3.8/threading.py", line 870, in run
+1774534964.9631457 [logical-1]     self._target(*self._args, **self._kwargs)
+1774534964.9631906 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 125, in start_bridgeNode_spin
+1774534964.9632394 [logical-1]     executor.spin()
+1774534964.9632800 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1774534964.9633267 [logical-1]     self.spin_once()
+1774534964.9633660 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 770, in spin_once
+1774534964.9634047 [logical-1]     self._spin_once_impl(timeout_sec)
+1774534964.9634430 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 762, in _spin_once_impl
+1774534964.9634817 [logical-1]     self._executor.submit(handler)
+1774534964.9635189 [logical-1]   File "/usr/lib/python3.8/concurrent/futures/thread.py", line 179, in submit
+1774534964.9635596 [logical-1]     raise RuntimeError('cannot schedule new futures after shutdown')
+1774534964.9636018 [logical-1] RuntimeError: cannot schedule new futures after shutdown
+1774534965.2620778 [INFO] [logical-1]: process has finished cleanly [pid 19207]

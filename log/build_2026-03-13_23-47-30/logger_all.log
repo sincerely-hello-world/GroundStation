@@ -1,0 +1,292 @@
+[0.721s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--symlink-install'][0m
+[0.721s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f06eb2d3520>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f06eb2d3520>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f06eb2b3a30>)[0m
+[0.943s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.944s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.944s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.944s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.944s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.944s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.944s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/focal/Desktop/2024_GroundStation'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.944s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.945s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.965s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.965s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.965s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.965s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.965s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.965s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['ignore', 'ignore_ament_install']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'ignore'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'ignore_ament_install'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['colcon_pkg']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'colcon_pkg'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['colcon_meta']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'colcon_meta'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['ros']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'ros'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['cmake', 'python']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'cmake'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'python'
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extensions ['python_setup_py']
+[0.966s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log) by extension 'python_setup_py'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['ignore', 'ignore_ament_install']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'ignore'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'ignore_ament_install'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['colcon_pkg']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'colcon_pkg'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['colcon_meta']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'colcon_meta'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['ros']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'ros'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['cmake', 'python']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'cmake'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'python'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extensions ['python_setup_py']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(run_log/2026-03-13-22-24-06-619054-ubuntu-5744) by extension 'python_setup_py'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.967s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['ignore', 'ignore_ament_install']
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'ignore'
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'ignore_ament_install'
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['colcon_pkg']
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'colcon_pkg'
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['colcon_meta']
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'colcon_meta'
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extensions ['ros']
+[0.968s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/GroundStation) by extension 'ros'
+[0.973s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/GroundStation' with type 'ros.ament_python' and name 'GroundStation'[0m
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['ignore', 'ignore_ament_install']
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'ignore'
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'ignore_ament_install'
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['colcon_pkg']
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'colcon_pkg'
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['colcon_meta']
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'colcon_meta'
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extensions ['ros']
+[0.974s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros2_pyqt_turtlesim_key) by extension 'ros'
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros2_pyqt_turtlesim_key' with type 'ros.ament_python' and name 'ros2_pyqt_turtlesim_key'[0m
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'ignore'
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'ignore_ament_install'
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['colcon_pkg']
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'colcon_pkg'
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['colcon_meta']
+[0.975s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'colcon_meta'
+[0.976s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extensions ['ros']
+[0.976s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/uav_car_interfaces) by extension 'ros'
+[0.977s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/uav_car_interfaces' with type 'ros.ament_cmake' and name 'uav_car_interfaces'[0m
+[0.977s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.977s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.977s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.977s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.977s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[1.020s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[1.020s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[1.026s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 256 installed packages in /opt/ros/foxy[0m
+[1.028s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_args' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_target' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_clean_cache' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_clean_first' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'cmake_force_configure' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'ament_cmake_args' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'catkin_cmake_args' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'GroundStation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'GroundStation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/focal/Desktop/2024_GroundStation/build/GroundStation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/focal/Desktop/2024_GroundStation/install/GroundStation', 'merge_install': False, 'path': '/home/focal/Desktop/2024_GroundStation/src/GroundStation', 'symlink_install': True, 'test_result_base': None}[0m
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_args' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_target' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_clean_cache' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_clean_first' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'cmake_force_configure' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'ament_cmake_args' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'catkin_cmake_args' from command line to 'None'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'ros2_pyqt_turtlesim_key' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.113s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'ros2_pyqt_turtlesim_key' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key', 'merge_install': False, 'path': '/home/focal/Desktop/2024_GroundStation/src/ros2_pyqt_turtlesim_key', 'symlink_install': True, 'test_result_base': None}[0m
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'uav_car_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.114s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'uav_car_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces', 'merge_install': False, 'path': '/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces', 'symlink_install': True, 'test_result_base': None}[0m
+[1.114s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[1.115s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[1.115s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/focal/Desktop/2024_GroundStation/src/GroundStation' with build type 'ament_python'
+[1.115s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('GroundStation', 'ament_prefix_path')
+[1.122s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.122s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/ament_prefix_path.ps1'
+[1.124s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/ament_prefix_path.dsv'
+[1.125s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/ament_prefix_path.sh'
+[1.126s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.126s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.131s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/focal/Desktop/2024_GroundStation/src/ros2_pyqt_turtlesim_key' with build type 'ament_python'
+[1.131s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_pyqt_turtlesim_key', 'ament_prefix_path')
+[1.132s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/ament_prefix_path.ps1'
+[1.133s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/ament_prefix_path.dsv'
+[1.133s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/ament_prefix_path.sh'
+[1.134s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.134s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.138s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces' with build type 'ament_cmake'
+[1.138s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces'
+[1.139s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.139s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.407s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/focal/Desktop/2024_GroundStation/src/GroundStation'
+[1.408s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.408s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.665s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/focal/Desktop/2024_GroundStation/src/ros2_pyqt_turtlesim_key'
+[1.666s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.666s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.676s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4[0m
+[2.306s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces -- -j4 -l4[0m
+[2.321s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces[0m
+[2.379s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/GroundStation': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/GroundStation/build --no-deps symlink_data[0m
+[2.390s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build --no-deps symlink_data[0m
+[2.439s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(uav_car_interfaces)
+[2.440s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces[0m
+[2.450s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake module files
+[2.451s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake config files
+[2.451s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'cmake_prefix_path')
+[2.451s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.ps1'
+[2.452s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.dsv'
+[2.452s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.sh'
+[2.453s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib'
+[2.453s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'ld_library_path_lib')
+[2.454s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.ps1'
+[2.454s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.dsv'
+[2.454s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.sh'
+[2.455s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[2.455s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/pkgconfig/uav_car_interfaces.pc'
+[2.455s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages'
+[2.455s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'pythonpath')
+[2.455s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.ps1'
+[2.456s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.dsv'
+[2.456s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.sh'
+[2.456s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[2.457s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.ps1'
+[2.459s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.dsv'
+[2.460s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.sh'
+[2.461s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.bash'
+[2.463s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.zsh'
+[2.464s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/colcon-core/packages/uav_car_interfaces)
+[2.465s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(uav_car_interfaces)
+[2.465s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake module files
+[2.465s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces' for CMake config files
+[2.466s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'cmake_prefix_path')
+[2.466s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.ps1'
+[2.466s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.dsv'
+[2.467s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/cmake_prefix_path.sh'
+[2.467s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib'
+[2.467s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'ld_library_path_lib')
+[2.468s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.ps1'
+[2.468s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.dsv'
+[2.469s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/ld_library_path_lib.sh'
+[2.469s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[2.469s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/pkgconfig/uav_car_interfaces.pc'
+[2.469s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages'
+[2.469s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('uav_car_interfaces', 'pythonpath')
+[2.469s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.ps1'
+[2.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.dsv'
+[2.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/hook/pythonpath.sh'
+[2.471s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/bin'
+[2.471s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.ps1'
+[2.472s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.dsv'
+[2.472s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.sh'
+[2.473s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.bash'
+[2.473s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.zsh'
+[2.474s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/colcon-core/packages/uav_car_interfaces)
+[2.845s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_pyqt_turtlesim_key', 'pythonpath_develop')
+[2.846s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath_develop.ps1'
+[2.846s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath_develop.dsv'
+[2.847s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath_develop.sh'
+[2.848s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key' for CMake module files
+[2.848s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key' for CMake config files
+[2.849s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib'
+[2.849s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/bin'
+[2.849s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/pkgconfig/ros2_pyqt_turtlesim_key.pc'
+[2.849s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages'
+[2.849s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('ros2_pyqt_turtlesim_key', 'pythonpath')
+[2.849s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath.ps1'
+[2.850s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath.dsv'
+[2.850s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/hook/pythonpath.sh'
+[2.851s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/bin'
+[2.851s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(ros2_pyqt_turtlesim_key)
+[2.851s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.ps1'
+[2.852s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.dsv'
+[2.853s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.sh'
+[2.853s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.bash'
+[2.854s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/ros2_pyqt_turtlesim_key/package.zsh'
+[2.854s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key' returned '0': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build --no-deps symlink_data[0m
+[2.854s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/share/colcon-core/packages/ros2_pyqt_turtlesim_key)
+[2.862s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('GroundStation', 'pythonpath_develop')
+[2.863s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/GroundStation/share/GroundStation/hook/pythonpath_develop.ps1'
+[2.863s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/focal/Desktop/2024_GroundStation/build/GroundStation' returned '0': PYTHONPATH=/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/focal/Desktop/2024_GroundStation/build/GroundStation/build --no-deps symlink_data[0m
+[2.863s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/build/GroundStation/share/GroundStation/hook/pythonpath_develop.dsv'
+[2.864s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/build/GroundStation/share/GroundStation/hook/pythonpath_develop.sh'
+[2.865s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation' for CMake module files
+[2.865s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation' for CMake config files
+[2.865s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib'
+[2.865s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/bin'
+[2.865s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/pkgconfig/GroundStation.pc'
+[2.866s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages'
+[2.866s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('GroundStation', 'pythonpath')
+[2.866s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/pythonpath.ps1'
+[2.866s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/pythonpath.dsv'
+[2.867s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/hook/pythonpath.sh'
+[2.867s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/focal/Desktop/2024_GroundStation/install/GroundStation/bin'
+[2.867s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(GroundStation)
+[2.867s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.ps1'
+[2.868s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.dsv'
+[2.868s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.sh'
+[2.869s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.bash'
+[2.869s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/package.zsh'
+[2.870s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/focal/Desktop/2024_GroundStation/install/GroundStation/share/colcon-core/packages/GroundStation)
+[2.870s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[2.871s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[2.871s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[2.871s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[2.882s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.882s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.882s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[2.898s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[2.898s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.ps1'
+[2.900s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/focal/Desktop/2024_GroundStation/install/_local_setup_util_ps1.py'
+[2.902s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.ps1'
+[2.903s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.sh'
+[2.906s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/focal/Desktop/2024_GroundStation/install/_local_setup_util_sh.py'
+[2.907s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.sh'
+[2.909s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.bash'
+[2.914s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.bash'
+[2.916s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/focal/Desktop/2024_GroundStation/install/local_setup.zsh'
+[2.917s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/focal/Desktop/2024_GroundStation/install/setup.zsh'

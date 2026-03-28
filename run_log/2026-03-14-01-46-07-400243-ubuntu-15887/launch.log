@@ -1,0 +1,11 @@
+1773477967.4066792 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-14-01-46-07-400243-ubuntu-15887
+1773477967.4071944 [INFO] [launch]: Default logging verbosity is set to INFO
+1773477967.4981580 [INFO] [logical-1]: process started with pid [15890]
+1773477968.5937660 [logical-1] [INFO] [1773477968.593005985] [Ground]: ros2 node launch success:Ground!
+1773478046.7364862 [logical-1] [INFO] [1773478046.735502303] [Ground]: 识别到QR码: 908483
+1773478374.4650552 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1773478377.5379839 [logical-1] Traceback (most recent call last):
+1773478377.5381603 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 105, in closeEvent
+1773478377.5382061 [logical-1]     def closeEvent(self, event):
+1773478377.5382380 [logical-1] KeyboardInterrupt
+1773478377.6507738 [INFO] [logical-1]: process has finished cleanly [pid 15890]

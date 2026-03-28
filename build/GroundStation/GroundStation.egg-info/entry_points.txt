@@ -1,0 +1,4 @@
+[console_scripts]
+logical = GroundStation.logical:main
+qrcode = GroundStation.qrcode:main
+

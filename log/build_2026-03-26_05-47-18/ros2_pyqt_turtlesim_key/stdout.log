@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing ros2_pyqt_turtlesim_key.egg-info/PKG-INFO
+writing dependency_links to ros2_pyqt_turtlesim_key.egg-info/dependency_links.txt
+writing entry points to ros2_pyqt_turtlesim_key.egg-info/entry_points.txt
+writing requirements to ros2_pyqt_turtlesim_key.egg-info/requires.txt
+writing top-level names to ros2_pyqt_turtlesim_key.egg-info/top_level.txt
+reading manifest file 'ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt'
+writing manifest file 'ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages/ros2-pyqt-turtlesim-key.egg-link (link to .)
+Installing ros2_pyqt_turtlesim_key script to /home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/ros2_pyqt_turtlesim_key
+
+Installed /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key
+running symlink_data

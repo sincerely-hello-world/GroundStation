@@ -1,0 +1,12 @@
+1773475304.0071745 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-14-01-01-44-003122-ubuntu-8809
+1773475304.0075765 [INFO] [launch]: Default logging verbosity is set to INFO
+1773475304.0799303 [INFO] [logical-1]: process started with pid [8816]
+1773475306.1958499 [logical-1] Traceback (most recent call last):
+1773475306.1960926 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical", line 11, in <module>
+1773475306.1961579 [logical-1]     load_entry_point('GroundStation', 'console_scripts', 'logical')()
+1773475306.1962023 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 114, in main
+1773475306.1962421 [logical-1]     uiC = UIController()
+1773475306.1962798 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/logical.py", line 21, in __init__
+1773475306.1963170 [logical-1]     self.shodialog2 = subdialog2()
+1773475306.1963542 [logical-1] NameError: name 'subdialog2' is not defined
+1773475306.3943241 [ERROR] [logical-1]: process has died [pid 8816, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

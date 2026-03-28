@@ -1,0 +1,32 @@
+1774534587.6419413 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-07-16-27-637102-ubuntu-18727
+1774534587.6424246 [INFO] [launch]: Default logging verbosity is set to INFO
+1774534587.7956810 [INFO] [logical-1]: process started with pid [18743]
+1774534589.4522300 [logical-1] [INFO] [1774534589.451867784] [Ground]: ros2 node launch success:Ground!
+1774534589.6549540 [logical-1] Exception in thread Thread-1:
+1774534589.6551850 [logical-1] Traceback (most recent call last):
+1774534589.6552520 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774534589.6552980 [logical-1]     self.run()
+1774534589.6553378 [logical-1]   File "/usr/lib/python3.8/threading.py", line 870, in run
+1774534589.6553845 [logical-1]     self._target(*self._args, **self._kwargs)
+1774534589.6554399 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 125, in start_bridgeNode_spin
+1774534589.6554954 [logical-1]     executor.spin()
+1774534589.6555355 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1774534589.6555748 [logical-1]     self.spin_once()
+1774534589.6556244 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 770, in spin_once
+1774534589.6556630 [logical-1]     self._spin_once_impl(timeout_sec)
+1774534589.6557007 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 767, in _spin_once_impl
+1774534589.6557720 [logical-1]     future.result()
+1774534589.6558106 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 94, in result
+1774534589.6558576 [logical-1]     raise self.exception()
+1774534589.6558971 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 239, in __call__
+1774534589.6559355 [logical-1]     self._handler.send(None)
+1774534589.6559753 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 429, in handler
+1774534589.6560154 [logical-1]     await call_coroutine(entity, arg)
+1774534589.6560550 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 354, in _execute_subscription
+1774534589.6561017 [logical-1]     await await_or_execute(sub.callback, msg)
+1774534589.6561410 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 118, in await_or_execute
+1774534589.6561821 [logical-1]     return callback(*args)
+1774534589.6562235 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 63, in position_callback
+1774534589.6562626 [logical-1]     self.position.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
+1774534589.6563017 [logical-1] TypeError: ROS2_bridgeNode.position[str, float, float, float] signal has 4 argument(s) but 5 provided
+1774534595.2232459 [INFO] [logical-1]: process has finished cleanly [pid 18743]

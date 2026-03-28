@@ -1,0 +1,8 @@
+1774536542.5995302 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-07-49-02-592532-ubuntu-21313
+1774536542.5998991 [INFO] [launch]: Default logging verbosity is set to INFO
+1774536542.6827621 [INFO] [logical-1]: process started with pid [21317]
+1774536543.7963753 [logical-1] [INFO] [1774536543.795778535] [Ground]: ros2 node launch success:Ground!
+1774536995.4030113 [logical-1] Exception in thread Thread-1:
+1774536995.4040797 [logical-1] Traceback (most recent call last):
+1774536995.4043124 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774536995.6634321 [INFO] [logical-1]: process has finished cleanly [pid 21317]

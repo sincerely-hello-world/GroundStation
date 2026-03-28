@@ -1,0 +1,22 @@
+1774270556.4312799 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-23-05-55-56-425227-ubuntu-6956
+1774270556.4320052 [INFO] [launch]: Default logging verbosity is set to INFO
+1774270556.5515108 [INFO] [logical-1]: process started with pid [6964]
+1774270557.8561637 [logical-1] [INFO] [1774270557.855622728] [Ground]: ros2 node launch success:Ground!
+1774270559.5938773 [logical-1] [INFO] [1774270559.593459127] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774270561.7546809 [logical-1] [INFO] [1774270561.754287142] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774270564.9358799 [logical-1] [INFO] [1774270564.935554307] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774270568.0162339 [logical-1] [INFO] [1774270568.015900863] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1774270608.3355899 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1774270608.6708922 [logical-1] Error in atexit._run_exitfuncs:
+1774270608.6711047 [logical-1] Traceback (most recent call last):
+1774270608.6711822 [logical-1]   File "/usr/lib/python3.8/concurrent/futures/thread.py", line 40, in _python_exit
+1774270608.6712220 [logical-1]     t.join()
+1774270608.6712563 [logical-1]   File "/usr/lib/python3.8/threading.py", line 1011, in join
+1774270608.6712894 [logical-1]     self._wait_for_tstate_lock()
+1774270608.6713192 [logical-1]   File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+1774270608.6713493 [logical-1] Exception in thread Thread-1:
+1774270608.6713798 [logical-1] Traceback (most recent call last):
+1774270608.6714108 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774270608.6714733 [logical-1]     elif lock.acquire(block, timeout):
+1774270608.6715038 [logical-1] KeyboardInterrupt
+1774270608.8330338 [INFO] [logical-1]: process has finished cleanly [pid 6964]

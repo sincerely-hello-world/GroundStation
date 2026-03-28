@@ -1,0 +1,9 @@
+1773763900.0168669 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-17-09-11-40-012504-ubuntu-8127
+1773763900.0185378 [INFO] [launch]: Default logging verbosity is set to INFO
+1773763900.2194216 [INFO] [logical-1]: process started with pid [8134]
+1773763903.2437835 [logical-1] [INFO] [1773763903.243293335] [Ground]: ros2 node launch success:Ground!
+1773763906.1892946 [logical-1] [INFO] [1773763906.188968726] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1773763912.9784727 [logical-1] [INFO] [1773763912.978134757] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1773763915.3758423 [logical-1] [INFO] [1773763915.375522418] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1773763917.4529226 [logical-1] [INFO] [1773763917.452539874] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1773763922.9703400 [INFO] [logical-1]: process has finished cleanly [pid 8134]

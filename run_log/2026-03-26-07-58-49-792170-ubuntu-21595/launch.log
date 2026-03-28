@@ -1,0 +1,5 @@
+1774537129.7992802 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-07-58-49-792170-ubuntu-21595
+1774537129.7997603 [INFO] [launch]: Default logging verbosity is set to INFO
+1774537130.0123756 [INFO] [logical-1]: process started with pid [21628]
+1774537132.1192973 [logical-1] [INFO] [1774537132.118725185] [Ground]: ros2 node launch success:Ground!
+1774537145.0973861 [ERROR] [logical-1]: process has died [pid 21628, exit code -9, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/logical --ros-args'].

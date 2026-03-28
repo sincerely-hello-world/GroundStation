@@ -1,0 +1,213 @@
+[0.000000] (-) TimerEvent: {}
+[0.000378] (GroundStation) JobQueued: {'identifier': 'GroundStation', 'dependencies': OrderedDict()}
+[0.000440] (ros2_pyqt_turtlesim_key) JobQueued: {'identifier': 'ros2_pyqt_turtlesim_key', 'dependencies': OrderedDict()}
+[0.000521] (uav_car_interfaces) JobQueued: {'identifier': 'uav_car_interfaces', 'dependencies': OrderedDict()}
+[0.000603] (GroundStation) JobStarted: {'identifier': 'GroundStation'}
+[0.022637] (ros2_pyqt_turtlesim_key) JobStarted: {'identifier': 'ros2_pyqt_turtlesim_key'}
+[0.054751] (uav_car_interfaces) JobStarted: {'identifier': 'uav_car_interfaces'}
+[0.098502] (-) TimerEvent: {}
+[0.200904] (-) TimerEvent: {}
+[0.301508] (-) TimerEvent: {}
+[0.402109] (-) TimerEvent: {}
+[0.502730] (-) TimerEvent: {}
+[0.604043] (-) TimerEvent: {}
+[0.705817] (-) TimerEvent: {}
+[0.806370] (-) TimerEvent: {}
+[0.906993] (-) TimerEvent: {}
+[0.956320] (uav_car_interfaces) JobProgress: {'identifier': 'uav_car_interfaces', 'progress': 'cmake'}
+[0.958110] (uav_car_interfaces) JobProgress: {'identifier': 'uav_car_interfaces', 'progress': 'build'}
+[0.961502] (uav_car_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'focal'), ('SSH_AGENT_PID', '2361'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/focal'), ('OLDPWD', '/home/focal'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2168'), ('ROS_LOG_DIR', '/home/focal/Desktop/2024_GroundStation/run_log'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'focal'), ('JOURNAL_STREAM', '8:68449'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'focal'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/home/focal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2396,unix/ubuntu:/tmp/.ICE-unix/2396'), ('INVOCATION_ID', '5b7c168143db43fea719a882185dd39e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4ff86b10_990c_4ec1_b247_2d0fa25d6a51'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[1.009134] (-) TimerEvent: {}
+[1.110717] (-) TimerEvent: {}
+[1.183152] (uav_car_interfaces) StdoutLine: {'line': b'[  2%] Built target uav_car_interfaces__cpp\n'}
+[1.184833] (uav_car_interfaces) StdoutLine: {'line': b'[ 12%] Built target uav_car_interfaces__rosidl_generator_c\n'}
+[1.210939] (-) TimerEvent: {}
+[1.311544] (-) TimerEvent: {}
+[1.322636] (uav_car_interfaces) StdoutLine: {'line': b'[ 23%] Built target uav_car_interfaces__rosidl_typesupport_c\n'}
+[1.362591] (uav_car_interfaces) StdoutLine: {'line': b'[ 34%] Built target uav_car_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.380056] (uav_car_interfaces) StdoutLine: {'line': b'[ 44%] Built target uav_car_interfaces__rosidl_typesupport_cpp\n'}
+[1.387610] (uav_car_interfaces) StdoutLine: {'line': b'[ 55%] Built target uav_car_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.411154] (uav_car_interfaces) StdoutLine: {'line': b'[ 65%] Built target uav_car_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.411526] (-) TimerEvent: {}
+[1.512201] (-) TimerEvent: {}
+[1.540622] (uav_car_interfaces) StdoutLine: {'line': b'[ 76%] Built target uav_car_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.612438] (-) TimerEvent: {}
+[1.644844] (uav_car_interfaces) StdoutLine: {'line': b'[ 76%] Built target uav_car_interfaces\n'}
+[1.718769] (-) TimerEvent: {}
+[1.744354] (uav_car_interfaces) StdoutLine: {'line': b'[ 78%] Built target uav_car_interfaces__py\n'}
+[1.822463] (-) TimerEvent: {}
+[1.860953] (uav_car_interfaces) StdoutLine: {'line': b'[ 87%] Built target uav_car_interfaces__python\n'}
+[1.922696] (-) TimerEvent: {}
+[1.975052] (uav_car_interfaces) StdoutLine: {'line': b'[ 91%] Built target uav_car_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.022961] (-) TimerEvent: {}
+[2.023454] (uav_car_interfaces) StdoutLine: {'line': b'[ 95%] Built target uav_car_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.046082] (uav_car_interfaces) StdoutLine: {'line': b'[100%] Built target uav_car_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.107215] (uav_car_interfaces) CommandEnded: {'returncode': 0}
+[2.132171] (-) TimerEvent: {}
+[2.133859] (uav_car_interfaces) JobProgress: {'identifier': 'uav_car_interfaces', 'progress': 'install'}
+[2.159076] (uav_car_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces'], 'cwd': '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'focal'), ('SSH_AGENT_PID', '2361'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/focal'), ('OLDPWD', '/home/focal'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2168'), ('ROS_LOG_DIR', '/home/focal/Desktop/2024_GroundStation/run_log'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'focal'), ('JOURNAL_STREAM', '8:68449'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'focal'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/home/focal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2396,unix/ubuntu:/tmp/.ICE-unix/2396'), ('INVOCATION_ID', '5b7c168143db43fea719a882185dd39e'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4ff86b10_990c_4ec1_b247_2d0fa25d6a51'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[2.193536] (ros2_pyqt_turtlesim_key) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/build', '--no-deps', 'symlink_data'], 'cwd': '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'focal', 'SSH_AGENT_PID': '2361', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'HOME': '/home/focal', 'OLDPWD': '/home/focal', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2168', 'ROS_LOG_DIR': '/home/focal/Desktop/2024_GroundStation/run_log', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'focal', 'JOURNAL_STREAM': '8:68449', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'focal', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/focal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2396,unix/ubuntu:/tmp/.ICE-unix/2396', 'INVOCATION_ID': '5b7c168143db43fea719a882185dd39e', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4ff86b10_990c_4ec1_b247_2d0fa25d6a51', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.136', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'VTE_VERSION': '6003', 'PYTHONPATH': '/home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages:'}, 'shell': False}
+[2.202637] (uav_car_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.203360] (uav_car_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.203569] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/rosidl_interfaces/uav_car_interfaces\n'}
+[2.203875] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__functions.h\n'}
+[2.204358] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__struct.h\n'}
+[2.204534] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__type_support.h\n'}
+[2.204711] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__functions.h\n'}
+[2.204882] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__struct.h\n'}
+[2.205287] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__type_support.h\n'}
+[2.205482] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/image_processor_data.h\n'}
+[2.205646] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.206652] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/t265_data.h\n'}
+[2.207483] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/control_service.h\n'}
+[2.208998] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__functions.h\n'}
+[2.211883] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__struct.h\n'}
+[2.212148] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__type_support.h\n'}
+[2.216859] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/library_path.sh\n'}
+[2.217069] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/library_path.dsv\n'}
+[2.217624] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_fastrtps_c.h\n'}
+[2.218769] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_fastrtps_c.h\n'}
+[2.235864] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.265500] (-) TimerEvent: {}
+[2.269240] (GroundStation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/focal/Desktop/2024_GroundStation/build/GroundStation/build', '--no-deps', 'symlink_data'], 'cwd': '/home/focal/Desktop/2024_GroundStation/build/GroundStation', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'focal', 'SSH_AGENT_PID': '2361', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'HOME': '/home/focal', 'OLDPWD': '/home/focal', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2168', 'ROS_LOG_DIR': '/home/focal/Desktop/2024_GroundStation/run_log', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'focal', 'JOURNAL_STREAM': '8:68449', '_': '/usr/bin/colcon', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'focal', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/focal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2396,unix/ubuntu:/tmp/.ICE-unix/2396', 'INVOCATION_ID': '5b7c168143db43fea719a882185dd39e', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4ff86b10_990c_4ec1_b247_2d0fa25d6a51', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'GNOME_TERMINAL_SERVICE': ':1.136', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/focal/Desktop/2024_GroundStation/build/GroundStation', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'VTE_VERSION': '6003', 'PYTHONPATH': '/home/focal/Desktop/2024_GroundStation/build/GroundStation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages:'}, 'shell': False}
+[2.278526] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_fastrtps_c.h\n'}
+[2.278814] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.278996] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.279162] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.279335] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.279502] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.279671] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.279970] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_introspection_c.h\n'}
+[2.280156] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_introspection_c.h\n'}
+[2.280319] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.290308] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_introspection_c.h\n'}
+[2.290522] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__builder.hpp\n'}
+[2.290703] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__struct.hpp\n'}
+[2.290874] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__traits.hpp\n'}
+[2.291037] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__type_support.hpp\n'}
+[2.291201] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__builder.hpp\n'}
+[2.291384] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__struct.hpp\n'}
+[2.291556] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__traits.hpp\n'}
+[2.291794] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__type_support.hpp\n'}
+[2.292239] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/image_processor_data.hpp\n'}
+[2.292434] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.294986] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/t265_data.hpp\n'}
+[2.296264] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/control_service.hpp\n'}
+[2.296459] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__builder.hpp\n'}
+[2.296655] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__struct.hpp\n'}
+[2.296956] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__traits.hpp\n'}
+[2.298449] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__type_support.hpp\n'}
+[2.298654] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.298837] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/msg/detail/t265_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.299000] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/include/uav_car_interfaces/srv/detail/control_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.299164] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/pythonpath.sh\n'}
+[2.299328] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/pythonpath.dsv\n'}
+[2.299521] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/__init__.py\n'}
+[2.299815] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/msg/__init__.py\n'}
+[2.300029] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/msg/_image_processor_data.py\n'}
+[2.300202] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/msg/_t265_data.py\n'}
+[2.300383] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/srv/__init__.py\n'}
+[2.300571] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/srv/_control_service.py\n'}
+[2.300740] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.300912] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.306022] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/python3.8/site-packages/uav_car_interfaces/uav_car_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.340078] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__python.so\n'}
+[2.340421] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/T265Data.idl\n'}
+[2.343231] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/ImageProcessorData.idl\n'}
+[2.343427] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService.idl\n'}
+[2.343625] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/T265Data.msg\n'}
+[2.343898] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/msg/ImageProcessorData.msg\n'}
+[2.347027] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService.srv\n'}
+[2.365732] (-) TimerEvent: {}
+[2.372560] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService_Request.msg\n'}
+[2.374027] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/srv/ControlService_Response.msg\n'}
+[2.375179] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/package_run_dependencies/uav_car_interfaces\n'}
+[2.399268] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/parent_prefix_path/uav_car_interfaces\n'}
+[2.403238] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/ament_prefix_path.sh\n'}
+[2.404812] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.407428] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/path.sh\n'}
+[2.408175] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/environment/path.dsv\n'}
+[2.412691] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.bash\n'}
+[2.413108] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.sh\n'}
+[2.413505] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.zsh\n'}
+[2.414851] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/local_setup.dsv\n'}
+[2.418311] (uav_car_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.dsv\n'}
+[2.468625] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/ament_index/resource_index/packages/uav_car_interfaces\n'}
+[2.469551] (-) TimerEvent: {}
+[2.475016] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.482193] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.482422] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.482650] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.482862] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.483109] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.483317] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.483557] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfacesConfig.cmake\n'}
+[2.483886] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfacesConfig-version.cmake\n'}
+[2.484079] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/package.xml\n'}
+[2.484273] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_generator_c.so\n'}
+[2.488945] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.494453] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_c.so\n'}
+[2.508265] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.508623] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/lib/libuav_car_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.575962] (-) TimerEvent: {}
+[2.656724] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_generator_cExport.cmake\n'}
+[2.658227] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.658628] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.658823] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.659047] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[2.659221] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.659395] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_generator_cppExport.cmake\n'}
+[2.660422] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.660675] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.662556] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[2.662796] (uav_car_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/focal/Desktop/2024_GroundStation/install/uav_car_interfaces/share/uav_car_interfaces/cmake/uav_car_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.693284] (uav_car_interfaces) CommandEnded: {'returncode': 0}
+[2.694056] (-) TimerEvent: {}
+[2.780211] (uav_car_interfaces) JobEnded: {'identifier': 'uav_car_interfaces', 'rc': 0}
+[2.797468] (-) TimerEvent: {}
+[2.898178] (-) TimerEvent: {}
+[2.993039] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'running develop\n'}
+[2.998376] (-) TimerEvent: {}
+[3.098922] (-) TimerEvent: {}
+[3.100927] (GroundStation) StdoutLine: {'line': b'running develop\n'}
+[3.199147] (-) TimerEvent: {}
+[3.299850] (-) TimerEvent: {}
+[3.344993] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'running egg_info\n'}
+[3.355894] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'writing ros2_pyqt_turtlesim_key.egg-info/PKG-INFO\n'}
+[3.356299] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'writing dependency_links to ros2_pyqt_turtlesim_key.egg-info/dependency_links.txt\n'}
+[3.356495] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'writing entry points to ros2_pyqt_turtlesim_key.egg-info/entry_points.txt\n'}
+[3.356677] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'writing requirements to ros2_pyqt_turtlesim_key.egg-info/requires.txt\n'}
+[3.356850] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'writing top-level names to ros2_pyqt_turtlesim_key.egg-info/top_level.txt\n'}
+[3.400224] (-) TimerEvent: {}
+[3.410667] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b"reading manifest file 'ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt'\n"}
+[3.411097] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b"writing manifest file 'ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt'\n"}
+[3.471605] (GroundStation) StdoutLine: {'line': b'running egg_info\n'}
+[3.472203] (GroundStation) StdoutLine: {'line': b'writing GroundStation.egg-info/PKG-INFO\n'}
+[3.472395] (GroundStation) StdoutLine: {'line': b'writing dependency_links to GroundStation.egg-info/dependency_links.txt\n'}
+[3.472581] (GroundStation) StdoutLine: {'line': b'writing entry points to GroundStation.egg-info/entry_points.txt\n'}
+[3.476266] (GroundStation) StdoutLine: {'line': b'writing requirements to GroundStation.egg-info/requires.txt\n'}
+[3.476616] (GroundStation) StdoutLine: {'line': b'writing top-level names to GroundStation.egg-info/top_level.txt\n'}
+[3.501170] (-) TimerEvent: {}
+[3.563760] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'running build_ext\n'}
+[3.567026] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'Creating /home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/python3.8/site-packages/ros2-pyqt-turtlesim-key.egg-link (link to .)\n'}
+[3.582057] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'Installing ros2_pyqt_turtlesim_key script to /home/focal/Desktop/2024_GroundStation/install/ros2_pyqt_turtlesim_key/lib/ros2_pyqt_turtlesim_key\n'}
+[3.583126] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'\n'}
+[3.583337] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'Installed /home/focal/Desktop/2024_GroundStation/build/ros2_pyqt_turtlesim_key\n'}
+[3.583511] (ros2_pyqt_turtlesim_key) StdoutLine: {'line': b'running symlink_data\n'}
+[3.588456] (GroundStation) StdoutLine: {'line': b"reading manifest file 'GroundStation.egg-info/SOURCES.txt'\n"}
+[3.594579] (GroundStation) StdoutLine: {'line': b"writing manifest file 'GroundStation.egg-info/SOURCES.txt'\n"}
+[3.602227] (-) TimerEvent: {}
+[3.705445] (-) TimerEvent: {}
+[3.725157] (ros2_pyqt_turtlesim_key) CommandEnded: {'returncode': 0}
+[3.748869] (GroundStation) StdoutLine: {'line': b'running build_ext\n'}
+[3.750253] (GroundStation) StdoutLine: {'line': b'Creating /home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/python3.8/site-packages/GroundStation.egg-link (link to .)\n'}
+[3.753346] (GroundStation) StdoutLine: {'line': b'Installing logical script to /home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation\n'}
+[3.753760] (GroundStation) StdoutLine: {'line': b'Installing qrcode script to /home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation\n'}
+[3.754277] (GroundStation) StdoutLine: {'line': b'\n'}
+[3.754655] (GroundStation) StdoutLine: {'line': b'Installed /home/focal/Desktop/2024_GroundStation/build/GroundStation\n'}
+[3.754853] (GroundStation) StdoutLine: {'line': b'running symlink_data\n'}
+[3.771554] (ros2_pyqt_turtlesim_key) JobEnded: {'identifier': 'ros2_pyqt_turtlesim_key', 'rc': 0}
+[3.805860] (-) TimerEvent: {}
+[3.841356] (GroundStation) CommandEnded: {'returncode': 0}
+[3.872634] (GroundStation) JobEnded: {'identifier': 'GroundStation', 'rc': 0}
+[3.877798] (-) EventReactorShutdown: {}

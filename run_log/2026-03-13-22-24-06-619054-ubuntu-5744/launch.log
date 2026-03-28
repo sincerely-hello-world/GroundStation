@@ -1,0 +1,13 @@
+1773465846.6231334 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-13-22-24-06-619054-ubuntu-5744
+1773465846.6235917 [INFO] [launch]: Default logging verbosity is set to INFO
+1773465846.8209558 [INFO] [logical-1]: process started with pid [5755]
+1773465849.6452758 [logical-1] [INFO] [1773465849.644852032] [Ground]: ros2 node launch success:Ground!
+1773465855.6931202 [logical-1] [ERROR] [1773465855.692844909] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+1773465855.6943920 [logical-1] [ERROR] [1773465855.694187053] [Ground]: fail
+1773465857.7859750 [logical-1] [ERROR] [1773465857.785090204] [Ground]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+1773465857.7867072 [logical-1] [ERROR] [1773465857.785534775] [Ground]: fail
+1773465864.4345722 [logical-1] [ERROR] [1773465864.434156623] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+1773465864.4349751 [logical-1] [ERROR] [1773465864.434539354] [Ground]: fail
+1773465866.6744606 [logical-1] [ERROR] [1773465866.674091983] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+1773465866.6753457 [logical-1] [ERROR] [1773465866.675140108] [Ground]: fail
+1773465889.2965834 [INFO] [logical-1]: process has finished cleanly [pid 5755]

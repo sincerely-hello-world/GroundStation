@@ -1,0 +1,31 @@
+1774533193.5044148 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-26-06-53-13-500455-ubuntu-17308
+1774533193.5047565 [INFO] [launch]: Default logging verbosity is set to INFO
+1774533193.5774789 [INFO] [logical-1]: process started with pid [17327]
+1774533194.7913022 [logical-1] [INFO] [1774533194.790818245] [Ground]: ros2 node launch success:Ground!
+1774533199.1593442 [logical-1] [INFO] [1774533199.158907563] [Ground]: G+00230-00049+00270 发送成功 → 飞行站已调用：G+00230-00049+00270服务
+1774533199.1905820 [logical-1] [INFO] [1774533199.187792137] [Ground]: MCU2 send back: +00230-00049+00270
+1774533211.1312180 [logical-1] [INFO] [1774533211.130842245] [Ground]: G-03769-00051+00270 发送成功 → 飞行站已调用：G-03769-00051+00270服务
+1774533211.1589286 [logical-1] [INFO] [1774533211.157885806] [Ground]: MCU2 send back: -03769-00051+00270
+1774533211.6206043 [logical-1] [INFO] [1774533211.620255649] [Ground]: G-01762-02048+00268 发送成功 → 飞行站已调用：G-01762-02048+00268服务
+1774533211.6470733 [logical-1] [INFO] [1774533211.646762739] [Ground]: MCU2 send back: -01762-02048+00268
+1774533212.1064048 [logical-1] [INFO] [1774533212.106015591] [Ground]: G-01766+01950+00269 发送成功 → 飞行站已调用：G-01766+01950+00269服务
+1774533212.1435924 [logical-1] [INFO] [1774533212.143170973] [Ground]: MCU2 send back: -01766+01950+00269
+1774533212.4662461 [logical-1] [INFO] [1774533212.465911114] [Ground]: G+00235-00049+00269 发送成功 → 飞行站已调用：G+00235-00049+00269服务
+1774533212.4957952 [logical-1] [INFO] [1774533212.494994092] [Ground]: MCU2 send back: +00235-00049+00269
+1774533212.9818380 [logical-1] [INFO] [1774533212.981203959] [Ground]: G-01765-00047+01567 发送成功 → 飞行站已调用：G-01765-00047+01567服务
+1774533213.0078173 [logical-1] [INFO] [1774533213.007484036] [Ground]: MCU2 send back: -01765-00047+01567
+1774533213.3797190 [logical-1] [INFO] [1774533213.379414147] [Ground]: G-01765-00047-01030 发送成功 → 飞行站已调用：G-01765-00047-01030服务
+1774533213.4044428 [logical-1] [INFO] [1774533213.404092343] [Ground]: MCU2 send back: -01765-00047-01030
+1774533227.9940197 [logical-1] [INFO] [1774533227.993679432] [Ground]: gopos 发送成功 → 飞行站已调用：gopos服务
+1774533228.4479227 [logical-1] [INFO] [1774533228.447548381] [Ground]: gopos 发送成功 → 飞行站已调用：gopos服务
+1774533228.6790407 [logical-1] [INFO] [1774533228.678642864] [Ground]: gopos 发送成功 → 飞行站已调用：gopos服务
+1774534582.6149700 [logical-1] Exception in thread Thread-1:
+1774534582.6627076 [logical-1] Traceback (most recent call last):
+1774534582.6629145 [logical-1]   File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+1774534582.6633315 [logical-1]     self.run()
+1774534582.6634626 [logical-1]   File "/usr/lib/python3.8/threading.py", line 870, in run
+1774534582.6635180 [logical-1]     self._target(*self._args, **self._kwargs)
+1774534582.6638327 [logical-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/bridgeNode.py", line 125, in start_bridgeNode_spin
+1774534582.6645088 [logical-1]     executor.spin()
+1774534582.6646147 [logical-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1774534583.6321788 [INFO] [logical-1]: process has finished cleanly [pid 17327]
