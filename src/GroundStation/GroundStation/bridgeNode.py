@@ -115,8 +115,6 @@ class ROS2_bridgeNode(Node, QObject):
         # self.get_logger().info(f"ok: image")
         cv_qrimage = cv2.cvtColor(cv_qrimage, cv2.COLOR_BGR2RGB)               
         self.qrcode_image.emit(cv_qrimage)
- 
-        
 
 def start_bridgeNode_spin(node):
     executor = MultiThreadedExecutor()
