@@ -121,7 +121,6 @@ class ROS2_bridgeNode(Node, QObject):
 
         self.get_logger().info(f"qrcode2 识别到QR码: {qrcode}")
         self.qrcode2.emit(qrcode, self.qr_order2)
-
     def qrcode_compressedimage_callback(self, msg):
         ## compressedimage bridge method
         # cv_qrimage=self.bridge.compressed_imgmsg_to_cv2(msg)
