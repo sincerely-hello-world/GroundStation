@@ -1,5 +1,0 @@
-[INFO] [1774270557.855622728] [Ground]: ros2 node launch success:Ground!
-[INFO] [1774270559.593459127] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
-[INFO] [1774270561.754287142] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
-[INFO] [1774270564.935554307] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
-[INFO] [1774270568.015900863] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务

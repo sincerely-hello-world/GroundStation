@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/PKG-INFO
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/SOURCES.txt
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/dependency_links.txt
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/entry_points.txt
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/requires.txt
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/top_level.txt
-../../build/ros2_pyqt_turtlesim_key/ros2_pyqt_turtlesim_key.egg-info/zip-safe
 resource/ros2_pyqt_turtlesim_key
 ros2_pyqt_turtlesim_key/__init__.py
 ros2_pyqt_turtlesim_key/key_ui.py

@@ -20,13 +20,11 @@ echo 'ros2项目构建时所在目录: '$SCRIPT_DIR
 echo 'ros2项目初始化bash所在路径: '$SCRIPT_DIR/install/setup.bash
 source $SCRIPT_DIR/install/setup.bash # ros2项目启动bash所在路径
 
-# ros2 run GroundStation logical
-# ros2 run GroundStation qrcode
-ros2 launch GroundStation nodes.launch.py
+# ros2 run GroundStation navNode # --ros-args --params-file 
+
+
 # # 启动项目
-# echo 'ros2项目启动python所在路径: '$SCRIPT_DIR/GroundStation/install/GroundStation/share/GroundStation/launch/
-# echo 'ros2项目启动python源码所在路径: '$SCRIPT_DIR/GroundStation/src/GroundStation/launch/
-# ros2 launch GroundStation uav_car_drone.launch.py
+ros2 launch GroundStation nodes.launch.py
 
 
 # ros2 pkg create  my_interfaces     --build-type ament_cmake --dependencies rosidl_default_generators builtin_interfaces

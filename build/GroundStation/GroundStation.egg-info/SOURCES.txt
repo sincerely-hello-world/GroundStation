@@ -1,17 +1,11 @@
 package.xml
 setup.cfg
 setup.py
-../../build/GroundStation/GroundStation.egg-info/PKG-INFO
-../../build/GroundStation/GroundStation.egg-info/SOURCES.txt
-../../build/GroundStation/GroundStation.egg-info/dependency_links.txt
-../../build/GroundStation/GroundStation.egg-info/entry_points.txt
-../../build/GroundStation/GroundStation.egg-info/requires.txt
-../../build/GroundStation/GroundStation.egg-info/top_level.txt
-../../build/GroundStation/GroundStation.egg-info/zip-safe
 GroundStation/__init__.py
 GroundStation/bridgeNode.py
-GroundStation/logical.py
-GroundStation/qrcode.py
+GroundStation/myMain.py
+GroundStation/navNode.py
+GroundStation/testNode.py
 GroundStation.egg-info/PKG-INFO
 GroundStation.egg-info/SOURCES.txt
 GroundStation.egg-info/dependency_links.txt
@@ -20,4 +14,5 @@ GroundStation.egg-info/requires.txt
 GroundStation.egg-info/top_level.txt
 GroundStation.egg-info/zip-safe
 launch/nodes.launch.py
+param/navNode.yaml
 resource/GroundStation

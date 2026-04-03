@@ -1,4 +1,5 @@
 [console_scripts]
-logical = GroundStation.logical:main
-qrcode = GroundStation.qrcode:main
+myMain = GroundStation.myMain:main
+navNode = GroundStation.navNode:main
+testNode = GroundStation.testNode:main
 

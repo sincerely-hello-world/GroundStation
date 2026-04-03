@@ -1,0 +1,7 @@
+1775209645.7000501 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-03-02-47-25-694734-ubuntu-16349
+1775209645.7006407 [INFO] [launch]: Default logging verbosity is set to INFO
+1775209645.7901962 [INFO] [navNode-1]: process started with pid [16351]
+1775209646.4701436 [navNode-1] [INFO] [1775209646.469835046] [navNode]: paths: [{'x': 0.0, 'y': 0.0, 'z': 0.7, 'label': 'TakeOff', 'qrcode': ''}, {'x': -0.25, 'y': 0.75, 'z': 0.8, 'label': 'A6', 'qrcode': ''}, {'x': -0.25, 'y': 0.75, 'z': 1.2, 'label': 'A3', 'qrcode': ''}, {'x': -0.25, 'y': 1.25, 'z': 1.2, 'label': 'A2', 'qrcode': ''}, {'x': -0.25, 'y': 1.25, 'z': 0.8, 'label': 'A5', 'qrcode': ''}, {'x': -0.25, 'y': 1.75, 'z': 0.8, 'label': 'A4', 'qrcode': ''}, {'x': -0.25, 'y': 1.75, 'z': 1.2, 'label': 'A1', 'qrcode': ''}, {'x': 0.75, 'y': 2.75, 'z': 0.7, 'label': 'UpSide1', 'qrcode': ''}, {'x': 0.75, 'y': 2.75, 'z': 0.7, 'label': 'Landpos', 'qrcode': ''}]
+1775209646.4751801 [navNode-1] [INFO] [1775209646.474904579] [navNode]: 上位机导航节点启动成功
+1775209653.9528618 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1775209653.9773500 [INFO] [navNode-1]: process has finished cleanly [pid 16351]

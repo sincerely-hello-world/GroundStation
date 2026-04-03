@@ -1,9 +1,0 @@
-1773665814.3940125 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-03-16-05-56-54-389596-ubuntu-4177
-1773665814.3943763 [INFO] [launch]: Default logging verbosity is set to INFO
-1773665814.5952389 [INFO] [logical-1]: process started with pid [4187]
-1773665817.7315149 [logical-1] [INFO] [1773665817.731218710] [Ground]: ros2 node launch success:Ground!
-1773665837.0748818 [logical-1] [INFO] [1773665837.074609952] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
-1773665843.0269902 [logical-1] [INFO] [1773665843.026667873] [Ground]: land 发送成功 → 飞行站已调用：land服务
-1773666187.5417831 [logical-1] [INFO] [1773666187.541326666] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
-1773666196.9288154 [logical-1] [INFO] [1773666196.928454666] [Ground]: land 发送成功 → 飞行站已调用：land服务
-1773666294.9329839 [INFO] [logical-1]: process has finished cleanly [pid 4187]

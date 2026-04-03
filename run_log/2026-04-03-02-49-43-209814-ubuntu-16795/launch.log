@@ -1,0 +1,19 @@
+1775209783.2139924 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-03-02-49-43-209814-ubuntu-16795
+1775209783.2144585 [INFO] [launch]: Default logging verbosity is set to INFO
+1775209783.2940652 [INFO] [testNode-1]: process started with pid [16797]
+1775209783.6203718 [testNode-1] [INFO] [1775209783.619942071] [testNode]: test:2
+1775209783.6207476 [testNode-1] [INFO] [1775209783.620452115] [testNode]: [
+1775209783.6208174 [testNode-1]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff","qrcode": ""},
+1775209783.6208630 [testNode-1]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"   ,"qrcode": ""},
+1775209783.6208951 [testNode-1]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"   ,"qrcode": ""},
+1775209783.6209259 [testNode-1]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"   ,"qrcode": ""},
+1775209783.6209557 [testNode-1]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"   ,"qrcode": ""},
+1775209783.6209848 [testNode-1]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"   ,"qrcode": ""},
+1775209783.6210134 [testNode-1]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"   ,"qrcode": ""},
+1775209783.6210434 [testNode-1]   {"x": 0.75, "y": 2.75, "z": 0.70, "label": "UpSide1","qrcode": ""},
+1775209783.6210725 [testNode-1]   {"x": 0.75, "y": 2.75, "z": 0.70, "label": "Landpos","qrcode": ""}
+1775209783.6211014 [testNode-1] ]
+1775209783.6211324 [testNode-1] 
+1775209783.6234651 [testNode-1] [INFO] [1775209783.623232653] [testNode]: 测试节点启动成功
+1775209812.2135603 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1775209812.2449231 [INFO] [testNode-1]: process has finished cleanly [pid 16797]

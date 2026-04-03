@@ -12,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        # ← 关键：添加这一行，让 param 目录被安装
+        (os.path.join('share', package_name, 'param'), glob('param/*.yaml')),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch.py'))),
         
     ],
@@ -24,8 +26,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'logical = GroundStation.logical:main',
-            'qrcode = GroundStation.qrcode:main'
+            'myMain = GroundStation.myMain:main',
+            'navNode = GroundStation.navNode:main',
+            'testNode = GroundStation.testNode:main'
         ],
     },
 )

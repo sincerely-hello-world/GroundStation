@@ -1,9 +1,0 @@
-[INFO] [1773465849.644852032] [Ground]: ros2 node launch success:Ground!
-[ERROR] [1773465855.692844909] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
-[ERROR] [1773465855.694187053] [Ground]: fail
-[ERROR] [1773465857.785090204] [Ground]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
-[ERROR] [1773465857.785534775] [Ground]: fail
-[ERROR] [1773465864.434156623] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
-[ERROR] [1773465864.434539354] [Ground]: fail
-[ERROR] [1773465866.674091983] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
-[ERROR] [1773465866.675140108] [Ground]: fail
