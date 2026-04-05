@@ -1,0 +1,4 @@
+[INFO] [1775393922.880703213] [Ground]: ros2 node launch success:Ground!
+[INFO] [1775393926.265403184] [Ground]: 发送 scan_all 成功
+[INFO] [1775393926.268956912] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775393926.401520074] [Ground]: MCU2 send back: Takeoffok

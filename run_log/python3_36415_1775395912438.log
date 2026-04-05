@@ -1,0 +1,142 @@
+[INFO] [1775395912.519853304] [navNode]: paths: [
+  {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+]
+
+[INFO] [1775395912.535061684] [navNode]: 上位机导航节点启动成功
+[INFO] [1775395916.121708760] [navNode]: 收到来自UI的请求：scan_all
+[WARN] [1775395916.122349352] [navNode]: 任务开始执行scan_all
+[INFO] [1775395916.223401572] [navNode]: 状态1：Takeoff--[TakeOff]
+[ERROR] [1775395916.474451155] [navNode]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+[INFO] [1775395916.475529765] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395916.476165194] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395916.523082003] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395916.523431743] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395916.623058712] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395916.623531730] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395916.723204631] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395916.723579122] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395916.823097892] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395916.823514084] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395916.925126824] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395916.926312331] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.023086012] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.023468515] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.123372031] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.123753299] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.223010273] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.223404269] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.323475978] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.323844371] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.422927465] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.423332210] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.522932145] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.523383775] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.623524550] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.623883512] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.723726425] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.724155182] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.822837372] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.823233782] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395917.923803369] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395917.924238429] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.024105505] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.024587116] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.123151443] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.123569747] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.223238691] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.223696272] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.323306660] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.323729938] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.423213593] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.423719233] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.523280151] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.523815504] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.623587173] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.624062893] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.723166086] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.723630385] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.823127296] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.823535587] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395918.923009509] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395918.923438492] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395919.023820155] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395919.024270878] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395919.123076850] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395919.123462626] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395919.223009568] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395919.223402268] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395919.322930036] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395919.323323450] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395919.423203047] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775395919.423707783] [navNode]: 未到目标点
+目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+当前位置:(0.0, 0.0, 0.0)
+[INFO] [1775395919.456131737] [navNode]: 收到来自UI的请求：shutdown-navNode

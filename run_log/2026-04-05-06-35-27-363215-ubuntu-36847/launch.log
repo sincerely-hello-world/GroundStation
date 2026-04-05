@@ -1,0 +1,168 @@
+1775396127.3670075 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-06-35-27-363215-ubuntu-36847
+1775396127.3673642 [INFO] [launch]: Default logging verbosity is set to INFO
+1775396127.4712791 [INFO] [myMain-1]: process started with pid [36849]
+1775396127.4715483 [INFO] [navNode-2]: process started with pid [36851]
+1775396127.9179387 [navNode-2] [INFO] [1775396127.917574357] [navNode]: paths: [
+1775396127.9181981 [navNode-2]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9182727 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9183149 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9183547 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9183934 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9184313 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9184680 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9185081 [navNode-2]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396127.9185479 [navNode-2]   {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775396127.9185886 [navNode-2] ]
+1775396127.9186299 [navNode-2] 
+1775396127.9225736 [navNode-2] [INFO] [1775396127.922313744] [navNode]: 上位机导航节点启动成功
+1775396128.7341402 [myMain-1] [INFO] [1775396128.733553892] [Ground]: ros2 node launch success:Ground!
+1775396130.1777442 [myMain-1] [INFO] [1775396130.177379334] [Ground]: 发送 scan_all 成功
+1775396130.1787918 [navNode-2] [INFO] [1775396130.178503817] [navNode]: 收到来自UI的请求：scan_all
+1775396130.1793206 [navNode-2] [WARN] [1775396130.179140698] [navNode]: 任务开始执行scan_all
+1775396130.1819549 [myMain-1] [INFO] [1775396130.181670851] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396130.2806399 [navNode-2] [INFO] [1775396130.280267896] [navNode]: 状态1：Takeoff--[TakeOff]
+1775396130.5318630 [navNode-2] [ERROR] [1775396130.531394680] [navNode]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+1775396130.5334461 [navNode-2] [INFO] [1775396130.533088166] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396130.5338085 [navNode-2] [INFO] [1775396130.533735938] [navNode]: 未到目标点
+1775396130.5338628 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396130.5339141 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396130.5799515 [navNode-2] [INFO] [1775396130.579527106] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396130.5802956 [navNode-2] [INFO] [1775396130.579942486] [navNode]: 未到目标点
+1775396130.5803485 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396130.5803828 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396130.6799929 [navNode-2] [INFO] [1775396130.679656098] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396130.6805680 [navNode-2] [INFO] [1775396130.680067765] [navNode]: 未到目标点
+1775396130.6806598 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396130.6806977 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396130.7800443 [navNode-2] [INFO] [1775396130.779726362] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396130.7803593 [navNode-2] [INFO] [1775396130.780113838] [navNode]: 未到目标点
+1775396130.7804153 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396130.7804523 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396130.8802016 [navNode-2] [INFO] [1775396130.879826977] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396130.8805337 [navNode-2] [INFO] [1775396130.880193882] [navNode]: 未到目标点
+1775396130.8806236 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396130.8806641 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396130.9798822 [navNode-2] [INFO] [1775396130.979580681] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396130.9802053 [navNode-2] [INFO] [1775396130.979953091] [navNode]: 未到目标点
+1775396130.9802618 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396130.9802983 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.0799952 [navNode-2] [INFO] [1775396131.079690704] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.0803912 [navNode-2] [INFO] [1775396131.080080050] [navNode]: 未到目标点
+1775396131.0804935 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.0805399 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.1809394 [navNode-2] [INFO] [1775396131.180633736] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.1812675 [navNode-2] [INFO] [1775396131.181033853] [navNode]: 未到目标点
+1775396131.1813593 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.1814010 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.2799890 [navNode-2] [INFO] [1775396131.279701073] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.2803521 [navNode-2] [INFO] [1775396131.280094745] [navNode]: 未到目标点
+1775396131.2804916 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.2805519 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.3801863 [navNode-2] [INFO] [1775396131.379866252] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.3806565 [navNode-2] [INFO] [1775396131.380276385] [navNode]: 未到目标点
+1775396131.3807549 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.3807943 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.4799538 [navNode-2] [INFO] [1775396131.479585328] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.4802842 [navNode-2] [INFO] [1775396131.479961361] [navNode]: 未到目标点
+1775396131.4803843 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.4804304 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.5800359 [navNode-2] [INFO] [1775396131.579725288] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.5803831 [navNode-2] [INFO] [1775396131.580125887] [navNode]: 未到目标点
+1775396131.5804782 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.5805559 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.6803017 [navNode-2] [INFO] [1775396131.679812869] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.6808224 [navNode-2] [INFO] [1775396131.680292144] [navNode]: 未到目标点
+1775396131.6809397 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.6810124 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.7805188 [navNode-2] [INFO] [1775396131.780096248] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.7810862 [navNode-2] [INFO] [1775396131.780654966] [navNode]: 未到目标点
+1775396131.7812111 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.7812843 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.8805420 [navNode-2] [INFO] [1775396131.880018460] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.8809803 [navNode-2] [INFO] [1775396131.880605792] [navNode]: 未到目标点
+1775396131.8810823 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.8811431 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396131.9806561 [navNode-2] [INFO] [1775396131.980180842] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396131.9810593 [navNode-2] [INFO] [1775396131.980645847] [navNode]: 未到目标点
+1775396131.9811592 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396131.9812119 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.0802376 [navNode-2] [INFO] [1775396132.079856999] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.0806231 [navNode-2] [INFO] [1775396132.080272556] [navNode]: 未到目标点
+1775396132.0807071 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.0807667 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.1805441 [navNode-2] [INFO] [1775396132.180208355] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.1809838 [navNode-2] [INFO] [1775396132.180705797] [navNode]: 未到目标点
+1775396132.1811247 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.1811771 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.2802622 [navNode-2] [INFO] [1775396132.279837474] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.2807412 [navNode-2] [INFO] [1775396132.280310879] [navNode]: 未到目标点
+1775396132.2808595 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.2809172 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.3810852 [navNode-2] [INFO] [1775396132.380620338] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.3823550 [navNode-2] [INFO] [1775396132.382052914] [navNode]: 未到目标点
+1775396132.3824897 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.3825333 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.4808636 [navNode-2] [INFO] [1775396132.480019593] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.4811141 [navNode-2] [INFO] [1775396132.480440981] [navNode]: 未到目标点
+1775396132.4812057 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.4812472 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.5808277 [navNode-2] [INFO] [1775396132.580465380] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.5812402 [navNode-2] [INFO] [1775396132.580880894] [navNode]: 未到目标点
+1775396132.5813725 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.5814373 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.6801741 [navNode-2] [INFO] [1775396132.679855761] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.6805823 [navNode-2] [INFO] [1775396132.680328804] [navNode]: 未到目标点
+1775396132.6806557 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.6807306 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.7803757 [navNode-2] [INFO] [1775396132.780044580] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.7809846 [navNode-2] [INFO] [1775396132.780519981] [navNode]: 未到目标点
+1775396132.7810767 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.7811196 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.8804967 [navNode-2] [INFO] [1775396132.880004816] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.8809793 [navNode-2] [INFO] [1775396132.880551466] [navNode]: 未到目标点
+1775396132.8811052 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.8811839 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396132.9806571 [navNode-2] [INFO] [1775396132.980242824] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396132.9810569 [navNode-2] [INFO] [1775396132.980703630] [navNode]: 未到目标点
+1775396132.9811735 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396132.9812210 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.0802014 [navNode-2] [INFO] [1775396133.079811370] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396133.0806859 [navNode-2] [INFO] [1775396133.080312824] [navNode]: 未到目标点
+1775396133.0808089 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396133.0808592 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.1803889 [navNode-2] [INFO] [1775396133.179985273] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396133.1808610 [navNode-2] [INFO] [1775396133.180513986] [navNode]: 未到目标点
+1775396133.1810074 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396133.1811109 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.2812192 [navNode-2] [INFO] [1775396133.280800034] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396133.2817776 [navNode-2] [INFO] [1775396133.281356554] [navNode]: 未到目标点
+1775396133.2819061 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396133.2819986 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.3802993 [navNode-2] [INFO] [1775396133.379946619] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396133.3807545 [navNode-2] [INFO] [1775396133.380400184] [navNode]: 未到目标点
+1775396133.3808939 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396133.3809516 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.4802003 [navNode-2] [INFO] [1775396133.479816007] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396133.4806046 [navNode-2] [INFO] [1775396133.480369497] [navNode]: 未到目标点
+1775396133.4807038 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396133.4807594 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.5800061 [navNode-2] [INFO] [1775396133.579697002] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775396133.5804338 [navNode-2] [INFO] [1775396133.580117144] [navNode]: 未到目标点
+1775396133.5805392 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775396133.5806179 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775396133.6167591 [myMain-1] [INFO] [1775396133.616387913] [Ground]: 发送 shutdown-navNode 成功
+1775396133.6176555 [navNode-2] [INFO] [1775396133.617370509] [navNode]: 收到来自UI的请求：shutdown-navNode
+1775396133.6181939 [navNode-2] [WARN] [1775396133.617995151] [navNode]: navNodeshutdown-navNode
+1775396133.7143185 [navNode-2] Traceback (most recent call last):
+1775396133.7146103 [navNode-2]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/navNode", line 11, in <module>
+1775396133.7147305 [navNode-2]     load_entry_point('GroundStation', 'console_scripts', 'navNode')()
+1775396133.7147908 [navNode-2]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/navNode.py", line 342, in main
+1775396133.7148306 [navNode-2]     node.destroy_node()
+1775396133.7148697 [navNode-2]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/node.py", line 1533, in destroy_node
+1775396133.7149165 [navNode-2]     self.handle.destroy()
+1775396133.7149537 [navNode-2]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/handle.py", line 92, in destroy
+1775396133.7149909 [navNode-2]     raise InvalidHandle('Asked to destroy handle, but it was already destroyed')
+1775396133.7150266 [navNode-2] rclpy.handle.InvalidHandle: Asked to destroy handle, but it was already destroyed
+1775396133.7445664 [navNode-2] The following exception was never retrieved: 
+1775396133.7594063 [ERROR] [navNode-2]: process has died [pid 36851, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/navNode --ros-args --params-file /home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/param/navNode.yaml'].
+1775396134.2472880 [INFO] [myMain-1]: process has finished cleanly [pid 36849]

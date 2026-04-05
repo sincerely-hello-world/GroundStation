@@ -1,0 +1,138 @@
+1775397289.2868774 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-06-54-49-281864-ubuntu-38401
+1775397289.2873223 [INFO] [launch]: Default logging verbosity is set to INFO
+1775397289.3860910 [INFO] [myMain-1]: process started with pid [38408]
+1775397289.3863313 [INFO] [navNode-2]: process started with pid [38410]
+1775397290.1137991 [navNode-2] [INFO] [1775397290.113266400] [navNode]: paths: [
+1775397290.1140130 [navNode-2]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1140838 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1141403 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1141920 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1142461 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1142976 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1143496 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1144433 [navNode-2]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397290.1145060 [navNode-2]   {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775397290.1145606 [navNode-2] ]
+1775397290.1146133 [navNode-2] 
+1775397290.1285672 [navNode-2] [INFO] [1775397290.126569985] [navNode]: 上位机导航节点启动成功
+1775397290.8983970 [myMain-1] [INFO] [1775397290.897886382] [Ground]: ros2 node launch success:Ground!
+1775397294.6168184 [myMain-1] [INFO] [1775397294.616491358] [Ground]: 发送 scan_all 成功
+1775397294.6175411 [navNode-2] [INFO] [1775397294.616768882] [navNode]: 收到来自UI的请求：scan_all
+1775397294.6177413 [navNode-2] [WARN] [1775397294.617355262] [navNode]: 任务开始执行scan_all
+1775397294.6192527 [myMain-1] [INFO] [1775397294.619020720] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775397294.7182152 [navNode-2] [INFO] [1775397294.717755139] [navNode]: 状态1：Takeoff--[TakeOff]
+1775397294.9691067 [navNode-2] [ERROR] [1775397294.968776757] [navNode]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+1775397294.9699574 [navNode-2] [INFO] [1775397294.969800602] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397294.9702442 [navNode-2] [INFO] [1775397294.970168201] [navNode]: 未到目标点
+1775397294.9703057 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397294.9703381 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.0183856 [navNode-2] [INFO] [1775397295.018083464] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.0187562 [navNode-2] [INFO] [1775397295.018472057] [navNode]: 未到目标点
+1775397295.0188234 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.0188844 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.1184304 [navNode-2] [INFO] [1775397295.118130465] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.1187971 [navNode-2] [INFO] [1775397295.118545027] [navNode]: 未到目标点
+1775397295.1188643 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.1189058 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.2182429 [navNode-2] [INFO] [1775397295.217939492] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.2185986 [navNode-2] [INFO] [1775397295.218326721] [navNode]: 未到目标点
+1775397295.2186940 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.2187452 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.3184853 [navNode-2] [INFO] [1775397295.318198828] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.3189325 [navNode-2] [INFO] [1775397295.318569639] [navNode]: 未到目标点
+1775397295.3190303 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.3190744 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.4183807 [navNode-2] [INFO] [1775397295.417982549] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.4187665 [navNode-2] [INFO] [1775397295.418465664] [navNode]: 未到目标点
+1775397295.4188581 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.4189174 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.5186520 [navNode-2] [INFO] [1775397295.518293643] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.5189767 [navNode-2] [INFO] [1775397295.518689296] [navNode]: 未到目标点
+1775397295.5190563 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.5191033 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.6185198 [navNode-2] [INFO] [1775397295.618245925] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.6188831 [navNode-2] [INFO] [1775397295.618635598] [navNode]: 未到目标点
+1775397295.6189716 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.6190352 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.7183847 [navNode-2] [INFO] [1775397295.718027406] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.7187588 [navNode-2] [INFO] [1775397295.718410527] [navNode]: 未到目标点
+1775397295.7188418 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.7189000 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.8183188 [navNode-2] [INFO] [1775397295.818025633] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.8187099 [navNode-2] [INFO] [1775397295.818398128] [navNode]: 未到目标点
+1775397295.8188164 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.8188753 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397295.9186225 [navNode-2] [INFO] [1775397295.918348788] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397295.9189398 [navNode-2] [INFO] [1775397295.918736919] [navNode]: 未到目标点
+1775397295.9190183 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397295.9190648 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.0186591 [navNode-2] [INFO] [1775397296.018372436] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.0190339 [navNode-2] [INFO] [1775397296.018781717] [navNode]: 未到目标点
+1775397296.0191140 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.0191631 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.1187325 [navNode-2] [INFO] [1775397296.118312058] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.1190698 [navNode-2] [INFO] [1775397296.118759681] [navNode]: 未到目标点
+1775397296.1191514 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.1191967 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.2182946 [navNode-2] [INFO] [1775397296.217995928] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.2186964 [navNode-2] [INFO] [1775397296.218398572] [navNode]: 未到目标点
+1775397296.2188046 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.2188666 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.3183608 [navNode-2] [INFO] [1775397296.318000299] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.3186800 [navNode-2] [INFO] [1775397296.318387487] [navNode]: 未到目标点
+1775397296.3187768 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.3188362 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.4186885 [navNode-2] [INFO] [1775397296.418290246] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.4191012 [navNode-2] [INFO] [1775397296.418731443] [navNode]: 未到目标点
+1775397296.4192016 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.4192646 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.5181217 [navNode-2] [INFO] [1775397296.517815176] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.5184727 [navNode-2] [INFO] [1775397296.518187176] [navNode]: 未到目标点
+1775397296.5185595 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.5186009 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.6198962 [navNode-2] [INFO] [1775397296.619374264] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.6205742 [navNode-2] [INFO] [1775397296.620175824] [navNode]: 未到目标点
+1775397296.6207883 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.6209126 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.7183754 [navNode-2] [INFO] [1775397296.718015377] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.7187338 [navNode-2] [INFO] [1775397296.718402274] [navNode]: 未到目标点
+1775397296.7188151 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.7188535 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.8206172 [navNode-2] [INFO] [1775397296.819974827] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.8213763 [navNode-2] [INFO] [1775397296.821062271] [navNode]: 未到目标点
+1775397296.8215835 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.8216944 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397296.9185429 [navNode-2] [INFO] [1775397296.918188710] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397296.9189043 [navNode-2] [INFO] [1775397296.918592634] [navNode]: 未到目标点
+1775397296.9189832 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397296.9190240 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397297.0184004 [navNode-2] [INFO] [1775397297.018068566] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397297.0187602 [navNode-2] [INFO] [1775397297.018427074] [navNode]: 未到目标点
+1775397297.0188501 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397297.0188890 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397297.1204600 [navNode-2] [INFO] [1775397297.119715277] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397297.1212912 [navNode-2] [INFO] [1775397297.120813484] [navNode]: 未到目标点
+1775397297.1214640 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397297.1215787 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397297.2183032 [navNode-2] [INFO] [1775397297.218002893] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397297.2186439 [navNode-2] [INFO] [1775397297.218390562] [navNode]: 未到目标点
+1775397297.2187495 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397297.2187903 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397297.2670515 [myMain-1] [INFO] [1775397297.266761159] [Ground]: 发送 shutdown-navNode 成功
+1775397297.2680602 [navNode-2] [INFO] [1775397297.267807072] [navNode]: 收到来自UI的请求：shutdown-navNode
+1775397297.2683227 [navNode-2] [WARN] [1775397297.268198137] [navNode]: navNodeshutdown-navNode
+1775397297.2685559 [navNode-2] [WARN] [1775397297.268489264] [navNode]: 任务开始执行shutdown-navNode
+1775397297.2700486 [myMain-1] [INFO] [1775397297.269886092] [Ground]: shutdown-navNode 响应成功 → 回复：shutdown-navNode
+1775397297.3228600 [navNode-2] [INFO] [1775397297.322419197] [navNode]: 状态8：End--[任务结束]
+1775397297.4018106 [navNode-2] Traceback (most recent call last):
+1775397297.4019861 [navNode-2]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/navNode", line 11, in <module>
+1775397297.4020345 [navNode-2]     load_entry_point('GroundStation', 'console_scripts', 'navNode')()
+1775397297.4020712 [navNode-2]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/navNode.py", line 346, in main
+1775397297.4021065 [navNode-2]     executor.shutdown(node)
+1775397297.4021418 [navNode-2]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 219, in shutdown
+1775397297.4021759 [navNode-2]     if not self._work_tracker.wait(timeout_sec):
+1775397297.4022193 [navNode-2]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 101, in wait
+1775397297.4022536 [navNode-2]     if timeout_sec is not None and timeout_sec < 0:
+1775397297.4022861 [navNode-2] TypeError: '<' not supported between instances of 'navNode' and 'int'
+1775397297.4494822 [ERROR] [navNode-2]: process has died [pid 38410, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/navNode --ros-args --params-file /home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/param/navNode.yaml'].
+1775397297.9125395 [INFO] [myMain-1]: process has finished cleanly [pid 38408]

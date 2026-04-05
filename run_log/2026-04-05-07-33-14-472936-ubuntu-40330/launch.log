@@ -1,0 +1,427 @@
+1775399594.4777610 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-07-33-14-472936-ubuntu-40330
+1775399594.4788315 [INFO] [launch]: Default logging verbosity is set to INFO
+1775399594.6104095 [INFO] [myMain-1]: process started with pid [40332]
+1775399594.6111486 [INFO] [navNode-2]: process started with pid [40334]
+1775399595.2561579 [navNode-2] [INFO] [1775399595.252592934] [navNode]: paths: [
+1775399595.2563832 [navNode-2]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2564611 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2565308 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2565837 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2566340 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2566843 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2567351 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2568405 [navNode-2]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775399595.2569091 [navNode-2]   {"x": 0.00, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775399595.2569630 [navNode-2] ]
+1775399595.2570167 [navNode-2] 
+1775399595.2736287 [navNode-2] [INFO] [1775399595.267709699] [navNode]: 上位机导航节点启动成功
+1775399597.2293904 [myMain-1] [INFO] [1775399597.229003615] [Ground]: ros2 node launch success:Ground!
+1775399600.6234407 [myMain-1] [INFO] [1775399600.622860233] [Ground]: 发送 scan_all 成功
+1775399600.6238999 [navNode-2] [INFO] [1775399600.623134747] [navNode]: 收到来自UI的请求：scan_all
+1775399600.6242645 [navNode-2] [WARN] [1775399600.623791621] [navNode]: 任务开始执行scan_all
+1775399600.6259089 [myMain-1] [INFO] [1775399600.625649432] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775399600.7246768 [navNode-2] [INFO] [1775399600.724295034] [navNode]: 状态1：Takeoff--[TakeOff]
+1775399600.9756737 [navNode-2] [ERROR] [1775399600.975338749] [navNode]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+1775399600.9768105 [navNode-2] [INFO] [1775399600.976606773] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399600.9770608 [navNode-2] [INFO] [1775399600.977002080] [navNode]: 未到目标点
+1775399600.9771302 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399600.9771683 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.0254462 [navNode-2] [INFO] [1775399601.025082330] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.0260131 [navNode-2] [INFO] [1775399601.025531206] [navNode]: 未到目标点
+1775399601.0262034 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.0262506 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.1248088 [navNode-2] [INFO] [1775399601.124554672] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.1256516 [navNode-2] [INFO] [1775399601.125526927] [navNode]: 未到目标点
+1775399601.1257508 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.1257908 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.2250397 [navNode-2] [INFO] [1775399601.224734956] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.2254319 [navNode-2] [INFO] [1775399601.225118169] [navNode]: 未到目标点
+1775399601.2255208 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.2255657 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.3270874 [navNode-2] [INFO] [1775399601.326607435] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.3290627 [navNode-2] [INFO] [1775399601.328716750] [navNode]: 未到目标点
+1775399601.3293698 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.3294837 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.4250231 [navNode-2] [INFO] [1775399601.424719759] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.4253886 [navNode-2] [INFO] [1775399601.425086456] [navNode]: 未到目标点
+1775399601.4254687 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.4255180 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.5249784 [navNode-2] [INFO] [1775399601.524609792] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.5253363 [navNode-2] [INFO] [1775399601.525018741] [navNode]: 未到目标点
+1775399601.5254359 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.5254815 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.6250527 [navNode-2] [INFO] [1775399601.624668317] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.6254201 [navNode-2] [INFO] [1775399601.625054750] [navNode]: 未到目标点
+1775399601.6255009 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.6255412 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.7250066 [navNode-2] [INFO] [1775399601.724562656] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.7254095 [navNode-2] [INFO] [1775399601.725013255] [navNode]: 未到目标点
+1775399601.7255723 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.7256324 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.8250630 [navNode-2] [INFO] [1775399601.824750496] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.8254201 [navNode-2] [INFO] [1775399601.825131505] [navNode]: 未到目标点
+1775399601.8255200 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.8255653 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399601.9256332 [navNode-2] [INFO] [1775399601.925251588] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399601.9260473 [navNode-2] [INFO] [1775399601.925667014] [navNode]: 未到目标点
+1775399601.9261246 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399601.9261847 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.0249231 [navNode-2] [INFO] [1775399602.024607328] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.0252807 [navNode-2] [INFO] [1775399602.024994637] [navNode]: 未到目标点
+1775399602.0253775 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.0254221 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.1247516 [navNode-2] [INFO] [1775399602.124442376] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.1251328 [navNode-2] [INFO] [1775399602.124820367] [navNode]: 未到目标点
+1775399602.1252148 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.1252756 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.2268476 [navNode-2] [INFO] [1775399602.226349308] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.2272575 [navNode-2] [INFO] [1775399602.226850409] [navNode]: 未到目标点
+1775399602.2273574 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.2274117 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.3248792 [navNode-2] [INFO] [1775399602.324521040] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.3252516 [navNode-2] [INFO] [1775399602.324879165] [navNode]: 未到目标点
+1775399602.3253453 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.3253911 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.4247875 [navNode-2] [INFO] [1775399602.424479265] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.4251354 [navNode-2] [INFO] [1775399602.424867878] [navNode]: 未到目标点
+1775399602.4252191 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.4252806 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.5250103 [navNode-2] [INFO] [1775399602.524642882] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.5254085 [navNode-2] [INFO] [1775399602.525049036] [navNode]: 未到目标点
+1775399602.5254986 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.5255411 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.6247296 [navNode-2] [INFO] [1775399602.624365692] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.6251044 [navNode-2] [INFO] [1775399602.624730561] [navNode]: 未到目标点
+1775399602.6251943 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.6252384 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.7250745 [navNode-2] [INFO] [1775399602.724735439] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.7254741 [navNode-2] [INFO] [1775399602.725103307] [navNode]: 未到目标点
+1775399602.7255442 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.7255805 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.8253863 [navNode-2] [INFO] [1775399602.825005057] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.8257718 [navNode-2] [INFO] [1775399602.825385216] [navNode]: 未到目标点
+1775399602.8258636 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.8259227 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399602.9248092 [navNode-2] [INFO] [1775399602.924501825] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399602.9251938 [navNode-2] [INFO] [1775399602.924875976] [navNode]: 未到目标点
+1775399602.9252720 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399602.9253163 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.0251372 [navNode-2] [INFO] [1775399603.024778666] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.0255582 [navNode-2] [INFO] [1775399603.025155135] [navNode]: 未到目标点
+1775399603.0256557 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.0257332 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.1248839 [navNode-2] [INFO] [1775399603.124511144] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.1252663 [navNode-2] [INFO] [1775399603.124912565] [navNode]: 未到目标点
+1775399603.1253622 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.1254075 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.2249634 [navNode-2] [INFO] [1775399603.224667077] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.2253931 [navNode-2] [INFO] [1775399603.225062937] [navNode]: 未到目标点
+1775399603.2255015 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.2255499 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.3250148 [navNode-2] [INFO] [1775399603.324662030] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.3253880 [navNode-2] [INFO] [1775399603.325015765] [navNode]: 未到目标点
+1775399603.3258600 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.3259726 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.4248314 [navNode-2] [INFO] [1775399603.424526374] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.4251852 [navNode-2] [INFO] [1775399603.424893896] [navNode]: 未到目标点
+1775399603.4252470 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.4252830 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.5248551 [navNode-2] [INFO] [1775399603.524496401] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.5252576 [navNode-2] [INFO] [1775399603.524872779] [navNode]: 未到目标点
+1775399603.5253377 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.5253835 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.6246958 [navNode-2] [INFO] [1775399603.624350808] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.6250184 [navNode-2] [INFO] [1775399603.624796688] [navNode]: 未到目标点
+1775399603.6250758 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.6251140 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.7249207 [navNode-2] [INFO] [1775399603.724615389] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.7253182 [navNode-2] [INFO] [1775399603.724988276] [navNode]: 未到目标点
+1775399603.7254429 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.7255232 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.8248935 [navNode-2] [INFO] [1775399603.824582979] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.8252592 [navNode-2] [INFO] [1775399603.824944633] [navNode]: 未到目标点
+1775399603.8253593 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.8254080 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399603.9249692 [navNode-2] [INFO] [1775399603.924669129] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399603.9253414 [navNode-2] [INFO] [1775399603.925062317] [navNode]: 未到目标点
+1775399603.9254198 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399603.9254823 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.0249896 [navNode-2] [INFO] [1775399604.024727065] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.0253534 [navNode-2] [INFO] [1775399604.025075887] [navNode]: 未到目标点
+1775399604.0254385 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.0254939 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.1249216 [navNode-2] [INFO] [1775399604.124561008] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.1252739 [navNode-2] [INFO] [1775399604.124944608] [navNode]: 未到目标点
+1775399604.1253591 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.1253998 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.2249177 [navNode-2] [INFO] [1775399604.224603175] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.2252810 [navNode-2] [INFO] [1775399604.224987662] [navNode]: 未到目标点
+1775399604.2254033 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.2254493 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.3250015 [navNode-2] [INFO] [1775399604.324620937] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.3253791 [navNode-2] [INFO] [1775399604.324987433] [navNode]: 未到目标点
+1775399604.3254592 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.3255203 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.4251263 [navNode-2] [INFO] [1775399604.424751874] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.4254956 [navNode-2] [INFO] [1775399604.425121927] [navNode]: 未到目标点
+1775399604.4255838 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.4256458 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.5262887 [navNode-2] [INFO] [1775399604.525837196] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.5267525 [navNode-2] [INFO] [1775399604.526322521] [navNode]: 未到目标点
+1775399604.5268164 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.5268528 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.6253715 [navNode-2] [INFO] [1775399604.625024352] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.6257310 [navNode-2] [INFO] [1775399604.625393517] [navNode]: 未到目标点
+1775399604.6258228 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.6258626 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.7249546 [navNode-2] [INFO] [1775399604.724679016] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.7253325 [navNode-2] [INFO] [1775399604.725047946] [navNode]: 未到目标点
+1775399604.7254155 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.7254820 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.8281996 [navNode-2] [INFO] [1775399604.827461986] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.8290493 [navNode-2] [INFO] [1775399604.828586632] [navNode]: 未到目标点
+1775399604.8292117 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.8293126 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399604.9249079 [navNode-2] [INFO] [1775399604.924546454] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399604.9252820 [navNode-2] [INFO] [1775399604.924901741] [navNode]: 未到目标点
+1775399604.9253602 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399604.9254007 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.0256317 [navNode-2] [INFO] [1775399605.025220995] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.0260923 [navNode-2] [INFO] [1775399605.025637696] [navNode]: 未到目标点
+1775399605.0261846 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.0262456 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.1248288 [navNode-2] [INFO] [1775399605.124519865] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.1251931 [navNode-2] [INFO] [1775399605.124875815] [navNode]: 未到目标点
+1775399605.1252737 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.1253181 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.2253144 [navNode-2] [INFO] [1775399605.224917539] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.2257590 [navNode-2] [INFO] [1775399605.225313718] [navNode]: 未到目标点
+1775399605.2258365 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.2258992 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.3249056 [navNode-2] [INFO] [1775399605.324583121] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.3252573 [navNode-2] [INFO] [1775399605.324971753] [navNode]: 未到目标点
+1775399605.3253579 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.3254380 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.4253945 [navNode-2] [INFO] [1775399605.425086336] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.4257386 [navNode-2] [INFO] [1775399605.425446434] [navNode]: 未到目标点
+1775399605.4258342 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.4258811 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.5248711 [navNode-2] [INFO] [1775399605.524605018] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.5252402 [navNode-2] [INFO] [1775399605.524963689] [navNode]: 未到目标点
+1775399605.5253348 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.5253799 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.6248634 [navNode-2] [INFO] [1775399605.624508703] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.6252322 [navNode-2] [INFO] [1775399605.624883979] [navNode]: 未到目标点
+1775399605.6253138 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.6253581 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.7267246 [navNode-2] [INFO] [1775399605.726116905] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.7271979 [navNode-2] [INFO] [1775399605.726555095] [navNode]: 未到目标点
+1775399605.7272980 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.7273436 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.8250322 [navNode-2] [INFO] [1775399605.824657963] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.8253858 [navNode-2] [INFO] [1775399605.825063074] [navNode]: 未到目标点
+1775399605.8254812 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.8255231 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399605.9250743 [navNode-2] [INFO] [1775399605.924745751] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399605.9254465 [navNode-2] [INFO] [1775399605.925113524] [navNode]: 未到目标点
+1775399605.9255204 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399605.9255633 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.0251212 [navNode-2] [INFO] [1775399606.024757645] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.0259423 [navNode-2] [INFO] [1775399606.025195589] [navNode]: 未到目标点
+1775399606.0262351 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.0263636 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.1252227 [navNode-2] [INFO] [1775399606.124858618] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.1256094 [navNode-2] [INFO] [1775399606.125241120] [navNode]: 未到目标点
+1775399606.1256888 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.1257477 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.2249506 [navNode-2] [INFO] [1775399606.224579588] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.2253318 [navNode-2] [INFO] [1775399606.224942248] [navNode]: 未到目标点
+1775399606.2254236 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.2255025 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.3251252 [navNode-2] [INFO] [1775399606.324759373] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.3255723 [navNode-2] [INFO] [1775399606.325167842] [navNode]: 未到目标点
+1775399606.3256521 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.3257420 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.4266596 [navNode-2] [INFO] [1775399606.426260464] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.4271684 [navNode-2] [INFO] [1775399606.426636522] [navNode]: 未到目标点
+1775399606.4272501 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.4273100 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.5249555 [navNode-2] [INFO] [1775399606.524592226] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.5253210 [navNode-2] [INFO] [1775399606.524970434] [navNode]: 未到目标点
+1775399606.5254133 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.5254564 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.6258986 [navNode-2] [INFO] [1775399606.625612569] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.6262388 [navNode-2] [INFO] [1775399606.625982105] [navNode]: 未到目标点
+1775399606.6263180 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.6263576 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.7248306 [navNode-2] [INFO] [1775399606.724538033] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.7251358 [navNode-2] [INFO] [1775399606.724911068] [navNode]: 未到目标点
+1775399606.7252436 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.7252860 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.8251212 [navNode-2] [INFO] [1775399606.824817218] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.8254786 [navNode-2] [INFO] [1775399606.825210256] [navNode]: 未到目标点
+1775399606.8255405 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.8255861 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399606.9251342 [navNode-2] [INFO] [1775399606.924770778] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399606.9254954 [navNode-2] [INFO] [1775399606.925137795] [navNode]: 未到目标点
+1775399606.9255853 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399606.9256291 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.0250800 [navNode-2] [INFO] [1775399607.024664812] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.0254560 [navNode-2] [INFO] [1775399607.025157255] [navNode]: 未到目标点
+1775399607.0255151 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.0255518 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.1247792 [navNode-2] [INFO] [1775399607.124486501] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.1250823 [navNode-2] [INFO] [1775399607.124864123] [navNode]: 未到目标点
+1775399607.1251564 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.1252012 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.2251160 [navNode-2] [INFO] [1775399607.224688026] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.2255800 [navNode-2] [INFO] [1775399607.225148064] [navNode]: 未到目标点
+1775399607.2256396 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.2256932 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.3274307 [navNode-2] [INFO] [1775399607.326898323] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.3281035 [navNode-2] [INFO] [1775399607.327643387] [navNode]: 未到目标点
+1775399607.3283138 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.3284409 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.4249699 [navNode-2] [INFO] [1775399607.424600476] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.4253211 [navNode-2] [INFO] [1775399607.424980244] [navNode]: 未到目标点
+1775399607.4254167 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.4254732 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.5249233 [navNode-2] [INFO] [1775399607.524614338] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.5252740 [navNode-2] [INFO] [1775399607.524997239] [navNode]: 未到目标点
+1775399607.5253730 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.5254200 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.6268096 [navNode-2] [INFO] [1775399607.626144832] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.6275287 [navNode-2] [INFO] [1775399607.627039351] [navNode]: 未到目标点
+1775399607.6276615 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.6278050 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.7246115 [navNode-2] [INFO] [1775399607.724243770] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.7250242 [navNode-2] [INFO] [1775399607.724638987] [navNode]: 未到目标点
+1775399607.7251098 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.7251523 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.8249836 [navNode-2] [INFO] [1775399607.824668437] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.8253641 [navNode-2] [INFO] [1775399607.825077991] [navNode]: 未到目标点
+1775399607.8254569 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.8255363 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399607.9246628 [navNode-2] [INFO] [1775399607.924358436] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399607.9250450 [navNode-2] [INFO] [1775399607.924748439] [navNode]: 未到目标点
+1775399607.9251380 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399607.9251931 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.0251901 [navNode-2] [INFO] [1775399608.024818842] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.0256321 [navNode-2] [INFO] [1775399608.025316597] [navNode]: 未到目标点
+1775399608.0257552 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.0258117 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.1247964 [navNode-2] [INFO] [1775399608.124488315] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.1251767 [navNode-2] [INFO] [1775399608.124916653] [navNode]: 未到目标点
+1775399608.1252747 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.1253235 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.2249455 [navNode-2] [INFO] [1775399608.224490018] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.2254534 [navNode-2] [INFO] [1775399608.224951691] [navNode]: 未到目标点
+1775399608.2255750 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.2256620 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.3248091 [navNode-2] [INFO] [1775399608.324443787] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.3252320 [navNode-2] [INFO] [1775399608.324890394] [navNode]: 未到目标点
+1775399608.3255355 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.3256631 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.4248915 [navNode-2] [INFO] [1775399608.424441106] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.4255900 [navNode-2] [INFO] [1775399608.424984154] [navNode]: 未到目标点
+1775399608.4258010 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.4258704 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.5249259 [navNode-2] [INFO] [1775399608.524575722] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.5253737 [navNode-2] [INFO] [1775399608.525021056] [navNode]: 未到目标点
+1775399608.5254428 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.5254860 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.6249478 [navNode-2] [INFO] [1775399608.624592013] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.6253998 [navNode-2] [INFO] [1775399608.625054490] [navNode]: 未到目标点
+1775399608.6254776 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.6255221 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.7251649 [navNode-2] [INFO] [1775399608.724835425] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.7255995 [navNode-2] [INFO] [1775399608.725378470] [navNode]: 未到目标点
+1775399608.7257195 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.7257779 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.8254435 [navNode-2] [INFO] [1775399608.824990074] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.8259568 [navNode-2] [INFO] [1775399608.825589485] [navNode]: 未到目标点
+1775399608.8261600 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.8262310 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399608.9253938 [navNode-2] [INFO] [1775399608.925042499] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399608.9258785 [navNode-2] [INFO] [1775399608.925618008] [navNode]: 未到目标点
+1775399608.9259899 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399608.9260530 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.0252709 [navNode-2] [INFO] [1775399609.024876884] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.0257113 [navNode-2] [INFO] [1775399609.025386138] [navNode]: 未到目标点
+1775399609.0257897 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.0258396 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.1258719 [navNode-2] [INFO] [1775399609.125415901] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.1266057 [navNode-2] [INFO] [1775399609.125991800] [navNode]: 未到目标点
+1775399609.1268504 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.1269598 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.2249982 [navNode-2] [INFO] [1775399609.224612803] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.2256916 [navNode-2] [INFO] [1775399609.225110499] [navNode]: 未到目标点
+1775399609.2258892 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.2259874 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.3251417 [navNode-2] [INFO] [1775399609.324731752] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.3256812 [navNode-2] [INFO] [1775399609.325253985] [navNode]: 未到目标点
+1775399609.3258169 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.3259270 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.4249303 [navNode-2] [INFO] [1775399609.424604540] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.4253123 [navNode-2] [INFO] [1775399609.425029280] [navNode]: 未到目标点
+1775399609.4254193 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.4254942 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.5251129 [navNode-2] [INFO] [1775399609.524746976] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.5255809 [navNode-2] [INFO] [1775399609.525264223] [navNode]: 未到目标点
+1775399609.5256937 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.5257430 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.6251082 [navNode-2] [INFO] [1775399609.624629375] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.6256247 [navNode-2] [INFO] [1775399609.625060622] [navNode]: 未到目标点
+1775399609.6257327 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.6257877 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.7248592 [navNode-2] [INFO] [1775399609.724457020] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.7252076 [navNode-2] [INFO] [1775399609.724907506] [navNode]: 未到目标点
+1775399609.7253196 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.7253730 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.8257074 [navNode-2] [INFO] [1775399609.824973698] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.8259256 [navNode-2] [INFO] [1775399609.825398840] [navNode]: 未到目标点
+1775399609.8259821 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.8260193 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399609.9251485 [navNode-2] [INFO] [1775399609.924712834] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399609.9255214 [navNode-2] [INFO] [1775399609.925231630] [navNode]: 未到目标点
+1775399609.9255941 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399609.9256363 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.0255370 [navNode-2] [INFO] [1775399610.024733781] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.0257964 [navNode-2] [INFO] [1775399610.025165486] [navNode]: 未到目标点
+1775399610.0258532 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.0258946 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.1249218 [navNode-2] [INFO] [1775399610.124593838] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.1252625 [navNode-2] [INFO] [1775399610.125028169] [navNode]: 未到目标点
+1775399610.1253247 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.1253638 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.2250750 [navNode-2] [INFO] [1775399610.224785004] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.2254770 [navNode-2] [INFO] [1775399610.225161493] [navNode]: 未到目标点
+1775399610.2255480 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.2255869 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.3249509 [navNode-2] [INFO] [1775399610.324632462] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.3254006 [navNode-2] [INFO] [1775399610.325097787] [navNode]: 未到目标点
+1775399610.3254573 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.3254917 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.4248242 [navNode-2] [INFO] [1775399610.424499492] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.4252079 [navNode-2] [INFO] [1775399610.424918183] [navNode]: 未到目标点
+1775399610.4253027 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.4253542 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.5250263 [navNode-2] [INFO] [1775399610.524640228] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.5256250 [navNode-2] [INFO] [1775399610.525204483] [navNode]: 未到目标点
+1775399610.5257316 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.5257759 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.6249936 [navNode-2] [INFO] [1775399610.624573118] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.6253445 [navNode-2] [INFO] [1775399610.625038171] [navNode]: 未到目标点
+1775399610.6254051 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.6254425 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.7246673 [navNode-2] [INFO] [1775399610.724327003] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775399610.7250438 [navNode-2] [INFO] [1775399610.724771532] [navNode]: 未到目标点
+1775399610.7251077 [navNode-2] 目标位置：(0.00, 0.00, 0.70)-[TakeOff][]
+1775399610.7251444 [navNode-2] 当前位置：(0.00, 0.00, 0.00)-到达?:[MCU:False]-[POS:False]
+1775399610.7779541 [myMain-1] [INFO] [1775399610.777412518] [Ground]: 发送 shutdown-navNode 成功
+1775399610.7786775 [navNode-2] [INFO] [1775399610.778445016] [navNode]: 收到来自UI的请求：shutdown-navNode
+1775399610.7789526 [navNode-2] [WARN] [1775399610.778854605] [navNode]: navNodeshutdown-navNode
+1775399610.7811437 [myMain-1] [INFO] [1775399610.780939438] [Ground]: shutdown-navNode 响应成功 → shutdown-navNode关闭节点
+1775399610.8580418 [navNode-2] The following exception was never retrieved: Tried to use a handle that has been destroyed.
+1775399610.8675401 [INFO] [navNode-2]: process has finished cleanly [pid 40334]
+1775399611.5301390 [INFO] [myMain-1]: process has finished cleanly [pid 40332]

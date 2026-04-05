@@ -1,0 +1,67 @@
+1775397478.1712012 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-06-57-58-165986-ubuntu-38836
+1775397478.1716239 [INFO] [launch]: Default logging verbosity is set to INFO
+1775397478.2452333 [INFO] [myMain-1]: process started with pid [38838]
+1775397478.2454228 [INFO] [navNode-2]: process started with pid [38840]
+1775397478.5728455 [navNode-2] [INFO] [1775397478.572551682] [navNode]: paths: [
+1775397478.5730131 [navNode-2]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5730569 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5730965 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5731263 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5731564 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5731850 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5732145 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5732429 [navNode-2]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775397478.5732722 [navNode-2]   {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775397478.5733042 [navNode-2] ]
+1775397478.5733340 [navNode-2] 
+1775397478.5818503 [navNode-2] [INFO] [1775397478.581595082] [navNode]: 上位机导航节点启动成功
+1775397479.1089938 [myMain-1] [INFO] [1775397479.108583535] [Ground]: ros2 node launch success:Ground!
+1775397482.0191748 [myMain-1] [INFO] [1775397482.018618720] [Ground]: 发送 scan_all 成功
+1775397482.0196640 [navNode-2] [INFO] [1775397482.018916223] [navNode]: 收到来自UI的请求：scan_all
+1775397482.0198076 [navNode-2] [WARN] [1775397482.019625052] [navNode]: 任务开始执行scan_all
+1775397482.0224252 [myMain-1] [INFO] [1775397482.022206405] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775397482.1205859 [navNode-2] [INFO] [1775397482.120009542] [navNode]: 状态1：Takeoff--[TakeOff]
+1775397482.3714967 [navNode-2] [ERROR] [1775397482.371119171] [navNode]: 发送 takeoff 失败: ROS2 服务 [ControlService] 未启动或超时
+1775397482.3725631 [navNode-2] [INFO] [1775397482.372323163] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.3727920 [navNode-2] [INFO] [1775397482.372695214] [navNode]: 未到目标点
+1775397482.3728454 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.3728800 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397482.4206448 [navNode-2] [INFO] [1775397482.420323856] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.4210353 [navNode-2] [INFO] [1775397482.420724285] [navNode]: 未到目标点
+1775397482.4211676 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.4212167 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397482.5203648 [navNode-2] [INFO] [1775397482.520068417] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.5207229 [navNode-2] [INFO] [1775397482.520443702] [navNode]: 未到目标点
+1775397482.5208223 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.5208695 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397482.6205840 [navNode-2] [INFO] [1775397482.620278136] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.6209815 [navNode-2] [INFO] [1775397482.620667311] [navNode]: 未到目标点
+1775397482.6210880 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.6211531 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397482.7205634 [navNode-2] [INFO] [1775397482.720258283] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.7209387 [navNode-2] [INFO] [1775397482.720636830] [navNode]: 未到目标点
+1775397482.7210429 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.7211058 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397482.8206851 [navNode-2] [INFO] [1775397482.820384786] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.8210747 [navNode-2] [INFO] [1775397482.820771038] [navNode]: 未到目标点
+1775397482.8211582 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.8212223 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397482.9204895 [navNode-2] [INFO] [1775397482.920119888] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397482.9209425 [navNode-2] [INFO] [1775397482.920493371] [navNode]: 未到目标点
+1775397482.9210393 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397482.9210835 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397483.0207336 [navNode-2] [INFO] [1775397483.020352965] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397483.0212421 [navNode-2] [INFO] [1775397483.020789119] [navNode]: 未到目标点
+1775397483.0213337 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397483.0213766 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397483.1205661 [navNode-2] [INFO] [1775397483.120268423] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775397483.1209269 [navNode-2] [INFO] [1775397483.120636336] [navNode]: 未到目标点
+1775397483.1210043 [navNode-2] 目标位置:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:False]
+1775397483.1210480 [navNode-2] 当前位置:(0.0, 0.0, 0.0)
+1775397483.2082541 [myMain-1] [INFO] [1775397483.208000245] [Ground]: 发送 shutdown-navNode 成功
+1775397483.2097709 [navNode-2] [INFO] [1775397483.209549384] [navNode]: 收到来自UI的请求：shutdown-navNode
+1775397483.2100463 [navNode-2] [WARN] [1775397483.209925532] [navNode]: navNodeshutdown-navNode
+1775397483.2121224 [myMain-1] [INFO] [1775397483.211837595] [Ground]: shutdown-navNode 响应成功 → shutdown-navNode关闭节点
+1775397483.2472682 [navNode-2] The following exception was never retrieved: Tried to use a handle that has been destroyed.
+1775397483.2534738 [INFO] [navNode-2]: process has finished cleanly [pid 38840]
+1775397483.8908107 [INFO] [myMain-1]: process has finished cleanly [pid 38838]

@@ -1,0 +1,3 @@
+[INFO] [1775397364.811670328] [Ground]: ros2 node launch success:Ground!
+[INFO] [1775397368.800291069] [Ground]: 发送 shutdown-navNode 成功
+[INFO] [1775397368.805559511] [Ground]: shutdown-navNode 响应成功 → 回复：shutdown-navNode

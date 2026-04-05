@@ -1,0 +1,6 @@
+[INFO] [1775390859.352618897] [Ground]: ros2 node launch success:Ground!
+[ERROR] [1775390862.220168937] [Ground]: 发送 scan_all 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775390867.426303473] [Ground]: 发送 scan_all 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775390868.439827872] [Ground]: 发送 scan_all 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775390869.244584790] [Ground]: 发送 scan_all 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775390870.058691266] [Ground]: 发送 scan_all 失败: ROS2 服务 [ControlService] 未启动或超时

@@ -1,0 +1,22 @@
+1775388224.3924255 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-04-23-44-388281-ubuntu-18796
+1775388224.3928661 [INFO] [launch]: Default logging verbosity is set to INFO
+1775388224.4681451 [INFO] [navNode-1]: process started with pid [18798]
+1775388224.7516165 [navNode-1] [INFO] [1775388224.751333407] [navNode]: paths: [
+1775388224.7519073 [navNode-1]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": "TakeOff", "qrcode2": "" },
+1775388224.7520304 [navNode-1]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7522900 [navNode-1]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7524779 [navNode-1]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7525792 [navNode-1]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7527001 [navNode-1]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7527950 [navNode-1]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7529142 [navNode-1]   {"x": 0.75, "y": 2.75, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775388224.7530086 [navNode-1]   {"x": 0.75, "y": 2.75, "z": 0.70, "label": "Landpos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775388224.7531574 [navNode-1] ]
+1775388224.7533352 [navNode-1] 
+1775388224.7604847 [navNode-1] [INFO] [1775388224.760185625] [navNode]: 上位机导航节点启动成功
+1775388231.7876635 [navNode-1] [INFO] [1775388231.787289841] [navNode]: 收到来自UI的请求：A1
+1775388231.7880142 [navNode-1] [INFO] [1775388231.787640166] [navNode]: 测试2<class 'str'>
+1775388231.7881601 [navNode-1] [INFO] [1775388231.787916338] [navNode]: 测试1<class 'str'>
+1775388276.3697584 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1775388276.3899491 [navNode-1] The following exception was never retrieved: find_points_by_labels() takes 3 positional arguments but 4 were given
+1775388276.3945971 [INFO] [navNode-1]: process has finished cleanly [pid 18798]

@@ -1,0 +1,351 @@
+1775393495.3284717 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-05-51-35-323668-ubuntu-28422
+1775393495.3287966 [INFO] [launch]: Default logging verbosity is set to INFO
+1775393495.3932841 [INFO] [myMain-1]: process started with pid [28424]
+1775393495.3934629 [INFO] [navNode-2]: process started with pid [28426]
+1775393495.7080104 [navNode-2] [INFO] [1775393495.707703535] [navNode]: paths: [
+1775393495.7086039 [navNode-2]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7088993 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7091246 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7098193 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7100766 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7107666 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7110388 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7115707 [navNode-2]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775393495.7118483 [navNode-2]   {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775393495.7120602 [navNode-2] ]
+1775393495.7122707 [navNode-2] 
+1775393495.7224789 [navNode-2] [INFO] [1775393495.715512604] [navNode]: 上位机导航节点启动成功
+1775393496.2926080 [myMain-1] [INFO] [1775393496.292241566] [Ground]: ros2 node launch success:Ground!
+1775393523.7887082 [myMain-1] [INFO] [1775393523.788282549] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775393523.8095822 [navNode-2] [INFO] [1775393523.809230910] [navNode]: MCU2 send back: Takeoffok
+1775393523.8098693 [myMain-1] [INFO] [1775393523.809296946] [Ground]: MCU2 send back: Takeoffok
+1775393532.0459797 [myMain-1] [INFO] [1775393532.045621117] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1775393532.0687175 [navNode-2] [INFO] [1775393532.068418855] [navNode]: MCU2 send back: Landok
+1775393532.0690923 [myMain-1] [INFO] [1775393532.068602536] [Ground]: MCU2 send back: Landok
+1775393537.3831615 [myMain-1] [INFO] [1775393537.382815003] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775393537.4041636 [navNode-2] [INFO] [1775393537.403845859] [navNode]: MCU2 send back: Takeoffok
+1775393537.4051220 [myMain-1] [INFO] [1775393537.404911757] [Ground]: MCU2 send back: Takeoffok
+1775393537.8276780 [myMain-1] [INFO] [1775393537.827348548] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775393537.8437042 [myMain-1] [INFO] [1775393537.843370731] [Ground]: MCU2 send back: Takeoffok
+1775393537.8453977 [navNode-2] [INFO] [1775393537.845183014] [navNode]: MCU2 send back: Takeoffok
+1775393542.8631227 [myMain-1] [INFO] [1775393542.862800987] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775393542.8863616 [navNode-2] [INFO] [1775393542.886078747] [navNode]: MCU2 send back: Takeoffok
+1775393542.8867218 [myMain-1] [INFO] [1775393542.886113949] [Ground]: MCU2 send back: Takeoffok
+1775393551.2423782 [myMain-1] [INFO] [1775393551.241917440] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775393551.2648783 [myMain-1] [INFO] [1775393551.264540588] [Ground]: MCU2 send back: Takeoffok
+1775393551.2652667 [navNode-2] [INFO] [1775393551.264665327] [navNode]: MCU2 send back: Takeoffok
+1775393667.2257340 [myMain-1] [INFO] [1775393667.225377119] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775393667.2463973 [myMain-1] [INFO] [1775393667.246063933] [Ground]: MCU2 send back: Takeoffok
+1775393667.2467394 [navNode-2] [INFO] [1775393667.246265085] [navNode]: MCU2 send back: Takeoffok
+1775393675.5824940 [myMain-1] [INFO] [1775393675.582171592] [Ground]: H+02895+01118+06180 发送成功 → 飞行站已调用：H+02895+01118+06180服务
+1775393675.6075015 [navNode-2] [INFO] [1775393675.607009744] [navNode]: MCU2 send back: +02895+01118+06180
+1775393675.6078825 [myMain-1] [INFO] [1775393675.607037434] [Ground]: MCU2 send back: +02895+01118+06180
+1775393675.6857016 [myMain-1] [INFO] [1775393675.685382313] [Ground]: MCU2 send back: Gdoing*
+1775393675.6859856 [navNode-2] [INFO] [1775393675.685520234] [navNode]: MCU2 send back: Gdoing*
+1775393675.8065522 [navNode-2] [INFO] [1775393675.806260074] [navNode]: MCU2 send back: Gdoing*
+1775393675.8070617 [myMain-1] [INFO] [1775393675.806374051] [Ground]: MCU2 send back: Gdoing*
+1775393675.9272976 [navNode-2] [INFO] [1775393675.926938591] [navNode]: MCU2 send back: Gdoing*
+1775393675.9279230 [myMain-1] [INFO] [1775393675.927735192] [Ground]: MCU2 send back: Gdoing*
+1775393676.0467370 [myMain-1] [INFO] [1775393676.046331600] [Ground]: MCU2 send back: Gdoing*
+1775393676.0471480 [navNode-2] [INFO] [1775393676.046329820] [navNode]: MCU2 send back: Gdoing*
+1775393676.1678052 [navNode-2] [INFO] [1775393676.167459419] [navNode]: MCU2 send back: Gdoing*
+1775393676.1681435 [myMain-1] [INFO] [1775393676.167460231] [Ground]: MCU2 send back: Gdoing*
+1775393676.2873302 [navNode-2] [INFO] [1775393676.286808082] [navNode]: MCU2 send back: Gdoing*
+1775393676.2877274 [myMain-1] [INFO] [1775393676.287045525] [Ground]: MCU2 send back: Gdoing*
+1775393676.4075806 [myMain-1] [INFO] [1775393676.407150684] [Ground]: MCU2 send back: Gdoing*
+1775393676.4083486 [navNode-2] [INFO] [1775393676.408147352] [navNode]: MCU2 send back: Gdoing*
+1775393676.5275586 [navNode-2] [INFO] [1775393676.527191207] [navNode]: MCU2 send back: Gdoing*
+1775393676.5278900 [myMain-1] [INFO] [1775393676.527363009] [Ground]: MCU2 send back: Gdoing*
+1775393676.6484685 [navNode-2] [INFO] [1775393676.648150814] [navNode]: MCU2 send back: Gdoing*
+1775393676.6489213 [myMain-1] [INFO] [1775393676.648777580] [Ground]: MCU2 send back: Gdoing*
+1775393676.7676549 [myMain-1] [INFO] [1775393676.767359291] [Ground]: MCU2 send back: Gdoing*
+1775393676.7679477 [navNode-2] [INFO] [1775393676.767416083] [navNode]: MCU2 send back: Gdoing*
+1775393676.9013782 [navNode-2] [INFO] [1775393676.901054517] [navNode]: MCU2 send back: Gdoing*
+1775393676.9043107 [myMain-1] [INFO] [1775393676.903963336] [Ground]: MCU2 send back: Gdoing*
+1775393677.0111635 [navNode-2] [INFO] [1775393677.010903696] [navNode]: MCU2 send back: Gdoing*
+1775393677.0115192 [myMain-1] [INFO] [1775393677.011197240] [Ground]: MCU2 send back: Gdoing*
+1775393677.1536305 [navNode-2] [INFO] [1775393677.153308470] [navNode]: MCU2 send back: Gdoing*
+1775393677.1539948 [myMain-1] [INFO] [1775393677.153665978] [Ground]: MCU2 send back: Gdoing*
+1775393677.2825854 [navNode-2] [INFO] [1775393677.282311544] [navNode]: MCU2 send back: Gdoing*
+1775393677.2831514 [myMain-1] [INFO] [1775393677.283001437] [Ground]: MCU2 send back: Gdoing*
+1775393677.3688343 [myMain-1] [INFO] [1775393677.368184858] [Ground]: MCU2 send back: Gdoing*
+1775393677.3701601 [navNode-2] [INFO] [1775393677.369854203] [navNode]: MCU2 send back: Gdoing*
+1775393677.4889607 [myMain-1] [INFO] [1775393677.488643087] [Ground]: MCU2 send back: Gdoing*
+1775393677.4893174 [navNode-2] [INFO] [1775393677.489153128] [navNode]: MCU2 send back: Gdoing*
+1775393677.6251256 [myMain-1] [INFO] [1775393677.624756298] [Ground]: MCU2 send back: Gdoing*
+1775393677.6254020 [navNode-2] [INFO] [1775393677.624785351] [navNode]: MCU2 send back: Gdoing*
+1775393677.7342882 [navNode-2] [INFO] [1775393677.734015579] [navNode]: MCU2 send back: Gdoing*
+1775393677.7346551 [myMain-1] [INFO] [1775393677.734203013] [Ground]: MCU2 send back: Gdoing*
+1775393677.8494866 [navNode-2] [INFO] [1775393677.849183923] [navNode]: MCU2 send back: Gdoing*
+1775393677.8498929 [myMain-1] [INFO] [1775393677.849784682] [Ground]: MCU2 send back: Gdoing*
+1775393677.9704261 [myMain-1] [INFO] [1775393677.969580640] [Ground]: MCU2 send back: Gdoing*
+1775393677.9708731 [navNode-2] [INFO] [1775393677.969614510] [navNode]: MCU2 send back: Gdoing*
+1775393678.1059320 [navNode-2] [INFO] [1775393678.105648110] [navNode]: MCU2 send back: Gdoing*
+1775393678.1062627 [myMain-1] [INFO] [1775393678.106023832] [Ground]: MCU2 send back: Gdoing*
+1775393678.1134343 [myMain-1] [INFO] [1775393678.113179824] [Ground]: H+05558+01893+05561 发送成功 → 飞行站已调用：H+05558+01893+05561服务
+1775393678.1731174 [navNode-2] [INFO] [1775393678.172655311] [navNode]: MCU2 send back: +05558+01893+05561
+1775393678.1735246 [myMain-1] [INFO] [1775393678.172653461] [Ground]: MCU2 send back: +05558+01893+05561
+1775393678.2422266 [myMain-1] [INFO] [1775393678.241887190] [Ground]: MCU2 send back: Gdoing*
+1775393678.2426157 [navNode-2] [INFO] [1775393678.242079786] [navNode]: MCU2 send back: Gdoing*
+1775393678.3299851 [myMain-1] [INFO] [1775393678.329579601] [Ground]: MCU2 send back: Gdoing*
+1775393678.3302855 [navNode-2] [INFO] [1775393678.329815265] [navNode]: MCU2 send back: Gdoing*
+1775393678.4506075 [myMain-1] [INFO] [1775393678.450234319] [Ground]: MCU2 send back: Gdoing*
+1775393678.4510148 [navNode-2] [INFO] [1775393678.450653240] [navNode]: MCU2 send back: Gdoing*
+1775393678.5865927 [navNode-2] [INFO] [1775393678.586325556] [navNode]: MCU2 send back: Gdoing*
+1775393678.5873737 [myMain-1] [INFO] [1775393678.587141365] [Ground]: MCU2 send back: Gdoing*
+1775393678.7248621 [navNode-2] [INFO] [1775393678.724609513] [navNode]: MCU2 send back: Gdoing*
+1775393678.7273843 [myMain-1] [INFO] [1775393678.727033473] [Ground]: MCU2 send back: Gdoing*
+1775393678.8104665 [navNode-2] [INFO] [1775393678.810178998] [navNode]: MCU2 send back: Gdoing*
+1775393678.8108470 [myMain-1] [INFO] [1775393678.810219622] [Ground]: MCU2 send back: Gdoing*
+1775393678.9329951 [myMain-1] [INFO] [1775393678.932606006] [Ground]: MCU2 send back: Gdoing*
+1775393678.9340091 [navNode-2] [INFO] [1775393678.933599768] [navNode]: MCU2 send back: Gdoing*
+1775393679.0663762 [navNode-2] [INFO] [1775393679.066128196] [navNode]: MCU2 send back: Gdone*
+1775393679.0667334 [navNode-2] [INFO] [1775393679.066449370] [navNode]: mcu:已到目标点-[none]
+1775393679.0671716 [myMain-1] [INFO] [1775393679.067066201] [Ground]: MCU2 send back: Gdone*
+1775393679.4115624 [navNode-2] [INFO] [1775393679.411197112] [navNode]: MCU2 send back: Gdone*
+1775393679.4118979 [navNode-2] [INFO] [1775393679.411545774] [navNode]: mcu:已到目标点-[none]
+1775393679.4126523 [myMain-1] [INFO] [1775393679.412501306] [Ground]: MCU2 send back: Gdone*
+1775393680.4326069 [myMain-1] [INFO] [1775393680.432304822] [Ground]: MCU2 send back: Gdone*
+1775393680.4329567 [navNode-2] [INFO] [1775393680.432774759] [navNode]: MCU2 send back: Gdone*
+1775393680.4333096 [navNode-2] [INFO] [1775393680.433098424] [navNode]: mcu:已到目标点-[none]
+1775393681.2850959 [myMain-1] [INFO] [1775393681.284795732] [Ground]: H+06399+04601+05448 发送成功 → 飞行站已调用：H+06399+04601+05448服务
+1775393681.3108006 [navNode-2] [INFO] [1775393681.310398509] [navNode]: MCU2 send back: +06399+04601+05448
+1775393681.3115785 [myMain-1] [INFO] [1775393681.311254078] [Ground]: MCU2 send back: +06399+04601+05448
+1775393681.3943138 [myMain-1] [INFO] [1775393681.394017603] [Ground]: MCU2 send back: Gdoing*
+1775393681.3946025 [navNode-2] [INFO] [1775393681.394181782] [navNode]: MCU2 send back: Gdoing*
+1775393681.5132103 [navNode-2] [INFO] [1775393681.512857300] [navNode]: MCU2 send back: Gdoing*
+1775393681.5140195 [myMain-1] [INFO] [1775393681.513835316] [Ground]: MCU2 send back: Gdoing*
+1775393681.6336908 [navNode-2] [INFO] [1775393681.633388037] [navNode]: MCU2 send back: Gdoing*
+1775393681.6341112 [myMain-1] [INFO] [1775393681.633818574] [Ground]: MCU2 send back: Gdoing*
+1775393681.7536891 [myMain-1] [INFO] [1775393681.753363557] [Ground]: MCU2 send back: Gdoing*
+1775393681.7542937 [navNode-2] [INFO] [1775393681.754055107] [navNode]: MCU2 send back: Gdoing*
+1775393681.8740509 [navNode-2] [INFO] [1775393681.873738730] [navNode]: MCU2 send back: Gdoing*
+1775393681.8745241 [myMain-1] [INFO] [1775393681.874420071] [Ground]: MCU2 send back: Gdoing*
+1775393681.9946895 [navNode-2] [INFO] [1775393681.994391804] [navNode]: MCU2 send back: Gdoing*
+1775393681.9953842 [myMain-1] [INFO] [1775393681.995184650] [Ground]: MCU2 send back: Gdoing*
+1775393682.1153250 [navNode-2] [INFO] [1775393682.115035624] [navNode]: MCU2 send back: Gdoing*
+1775393682.1157012 [myMain-1] [INFO] [1775393682.115353584] [Ground]: MCU2 send back: Gdoing*
+1775393682.2357199 [myMain-1] [INFO] [1775393682.235225019] [Ground]: MCU2 send back: Gdoing*
+1775393682.2361965 [navNode-2] [INFO] [1775393682.235532105] [navNode]: MCU2 send back: Gdoing*
+1775393682.3546169 [myMain-1] [INFO] [1775393682.354214063] [Ground]: MCU2 send back: Gdone*
+1775393682.3550069 [navNode-2] [INFO] [1775393682.354420607] [navNode]: MCU2 send back: Gdone*
+1775393682.3550725 [navNode-2] [INFO] [1775393682.354826332] [navNode]: mcu:已到目标点-[none]
+1775393682.4758909 [navNode-2] [INFO] [1775393682.475398569] [navNode]: MCU2 send back: Gdone*
+1775393682.4762843 [myMain-1] [INFO] [1775393682.475410067] [Ground]: MCU2 send back: Gdone*
+1775393682.4764118 [navNode-2] [INFO] [1775393682.476071807] [navNode]: mcu:已到目标点-[none]
+1775393683.4962690 [myMain-1] [INFO] [1775393683.495966729] [Ground]: MCU2 send back: Gdone*
+1775393683.4967172 [navNode-2] [INFO] [1775393683.495995431] [navNode]: MCU2 send back: Gdone*
+1775393683.4968951 [navNode-2] [INFO] [1775393683.496312382] [navNode]: mcu:已到目标点-[none]
+1775393683.5946486 [myMain-1] [INFO] [1775393683.594347995] [Ground]: H+06804+03187+05351 发送成功 → 飞行站已调用：H+06804+03187+05351服务
+1775393683.6200495 [navNode-2] [INFO] [1775393683.619780050] [navNode]: MCU2 send back: +06804+03187+05351
+1775393683.6203518 [myMain-1] [INFO] [1775393683.619878489] [Ground]: MCU2 send back: +06804+03187+05351
+1775393683.7179065 [navNode-2] [INFO] [1775393683.717570394] [navNode]: MCU2 send back: Gdoing*
+1775393683.7184095 [myMain-1] [INFO] [1775393683.718142844] [Ground]: MCU2 send back: Gdoing*
+1775393683.8362837 [navNode-2] [INFO] [1775393683.835786480] [navNode]: MCU2 send back: Gdoing*
+1775393683.8366878 [myMain-1] [INFO] [1775393683.835873676] [Ground]: MCU2 send back: Gdoing*
+1775393683.9570513 [navNode-2] [INFO] [1775393683.956629153] [navNode]: MCU2 send back: Gdoing*
+1775393683.9579947 [myMain-1] [INFO] [1775393683.957475350] [Ground]: MCU2 send back: Gdoing*
+1775393684.0775735 [myMain-1] [INFO] [1775393684.076693485] [Ground]: MCU2 send back: Gdoing*
+1775393684.0779755 [navNode-2] [INFO] [1775393684.076639027] [navNode]: MCU2 send back: Gdoing*
+1775393684.1968353 [myMain-1] [INFO] [1775393684.196391722] [Ground]: MCU2 send back: Gdoing*
+1775393684.1979659 [navNode-2] [INFO] [1775393684.197657027] [navNode]: MCU2 send back: Gdoing*
+1775393684.3174114 [navNode-2] [INFO] [1775393684.317059155] [navNode]: MCU2 send back: Gdoing*
+1775393684.3178036 [myMain-1] [INFO] [1775393684.317645338] [Ground]: MCU2 send back: Gdoing*
+1775393684.4374883 [myMain-1] [INFO] [1775393684.437154332] [Ground]: MCU2 send back: Gdoing*
+1775393684.4380324 [navNode-2] [INFO] [1775393684.437664217] [navNode]: MCU2 send back: Gdoing*
+1775393684.5578198 [navNode-2] [INFO] [1775393684.557399465] [navNode]: MCU2 send back: Gdoing*
+1775393684.5591900 [myMain-1] [INFO] [1775393684.558379559] [Ground]: MCU2 send back: Gdoing*
+1775393684.6778154 [navNode-2] [INFO] [1775393684.677399049] [navNode]: MCU2 send back: Gdoing*
+1775393684.6782343 [myMain-1] [INFO] [1775393684.677805513] [Ground]: MCU2 send back: Gdoing*
+1775393684.7983322 [myMain-1] [INFO] [1775393684.797924792] [Ground]: MCU2 send back: Gdoing*
+1775393684.7994702 [navNode-2] [INFO] [1775393684.799191295] [navNode]: MCU2 send back: Gdoing*
+1775393684.9178329 [myMain-1] [INFO] [1775393684.917474335] [Ground]: MCU2 send back: Gdoing*
+1775393684.9182141 [navNode-2] [INFO] [1775393684.917949132] [navNode]: MCU2 send back: Gdoing*
+1775393685.0378199 [myMain-1] [INFO] [1775393685.037410507] [Ground]: MCU2 send back: Gdoing*
+1775393685.0385091 [navNode-2] [INFO] [1775393685.038329796] [navNode]: MCU2 send back: Gdoing*
+1775393685.1592579 [myMain-1] [INFO] [1775393685.158497888] [Ground]: MCU2 send back: Gdoing*
+1775393685.1597657 [navNode-2] [INFO] [1775393685.158534361] [navNode]: MCU2 send back: Gdoing*
+1775393685.2789698 [navNode-2] [INFO] [1775393685.278612172] [navNode]: MCU2 send back: Gdoing*
+1775393685.2794087 [myMain-1] [INFO] [1775393685.279070794] [Ground]: MCU2 send back: Gdoing*
+1775393685.3989637 [navNode-2] [INFO] [1775393685.398440252] [navNode]: MCU2 send back: Gdoing*
+1775393685.3993788 [myMain-1] [INFO] [1775393685.398521518] [Ground]: MCU2 send back: Gdoing*
+1775393685.5199704 [navNode-2] [INFO] [1775393685.519653851] [navNode]: MCU2 send back: Gdone*
+1775393685.5203600 [navNode-2] [INFO] [1775393685.520160079] [navNode]: mcu:已到目标点-[none]
+1775393685.5214388 [myMain-1] [INFO] [1775393685.521131642] [Ground]: MCU2 send back: Gdone*
+1775393685.5385609 [myMain-1] [INFO] [1775393685.538199056] [Ground]: MCU2 send back: Gdone*
+1775393685.5389178 [navNode-2] [INFO] [1775393685.538708277] [navNode]: MCU2 send back: Gdone*
+1775393685.5391409 [navNode-2] [INFO] [1775393685.539062465] [navNode]: mcu:已到目标点-[none]
+1775393686.0725181 [myMain-1] [INFO] [1775393686.072194728] [Ground]: H+05049+03814+05262 发送成功 → 飞行站已调用：H+05049+03814+05262服务
+1775393686.0971115 [navNode-2] [INFO] [1775393686.096853050] [navNode]: MCU2 send back: +05049+03814+05262
+1775393686.0974045 [myMain-1] [INFO] [1775393686.096899228] [Ground]: MCU2 send back: +05049+03814+05262
+1775393686.1790679 [navNode-2] [INFO] [1775393686.178672687] [navNode]: MCU2 send back: Gdoing*
+1775393686.1795173 [myMain-1] [INFO] [1775393686.178723854] [Ground]: MCU2 send back: Gdoing*
+1775393686.2992101 [myMain-1] [INFO] [1775393686.298876513] [Ground]: MCU2 send back: Gdoing*
+1775393686.3007817 [navNode-2] [INFO] [1775393686.300484384] [navNode]: MCU2 send back: Gdoing*
+1775393686.4192641 [myMain-1] [INFO] [1775393686.418868476] [Ground]: MCU2 send back: Gdoing*
+1775393686.4200103 [navNode-2] [INFO] [1775393686.419742266] [navNode]: MCU2 send back: Gdoing*
+1775393686.5407078 [navNode-2] [INFO] [1775393686.540340642] [navNode]: MCU2 send back: Gdoing*
+1775393686.5416131 [myMain-1] [INFO] [1775393686.541374443] [Ground]: MCU2 send back: Gdoing*
+1775393686.6613522 [navNode-2] [INFO] [1775393686.661027895] [navNode]: MCU2 send back: Gdoing*
+1775393686.6617534 [myMain-1] [INFO] [1775393686.661558769] [Ground]: MCU2 send back: Gdoing*
+1775393686.7801719 [navNode-2] [INFO] [1775393686.779867792] [navNode]: MCU2 send back: Gdoing*
+1775393686.7805724 [myMain-1] [INFO] [1775393686.780283224] [Ground]: MCU2 send back: Gdoing*
+1775393686.9003320 [navNode-2] [INFO] [1775393686.900038563] [navNode]: MCU2 send back: Gdoing*
+1775393686.9012039 [myMain-1] [INFO] [1775393686.900998134] [Ground]: MCU2 send back: Gdoing*
+1775393687.0200961 [myMain-1] [INFO] [1775393687.019739342] [Ground]: MCU2 send back: Gdoing*
+1775393687.0204048 [navNode-2] [INFO] [1775393687.019789780] [navNode]: MCU2 send back: Gdoing*
+1775393687.1410763 [navNode-2] [INFO] [1775393687.140651823] [navNode]: MCU2 send back: Gdoing*
+1775393687.1423721 [myMain-1] [INFO] [1775393687.142086198] [Ground]: MCU2 send back: Gdoing*
+1775393687.2615509 [navNode-2] [INFO] [1775393687.261224408] [navNode]: MCU2 send back: Gdone*
+1775393687.2619414 [navNode-2] [INFO] [1775393687.261654532] [navNode]: mcu:已到目标点-[none]
+1775393687.2639949 [myMain-1] [INFO] [1775393687.263562433] [Ground]: MCU2 send back: Gdone*
+1775393687.5851924 [navNode-2] [INFO] [1775393687.584855952] [navNode]: MCU2 send back: Gdone*
+1775393687.5857799 [myMain-1] [INFO] [1775393687.585454080] [Ground]: MCU2 send back: Gdone*
+1775393687.5862761 [navNode-2] [INFO] [1775393687.586106257] [navNode]: mcu:已到目标点-[none]
+1775393688.6026516 [navNode-2] [INFO] [1775393688.601785069] [navNode]: MCU2 send back: Gdone*
+1775393688.6038034 [myMain-1] [INFO] [1775393688.602536392] [Ground]: MCU2 send back: Gdone*
+1775393688.6042068 [navNode-2] [INFO] [1775393688.603370225] [navNode]: mcu:已到目标点-[none]
+1775393688.9217725 [myMain-1] [INFO] [1775393688.921416853] [Ground]: H+04851+03882+06480 发送成功 → 飞行站已调用：H+04851+03882+06480服务
+1775393688.9443603 [myMain-1] [INFO] [1775393688.944080187] [Ground]: MCU2 send back: +04851+03882+06480
+1775393688.9448788 [navNode-2] [INFO] [1775393688.944719806] [navNode]: MCU2 send back: +04851+03882+06480
+1775393689.0418355 [navNode-2] [INFO] [1775393689.041517084] [navNode]: MCU2 send back: Gdoing*
+1775393689.0422454 [myMain-1] [INFO] [1775393689.041938214] [Ground]: MCU2 send back: Gdoing*
+1775393689.1621852 [myMain-1] [INFO] [1775393689.161856064] [Ground]: MCU2 send back: Gdoing*
+1775393689.1625891 [navNode-2] [INFO] [1775393689.162454022] [navNode]: MCU2 send back: Gdoing*
+1775393689.2823696 [navNode-2] [INFO] [1775393689.281992279] [navNode]: MCU2 send back: Gdoing*
+1775393689.2827847 [myMain-1] [INFO] [1775393689.282003551] [Ground]: MCU2 send back: Gdoing*
+1775393689.4023266 [myMain-1] [INFO] [1775393689.401998791] [Ground]: MCU2 send back: Gdoing*
+1775393689.4027278 [navNode-2] [INFO] [1775393689.402114560] [navNode]: MCU2 send back: Gdoing*
+1775393689.5234108 [navNode-2] [INFO] [1775393689.522956545] [navNode]: MCU2 send back: Gdoing*
+1775393689.5238075 [myMain-1] [INFO] [1775393689.523036767] [Ground]: MCU2 send back: Gdoing*
+1775393689.6231103 [navNode-2] [INFO] [1775393689.622645267] [navNode]: MCU2 send back: Gdone*
+1775393689.6235676 [myMain-1] [INFO] [1775393689.622946585] [Ground]: MCU2 send back: Gdone*
+1775393689.6237800 [navNode-2] [INFO] [1775393689.623095598] [navNode]: mcu:已到目标点-[none]
+1775393689.6437747 [myMain-1] [INFO] [1775393689.642968502] [Ground]: MCU2 send back: Gdone*
+1775393689.6445498 [navNode-2] [INFO] [1775393689.643016838] [navNode]: MCU2 send back: Gdone*
+1775393689.6455581 [navNode-2] [INFO] [1775393689.645254908] [navNode]: mcu:已到目标点-[none]
+1775393690.6439154 [navNode-2] [INFO] [1775393690.643549651] [navNode]: MCU2 send back: Gdone*
+1775393690.6442897 [myMain-1] [INFO] [1775393690.643576512] [Ground]: MCU2 send back: Gdone*
+1775393690.6444397 [navNode-2] [INFO] [1775393690.643883563] [navNode]: mcu:已到目标点-[none]
+1775393691.6125550 [myMain-1] [INFO] [1775393691.612243352] [Ground]: H+04719+03931+04809 发送成功 → 飞行站已调用：H+04719+03931+04809服务
+1775393691.6377304 [myMain-1] [INFO] [1775393691.637243321] [Ground]: MCU2 send back: +04719+03931+04809
+1775393691.6381898 [navNode-2] [INFO] [1775393691.637724691] [navNode]: MCU2 send back: +04719+03931+04809
+1775393691.7262712 [myMain-1] [INFO] [1775393691.725897106] [Ground]: MCU2 send back: Gdoing*
+1775393691.7266073 [navNode-2] [INFO] [1775393691.726127906] [navNode]: MCU2 send back: Gdoing*
+1775393691.8452866 [myMain-1] [INFO] [1775393691.844868654] [Ground]: MCU2 send back: Gdoing*
+1775393691.8456135 [navNode-2] [INFO] [1775393691.844960233] [navNode]: MCU2 send back: Gdoing*
+1775393691.9667392 [navNode-2] [INFO] [1775393691.966232696] [navNode]: MCU2 send back: Gdoing*
+1775393691.9678345 [myMain-1] [INFO] [1775393691.967585539] [Ground]: MCU2 send back: Gdoing*
+1775393692.0869436 [navNode-2] [INFO] [1775393692.086258400] [navNode]: MCU2 send back: Gdoing*
+1775393692.0879335 [myMain-1] [INFO] [1775393692.087357662] [Ground]: MCU2 send back: Gdoing*
+1775393692.2055349 [myMain-1] [INFO] [1775393692.205171685] [Ground]: MCU2 send back: Gdone*
+1775393692.2063324 [navNode-2] [INFO] [1775393692.206066129] [navNode]: MCU2 send back: Gdone*
+1775393692.2066865 [navNode-2] [INFO] [1775393692.206517347] [navNode]: mcu:已到目标点-[none]
+1775393692.6865284 [navNode-2] [INFO] [1775393692.686218349] [navNode]: MCU2 send back: Gdone*
+1775393692.6879992 [navNode-2] [INFO] [1775393692.686847519] [navNode]: mcu:已到目标点-[none]
+1775393692.6884959 [myMain-1] [INFO] [1775393692.687743768] [Ground]: MCU2 send back: Gdone*
+1775393693.7069476 [navNode-2] [INFO] [1775393693.706512315] [navNode]: MCU2 send back: Gdone*
+1775393693.7075460 [myMain-1] [INFO] [1775393693.707198856] [Ground]: MCU2 send back: Gdone*
+1775393693.7081008 [navNode-2] [INFO] [1775393693.707890661] [navNode]: mcu:已到目标点-[none]
+1775393693.9225709 [myMain-1] [INFO] [1775393693.922246875] [Ground]: H+04548+03873+05995 发送成功 → 飞行站已调用：H+04548+03873+05995服务
+1775393693.9459891 [myMain-1] [INFO] [1775393693.945685241] [Ground]: MCU2 send back: +04548+03873+05995
+1775393693.9462960 [navNode-2] [INFO] [1775393693.945784877] [navNode]: MCU2 send back: +04548+03873+05995
+1775393694.0283225 [navNode-2] [INFO] [1775393694.028003255] [navNode]: MCU2 send back: Gdoing*
+1775393694.0287294 [myMain-1] [INFO] [1775393694.028570083] [Ground]: MCU2 send back: Gdoing*
+1775393694.1493833 [navNode-2] [INFO] [1775393694.148974134] [navNode]: MCU2 send back: Gdoing*
+1775393694.1500540 [myMain-1] [INFO] [1775393694.149865302] [Ground]: MCU2 send back: Gdoing*
+1775393694.2681918 [myMain-1] [INFO] [1775393694.267807614] [Ground]: MCU2 send back: Gdoing*
+1775393694.2685673 [navNode-2] [INFO] [1775393694.268095818] [navNode]: MCU2 send back: Gdoing*
+1775393694.3883779 [myMain-1] [INFO] [1775393694.387986863] [Ground]: MCU2 send back: Gdoing*
+1775393694.3890803 [navNode-2] [INFO] [1775393694.388921488] [navNode]: MCU2 send back: Gdoing*
+1775393694.5089893 [navNode-2] [INFO] [1775393694.508624957] [navNode]: MCU2 send back: Gdone*
+1775393694.5094528 [myMain-1] [INFO] [1775393694.508798945] [Ground]: MCU2 send back: Gdone*
+1775393694.5096223 [navNode-2] [INFO] [1775393694.509273980] [navNode]: mcu:已到目标点-[none]
+1775393694.7299368 [myMain-1] [INFO] [1775393694.728985949] [Ground]: MCU2 send back: Gdone*
+1775393694.7303615 [navNode-2] [INFO] [1775393694.728986199] [navNode]: MCU2 send back: Gdone*
+1775393694.7304657 [navNode-2] [INFO] [1775393694.729353367] [navNode]: mcu:已到目标点-[none]
+1775393695.2958302 [myMain-1] [INFO] [1775393695.295511461] [Ground]: H+04465+03749+06928 发送成功 → 飞行站已调用：H+04465+03749+06928服务
+1775393695.3231316 [navNode-2] [INFO] [1775393695.322640899] [navNode]: MCU2 send back: +04465+03749+06928
+1775393695.3234184 [myMain-1] [INFO] [1775393695.322645262] [Ground]: MCU2 send back: +04465+03749+06928
+1775393695.4094906 [myMain-1] [INFO] [1775393695.409004193] [Ground]: MCU2 send back: Gdoing*
+1775393695.4098270 [navNode-2] [INFO] [1775393695.409170091] [navNode]: MCU2 send back: Gdoing*
+1775393695.5301862 [myMain-1] [INFO] [1775393695.529778689] [Ground]: MCU2 send back: Gdoing*
+1775393695.5313749 [navNode-2] [INFO] [1775393695.531037827] [navNode]: MCU2 send back: Gdoing*
+1775393695.6503546 [myMain-1] [INFO] [1775393695.649992571] [Ground]: MCU2 send back: Gdoing*
+1775393695.6508305 [navNode-2] [INFO] [1775393695.650721449] [navNode]: MCU2 send back: Gdoing*
+1775393695.7703185 [navNode-2] [INFO] [1775393695.769973257] [navNode]: MCU2 send back: Gdone*
+1775393695.7707851 [myMain-1] [INFO] [1775393695.770090329] [Ground]: MCU2 send back: Gdone*
+1775393695.7710409 [navNode-2] [INFO] [1775393695.770398720] [navNode]: mcu:已到目标点-[none]
+1775393696.3470261 [myMain-1] [INFO] [1775393696.346447893] [Ground]: H+04411+03651+05054 发送成功 → 飞行站已调用：H+04411+03651+05054服务
+1775393696.3703294 [myMain-1] [INFO] [1775393696.370022572] [Ground]: MCU2 send back: +04411+03651+05054
+1775393696.3708029 [navNode-2] [INFO] [1775393696.370235775] [navNode]: MCU2 send back: +04411+03651+05054
+1775393696.4510541 [navNode-2] [INFO] [1775393696.450741368] [navNode]: MCU2 send back: Gdoing*
+1775393696.4514346 [myMain-1] [INFO] [1775393696.451203919] [Ground]: MCU2 send back: Gdoing*
+1775393696.5713840 [myMain-1] [INFO] [1775393696.571041440] [Ground]: MCU2 send back: Gdoing*
+1775393696.5717356 [navNode-2] [INFO] [1775393696.571546992] [navNode]: MCU2 send back: Gdoing*
+1775393696.6911666 [myMain-1] [INFO] [1775393696.690708760] [Ground]: MCU2 send back: Gdoing*
+1775393696.6915760 [navNode-2] [INFO] [1775393696.690795971] [navNode]: MCU2 send back: Gdoing*
+1775393696.8115819 [myMain-1] [INFO] [1775393696.811118896] [Ground]: MCU2 send back: Gdoing*
+1775393696.8120539 [navNode-2] [INFO] [1775393696.811407403] [navNode]: MCU2 send back: Gdoing*
+1775393696.9316745 [myMain-1] [INFO] [1775393696.931215319] [Ground]: MCU2 send back: Gdoing*
+1775393696.9320776 [navNode-2] [INFO] [1775393696.931347639] [navNode]: MCU2 send back: Gdoing*
+1775393697.0514848 [navNode-2] [INFO] [1775393697.050999262] [navNode]: MCU2 send back: Gdone*
+1775393697.0518885 [myMain-1] [INFO] [1775393697.051084471] [Ground]: MCU2 send back: Gdone*
+1775393697.0520234 [navNode-2] [INFO] [1775393697.051405320] [navNode]: mcu:已到目标点-[none]
+1775393697.7601902 [myMain-1] [INFO] [1775393697.759908793] [Ground]: H+02311+03624+05381 发送成功 → 飞行站已调用：H+02311+03624+05381服务
+1775393697.7878325 [myMain-1] [INFO] [1775393697.787448402] [Ground]: MCU2 send back: +02311+03624+05381
+1775393697.7882288 [navNode-2] [INFO] [1775393697.787496584] [navNode]: MCU2 send back: +02311+03624+05381
+1775393697.8726630 [myMain-1] [INFO] [1775393697.872286189] [Ground]: MCU2 send back: Gdoing*
+1775393697.8742509 [navNode-2] [INFO] [1775393697.873771330] [navNode]: MCU2 send back: Gdoing*
+1775393697.9923186 [myMain-1] [INFO] [1775393697.991959275] [Ground]: MCU2 send back: Gdoing*
+1775393697.9930687 [navNode-2] [INFO] [1775393697.992853081] [navNode]: MCU2 send back: Gdoing*
+1775393698.1126783 [myMain-1] [INFO] [1775393698.112066345] [Ground]: MCU2 send back: Gdoing*
+1775393698.1133220 [navNode-2] [INFO] [1775393698.112674178] [navNode]: MCU2 send back: Gdoing*
+1775393698.2330146 [myMain-1] [INFO] [1775393698.232691163] [Ground]: MCU2 send back: Gdoing*
+1775393698.2335510 [navNode-2] [INFO] [1775393698.233399405] [navNode]: MCU2 send back: Gdoing*
+1775393698.3541555 [myMain-1] [INFO] [1775393698.353646876] [Ground]: MCU2 send back: Gdoing*
+1775393698.3549545 [navNode-2] [INFO] [1775393698.354108371] [navNode]: MCU2 send back: Gdoing*
+1775393698.4733911 [myMain-1] [INFO] [1775393698.473009562] [Ground]: MCU2 send back: Gdoing*
+1775393698.4738445 [navNode-2] [INFO] [1775393698.473208249] [navNode]: MCU2 send back: Gdoing*
+1775393698.5940294 [navNode-2] [INFO] [1775393698.593494283] [navNode]: MCU2 send back: Gdoing*
+1775393698.5944653 [myMain-1] [INFO] [1775393698.593702695] [Ground]: MCU2 send back: Gdoing*
+1775393698.7137897 [navNode-2] [INFO] [1775393698.713440228] [navNode]: MCU2 send back: Gdoing*
+1775393698.7142448 [myMain-1] [INFO] [1775393698.713984309] [Ground]: MCU2 send back: Gdoing*
+1775393698.8333788 [navNode-2] [INFO] [1775393698.833012741] [navNode]: MCU2 send back: Gdoing*
+1775393698.8336689 [myMain-1] [INFO] [1775393698.833104147] [Ground]: MCU2 send back: Gdoing*
+1775393698.9531543 [myMain-1] [INFO] [1775393698.952743072] [Ground]: MCU2 send back: Gdone*
+1775393698.9536550 [navNode-2] [INFO] [1775393698.952898085] [navNode]: MCU2 send back: Gdone*
+1775393698.9538708 [navNode-2] [INFO] [1775393698.953729781] [navNode]: mcu:已到目标点-[none]
+1775393699.8337083 [myMain-1] [INFO] [1775393699.833194641] [Ground]: MCU2 send back: Gdone*
+1775393699.8340828 [navNode-2] [INFO] [1775393699.833283475] [navNode]: MCU2 send back: Gdone*
+1775393699.8343761 [navNode-2] [INFO] [1775393699.833599479] [navNode]: mcu:已到目标点-[none]
+1775393700.8548031 [myMain-1] [INFO] [1775393700.854406188] [Ground]: MCU2 send back: Gdone*
+1775393700.8556623 [navNode-2] [INFO] [1775393700.855385109] [navNode]: MCU2 send back: Gdone*
+1775393700.8558879 [navNode-2] [INFO] [1775393700.855757586] [navNode]: mcu:已到目标点-[none]
+1775393700.8565280 [myMain-1] [INFO] [1775393700.856319606] [Ground]: H+02217+03554+05152 发送成功 → 飞行站已调用：H+02217+03554+05152服务
+1775393700.8841853 [myMain-1] [INFO] [1775393700.883878676] [Ground]: MCU2 send back: +02217+03554+05152
+1775393700.8844879 [navNode-2] [INFO] [1775393700.883917703] [navNode]: MCU2 send back: +02217+03554+05152
+1775393700.9759734 [navNode-2] [INFO] [1775393700.975286441] [navNode]: MCU2 send back: Gdone*
+1775393700.9761927 [navNode-2] [INFO] [1775393700.975620744] [navNode]: mcu:已到目标点-[none]
+1775393700.9764383 [myMain-1] [INFO] [1775393700.975306805] [Ground]: MCU2 send back: Gdone*
+1775393701.8774986 [navNode-2] [INFO] [1775393701.877022153] [navNode]: MCU2 send back: Gdone*
+1775393701.8778472 [myMain-1] [INFO] [1775393701.877144042] [Ground]: MCU2 send back: Gdone*
+1775393701.8779659 [navNode-2] [INFO] [1775393701.877391119] [navNode]: mcu:已到目标点-[none]
+1775393702.8967087 [myMain-1] [INFO] [1775393702.896437212] [Ground]: MCU2 send back: Gdone*
+1775393702.8974729 [navNode-2] [INFO] [1775393702.897315212] [navNode]: MCU2 send back: Gdone*
+1775393702.8980231 [navNode-2] [INFO] [1775393702.897677243] [navNode]: mcu:已到目标点-[none]
+1775393703.9184277 [myMain-1] [INFO] [1775393703.918122328] [Ground]: MCU2 send back: Gdone*
+1775393703.9194186 [navNode-2] [INFO] [1775393703.918169886] [navNode]: MCU2 send back: Gdone*
+1775393703.9198740 [navNode-2] [INFO] [1775393703.918520591] [navNode]: mcu:已到目标点-[none]
+1775393704.3390348 [myMain-1] [INFO] [1775393704.338749771] [Ground]: land 发送成功 → 飞行站已调用：land服务
+1775393704.3616047 [myMain-1] [INFO] [1775393704.361317781] [Ground]: MCU2 send back: Landok
+1775393704.3622520 [navNode-2] [INFO] [1775393704.362101581] [navNode]: MCU2 send back: Landok
+1775393910.5531468 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1775393910.5603774 [myMain-1] Traceback (most recent call last):
+1775393910.5606592 [myMain-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/myMain.py", line 90, in update_pos
+1775393910.5607715 [myMain-1]     def update_pos(self, info, x,y,z,confidence):
+1775393910.5608475 [myMain-1] KeyboardInterrupt
+1775393910.6431580 [INFO] [navNode-2]: process has finished cleanly [pid 28426]
+1775393915.5592108 [ERROR] [myMain-1]: process[myMain-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+1775393915.5606322 [INFO] [myMain-1]: sending signal 'SIGTERM' to process[myMain-1]
+1775393915.5917616 [ERROR] [myMain-1]: process has died [pid 28424, exit code -15, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/myMain --ros-args'].

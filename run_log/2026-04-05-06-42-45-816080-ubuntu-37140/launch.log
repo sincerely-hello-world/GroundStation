@@ -1,0 +1,48 @@
+1775396565.8245294 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-06-42-45-816080-ubuntu-37140
+1775396565.8249941 [INFO] [launch]: Default logging verbosity is set to INFO
+1775396565.9424469 [INFO] [myMain-1]: process started with pid [37142]
+1775396565.9427648 [INFO] [navNode-2]: process started with pid [37144]
+1775396566.3729849 [navNode-2] [INFO] [1775396566.372647797] [navNode]: paths: [
+1775396566.3733201 [navNode-2]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3734672 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3735912 [navNode-2]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3737113 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3738317 [navNode-2]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3740001 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3741252 [navNode-2]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3742442 [navNode-2]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775396566.3743727 [navNode-2]   {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775396566.3745556 [navNode-2] ]
+1775396566.3747380 [navNode-2] 
+1775396566.3787153 [navNode-2] [INFO] [1775396566.378385435] [navNode]: 上位机导航节点启动成功
+1775396567.0211322 [myMain-1] [INFO] [1775396567.020749231] [Ground]: ros2 node launch success:Ground!
+1775396568.2620823 [myMain-1] [INFO] [1775396568.261708639] [Ground]: 发送 scan_all 成功
+1775396568.2628734 [navNode-2] [INFO] [1775396568.262487423] [navNode]: 收到来自UI的请求：scan_all
+1775396568.2631960 [navNode-2] [WARN] [1775396568.262884602] [navNode]: 任务开始执行scan_all
+1775396568.2660019 [myMain-1] [INFO] [1775396568.265679034] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396574.7028878 [navNode-2] [INFO] [1775396574.702481167] [navNode]: 收到来自UI的请求：scan_all
+1775396574.7032640 [navNode-2] [WARN] [1775396574.703171968] [navNode]: 任务开始执行scan_all
+1775396574.7034729 [myMain-1] [INFO] [1775396574.702492186] [Ground]: 发送 scan_all 成功
+1775396574.7049696 [myMain-1] [INFO] [1775396574.704709494] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396575.5421793 [myMain-1] [INFO] [1775396575.541761519] [Ground]: 发送 scan_all 成功
+1775396575.5430617 [navNode-2] [INFO] [1775396575.542850863] [navNode]: 收到来自UI的请求：scan_all
+1775396575.5433767 [navNode-2] [WARN] [1775396575.543239740] [navNode]: 任务开始执行scan_all
+1775396575.5463512 [myMain-1] [INFO] [1775396575.546061159] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396576.2784059 [myMain-1] [INFO] [1775396576.278070014] [Ground]: 发送 scan_all 成功
+1775396576.2793097 [navNode-2] [INFO] [1775396576.279056796] [navNode]: 收到来自UI的请求：scan_all
+1775396576.2796476 [navNode-2] [WARN] [1775396576.279506088] [navNode]: 任务开始执行scan_all
+1775396576.2812855 [myMain-1] [INFO] [1775396576.281075069] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396576.6973979 [myMain-1] [INFO] [1775396576.697106332] [Ground]: 发送 scan_all 成功
+1775396576.6983838 [navNode-2] [INFO] [1775396576.698083243] [navNode]: 收到来自UI的请求：scan_all
+1775396576.6987667 [navNode-2] [WARN] [1775396576.698468845] [navNode]: 任务开始执行scan_all
+1775396576.7003160 [myMain-1] [INFO] [1775396576.700099603] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396577.1873112 [myMain-1] [INFO] [1775396577.186899341] [Ground]: 发送 scan_all 成功
+1775396577.1882143 [navNode-2] [INFO] [1775396577.187955649] [navNode]: 收到来自UI的请求：scan_all
+1775396577.1884689 [navNode-2] [WARN] [1775396577.188367549] [navNode]: 任务开始执行scan_all
+1775396577.1899416 [myMain-1] [INFO] [1775396577.189684599] [Ground]: scan_all 响应成功 → 回复：scan_all
+1775396579.5069499 [myMain-1] [INFO] [1775396579.506488870] [Ground]: 发送 shutdown-navNode 成功
+1775396579.5074091 [navNode-2] [INFO] [1775396579.507319388] [navNode]: 收到来自UI的请求：shutdown-navNode
+1775396579.5083723 [navNode-2] [WARN] [1775396579.508237939] [navNode]: navNodeshutdown-navNode
+1775396580.1624792 [INFO] [myMain-1]: process has finished cleanly [pid 37142]
+1775396588.7527978 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1775396588.7794611 [INFO] [navNode-2]: process has finished cleanly [pid 37144]

@@ -1,0 +1,36 @@
+[INFO] [1775392158.411093976] [Ground]: ros2 node launch success:Ground!
+[INFO] [1775392163.972111961] [Ground]: 发送 scan_all 成功
+[INFO] [1775392163.978168350] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392164.111518149] [Ground]: MCU2 send back: Takeoffok
+[INFO] [1775392220.559493326] [Ground]: 发送 scan_all 成功
+[INFO] [1775392220.562919025] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392220.961560996] [Ground]: 发送 scan_all 成功
+[INFO] [1775392220.964912550] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392221.145421483] [Ground]: 发送 scan_all 成功
+[INFO] [1775392221.148988135] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392221.329286780] [Ground]: 发送 scan_all 成功
+[INFO] [1775392221.333233228] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392221.494914547] [Ground]: 发送 scan_all 成功
+[INFO] [1775392221.498196191] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392221.670392649] [Ground]: 发送 scan_all 成功
+[INFO] [1775392221.673061736] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392221.854126296] [Ground]: 发送 scan_all 成功
+[INFO] [1775392221.857988467] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392222.020256360] [Ground]: 发送 scan_all 成功
+[INFO] [1775392222.023395429] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392223.210230838] [Ground]: 发送 scan_all 成功
+[INFO] [1775392223.213050038] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392223.385283593] [Ground]: 发送 scan_all 成功
+[INFO] [1775392223.388682972] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392223.551767595] [Ground]: 发送 scan_all 成功
+[INFO] [1775392223.554540942] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392223.726313132] [Ground]: 发送 scan_all 成功
+[INFO] [1775392223.729433896] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392223.901443107] [Ground]: 发送 scan_all 成功
+[INFO] [1775392223.904003069] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392224.093723744] [Ground]: 发送 scan_all 成功
+[INFO] [1775392224.097535547] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392224.260226852] [Ground]: 发送 scan_all 成功
+[INFO] [1775392224.263311283] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392224.435044960] [Ground]: 发送 scan_all 成功
+[INFO] [1775392224.438872862] [Ground]: scan_all 响应成功 → 回复：scan_all

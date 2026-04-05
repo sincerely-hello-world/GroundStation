@@ -1,0 +1,14 @@
+1775390830.1940320 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-05-07-10-190537-ubuntu-21941
+1775390830.1943657 [INFO] [launch]: Default logging verbosity is set to INFO
+1775390830.2628794 [INFO] [myMain-1]: process started with pid [21943]
+1775390832.5001326 [myMain-1] [INFO] [1775390832.499820564] [Ground]: ros2 node launch success:Ground!
+1775390832.8017683 [myMain-1] [ERROR] [1775390832.800904504] [Ground]: 发送 scan_all 失败: ROS2 服务 [ControlService] 未启动或超时
+1775390832.8826890 [myMain-1] Traceback (most recent call last):
+1775390832.8829060 [myMain-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/myMain", line 11, in <module>
+1775390832.8829865 [myMain-1]     load_entry_point('GroundStation', 'console_scripts', 'myMain')()
+1775390832.8830218 [myMain-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/myMain.py", line 182, in main
+1775390832.8830631 [myMain-1]     uiC = UIController()
+1775390832.8830941 [myMain-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/myMain.py", line 44, in __init__
+1775390832.8831255 [myMain-1]     self.pushButton_runtask.clicked.connect(self.bridge_node.send_talk("scan_all"))
+1775390832.8831565 [myMain-1] TypeError: argument 1 has unexpected type 'NoneType'
+1775390833.0312231 [ERROR] [myMain-1]: process has died [pid 21943, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/myMain --ros-args'].

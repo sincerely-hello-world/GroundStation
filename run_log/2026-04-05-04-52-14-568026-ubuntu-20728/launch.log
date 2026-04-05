@@ -1,0 +1,94 @@
+1775389934.5718307 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-05-04-52-14-568026-ubuntu-20728
+1775389934.5721614 [INFO] [launch]: Default logging verbosity is set to INFO
+1775389934.6518729 [INFO] [navNode-1]: process started with pid [20730]
+1775389934.9260902 [navNode-1] [INFO] [1775389934.925808429] [navNode]: paths: [
+1775389934.9262805 [navNode-1]   {"x": 0.00, "y": 0.00, "z": 0.00, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9263239 [navNode-1]   {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9263549 [navNode-1]   {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9263842 [navNode-1]   {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9264131 [navNode-1]   {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9264412 [navNode-1]   {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9264693 [navNode-1]   {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9264967 [navNode-1]   {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9265244 [navNode-1]   {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+1775389934.9265528 [navNode-1]   {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+1775389934.9265811 [navNode-1] ]
+1775389934.9266095 [navNode-1] 
+1775389934.9293923 [navNode-1] [INFO] [1775389934.929216869] [navNode]: 上位机导航节点启动成功
+1775389934.9300513 [navNode-1] [WARN] [1775389934.929955359] [navNode]: 任务开始执行
+1775389935.0318320 [navNode-1] [INFO] [1775389935.031502720] [navNode]: 状态1：Takeoff--[TakeOff]
+1775389935.2842669 [navNode-1] [INFO] [1775389935.283920649] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+1775389935.2846365 [navNode-1] [INFO] [1775389935.284356267] [navNode]: 已到目标点
+1775389935.2846971 [navNode-1] 目标位置:TakeOff:(0.0, 0.0, 0.0)-[TakeOff]-[MCU:False]-[POS:True]
+1775389935.2847371 [navNode-1] 当前位置:(-0.00019348463683854789, -0.00031112603028304875, -0.000636265438515693)
+1775389935.2847733 [navNode-1] 
+1775389935.2927036 [navNode-1] [INFO] [1775389935.292333870] [navNode]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+1775389935.3311753 [navNode-1] [INFO] [1775389935.330765474] [navNode]: 状态3：SetAim--[TakeOff]
+1775389935.4316781 [navNode-1] [INFO] [1775389935.431162241] [navNode]: 状态4：WaitAim--[TakeOff]
+1775389935.4323125 [navNode-1] [INFO] [1775389935.431577034] [navNode]: 已到目标点
+1775389935.4324217 [navNode-1] 目标位置:TakeOff:(0.0, 0.0, 0.0)-[TakeOff]-[MCU:False]-[POS:True]
+1775389935.4324608 [navNode-1] 当前位置:(-0.0001203368155984208, -0.0002180910378228873, -0.0012424876913428307)
+1775389935.4324963 [navNode-1] 
+1775389935.5315311 [navNode-1] [INFO] [1775389935.531142212] [navNode]: 状态5：ArriveAim--[TakeOff]
+1775389935.6314824 [navNode-1] [INFO] [1775389935.631112724] [navNode]: 状态3：SetAim--[TakeOff]
+1775389935.7313747 [navNode-1] [INFO] [1775389935.731078471] [navNode]: 状态4：WaitAim--[TakeOff]
+1775389935.7316787 [navNode-1] [INFO] [1775389935.731446970] [navNode]: 已到目标点
+1775389935.7317321 [navNode-1] 目标位置:TakeOff:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:True]
+1775389935.7317665 [navNode-1] 当前位置:(-0.0001203368155984208, -0.0002180910378228873, -0.0012424876913428307)
+1775389935.7317975 [navNode-1] 
+1775389935.8313584 [navNode-1] [INFO] [1775389935.830971819] [navNode]: 状态5：ArriveAim--[TakeOff]
+1775389935.9340029 [navNode-1] [INFO] [1775389935.933275417] [navNode]: 状态3：SetAim--[TakeOff]
+1775389936.0315263 [navNode-1] [INFO] [1775389936.031146372] [navNode]: 状态4：WaitAim--[A6]
+1775389936.0318904 [navNode-1] [INFO] [1775389936.031526391] [navNode]: 已到目标点
+1775389936.0319858 [navNode-1] 目标位置:A6:(-0.25, 0.75, 0.8)-[A6]-[MCU:False]-[POS:True]
+1775389936.0320308 [navNode-1] 当前位置:(-0.0001203368155984208, -0.0002180910378228873, -0.0012424876913428307)
+1775389936.0320625 [navNode-1] 
+1775389936.1327708 [navNode-1] [INFO] [1775389936.132469614] [navNode]: 状态5：ArriveAim--[A6]
+1775389936.2309542 [navNode-1] [INFO] [1775389936.230655125] [navNode]: 状态6：Delay--[A6]
+1775389936.3310964 [navNode-1] [INFO] [1775389936.330817640] [navNode]: 状态6：Delay--[A6]
+1775389936.4315188 [navNode-1] [INFO] [1775389936.431132995] [navNode]: 状态6：Delay--[A6]
+1775389936.5315230 [navNode-1] [INFO] [1775389936.531136186] [navNode]: 状态6：Delay--[A6]
+1775389936.6316876 [navNode-1] [INFO] [1775389936.631380948] [navNode]: 状态6：Delay--[A6]
+1775389936.7314734 [navNode-1] [INFO] [1775389936.731154150] [navNode]: 状态6：Delay--[A6]
+1775389936.8332994 [navNode-1] [INFO] [1775389936.832975313] [navNode]: 状态6：Delay--[A6]
+1775389936.9311984 [navNode-1] [INFO] [1775389936.930928408] [navNode]: 状态6：Delay--[A6]
+1775389937.0319674 [navNode-1] [INFO] [1775389937.031655676] [navNode]: 状态6：Delay--[A6]
+1775389937.1311033 [navNode-1] [INFO] [1775389937.130827799] [navNode]: 状态6：Delay--[A6]
+1775389937.2324102 [navNode-1] [INFO] [1775389937.232010095] [navNode]: 状态6：Delay--[A6]
+1775389937.3341966 [navNode-1] [INFO] [1775389937.333501803] [navNode]: 状态6：Delay--[A6]
+1775389937.4310558 [navNode-1] [INFO] [1775389937.430804202] [navNode]: 状态6：Delay--[A6]
+1775389937.5314858 [navNode-1] [INFO] [1775389937.531117845] [navNode]: 状态6：Delay--[A6]
+1775389937.6313877 [navNode-1] [INFO] [1775389937.631008983] [navNode]: 状态6：Delay--[A6]
+1775389937.7313838 [navNode-1] [INFO] [1775389937.730982583] [navNode]: 状态6：Delay--[A6]
+1775389937.8329878 [navNode-1] [INFO] [1775389937.832490717] [navNode]: 状态6：Delay--[A6]
+1775389937.9313958 [navNode-1] [INFO] [1775389937.930845942] [navNode]: 状态6：Delay--[A6]
+1775389938.0323057 [navNode-1] [INFO] [1775389938.031921765] [navNode]: 状态6：Delay--[A6]
+1775389938.1310928 [navNode-1] [INFO] [1775389938.130815656] [navNode]: 状态6：Delay--[A6]
+1775389938.2317288 [navNode-1] [INFO] [1775389938.231431159] [navNode]: 状态6：Delay--[A6]
+1775389938.3685102 [navNode-1] [INFO] [1775389938.368187534] [navNode]: 状态6：Delay--[A6]
+1775389938.4888330 [navNode-1] Traceback (most recent call last):
+1775389938.4890964 [navNode-1]   File "/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/navNode", line 11, in <module>
+1775389938.4891746 [navNode-1]     load_entry_point('GroundStation', 'console_scripts', 'navNode')()
+1775389938.4892123 [navNode-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/navNode.py", line 329, in main
+1775389938.4892483 [navNode-1]     executor.spin()
+1775389938.4892819 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 290, in spin
+1775389938.4893138 [navNode-1]     self.spin_once()
+1775389938.4893453 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 770, in spin_once
+1775389938.4893773 [navNode-1]     self._spin_once_impl(timeout_sec)
+1775389938.4894085 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 767, in _spin_once_impl
+1775389938.4894407 [navNode-1]     future.result()
+1775389938.4894717 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 94, in result
+1775389938.4895012 [navNode-1]     raise self.exception()
+1775389938.4895289 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/task.py", line 239, in __call__
+1775389938.4895580 [navNode-1]     self._handler.send(None)
+1775389938.4895880 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 429, in handler
+1775389938.4897232 [navNode-1]     await call_coroutine(entity, arg)
+1775389938.4898911 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 343, in _execute_timer
+1775389938.4899607 [navNode-1]     await await_or_execute(tmr.callback)
+1775389938.4899960 [navNode-1]   File "/opt/ros/foxy/lib/python3.8/site-packages/rclpy/executors.py", line 118, in await_or_execute
+1775389938.4900284 [navNode-1]     return callback(*args)
+1775389938.4900589 [navNode-1]   File "/home/focal/Desktop/2024_GroundStation/build/GroundStation/GroundStation/navNode.py", line 209, in delay_ok_callback
+1775389938.4900906 [navNode-1]     self.get_logger().info(f"延时结束,QR识别结果:前{self.qrcode}，后{self.qrcode2}")
+1775389938.4901266 [navNode-1] AttributeError: 'navNode' object has no attribute 'qrcode'
+1775389938.5191226 [navNode-1] The following exception was never retrieved: Tried to use a handle that has been destroyed.
+1775389938.5311794 [ERROR] [navNode-1]: process has died [pid 20730, exit code 1, cmd '/home/focal/Desktop/2024_GroundStation/install/GroundStation/lib/GroundStation/navNode --ros-args --params-file /home/focal/Desktop/2024_GroundStation/install/GroundStation/share/GroundStation/param/navNode.yaml'].

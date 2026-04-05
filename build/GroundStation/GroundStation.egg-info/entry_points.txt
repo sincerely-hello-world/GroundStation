@@ -1,0 +1,5 @@
+[console_scripts]
+myMain = GroundStation.myMain:main
+navNode = GroundStation.navNode:main
+testNode = GroundStation.testNode:main
+

@@ -1,0 +1,64 @@
+[INFO] [1775392356.232595038] [Ground]: ros2 node launch success:Ground!
+[INFO] [1775392427.582024654] [Ground]: 发送 scan_all 成功
+[INFO] [1775392427.585222793] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392427.716442118] [Ground]: MCU2 send back: Takeoffok
+[INFO] [1775392436.818832834] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392437.841181502] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392438.862951170] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392439.882188555] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392440.903627695] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392441.924845753] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392442.945369072] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392443.965855196] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392444.988108501] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392446.008179522] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392447.028138653] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392448.049258073] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392449.070999167] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392450.090598934] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392451.111594840] [Ground]: MCU2 send back: Gdone*
+[ERROR] [1775392451.474197661] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775392451.474820831] [Ground]: fail
+[INFO] [1775392452.133440051] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392453.153590351] [Ground]: MCU2 send back: Gdone*
+[ERROR] [1775392453.643086801] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775392453.643509873] [Ground]: fail
+[INFO] [1775392454.176759605] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392455.195481773] [Ground]: MCU2 send back: Gdone*
+[ERROR] [1775392456.093364308] [Ground]: 发送 land 失败: ROS2 服务 [ControlService] 未启动或超时
+[ERROR] [1775392456.093745800] [Ground]: fail
+[INFO] [1775392456.216140969] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392457.238843549] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392458.258828286] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392459.278968991] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392460.299658907] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392461.320903835] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392462.341124406] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392463.361361175] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392464.383075277] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392465.404383005] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392466.424414938] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392467.445570906] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392468.467905176] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392469.488082196] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392470.509173353] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392471.529811756] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392472.549223893] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392473.569674330] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392474.590771376] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392475.613016879] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392476.633966564] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392477.653255817] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392478.675237625] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392479.696551602] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392480.717126604] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392481.738469725] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392482.760883904] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392483.780128648] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392484.802819890] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392485.821323096] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392486.842514470] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392487.864510686] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392488.884369345] [Ground]: MCU2 send back: Gdone*
+[INFO] [1775392489.905792616] [Ground]: MCU2 send back: Gdone*
+[INFO]

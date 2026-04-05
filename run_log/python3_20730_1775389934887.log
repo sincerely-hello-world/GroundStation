@@ -1,0 +1,64 @@
+[INFO] [1775389934.925808429] [navNode]: paths: [
+  {"x": 0.00, "y": 0.00, "z": 0.00, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+  {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+]
+
+[INFO] [1775389934.929216869] [navNode]: 上位机导航节点启动成功
+[WARN] [1775389934.929955359] [navNode]: 任务开始执行
+[INFO] [1775389935.031502720] [navNode]: 状态1：Takeoff--[TakeOff]
+[INFO] [1775389935.283920649] [navNode]: 状态2：Takeoff_wait--[TakeOff]
+[INFO] [1775389935.284356267] [navNode]: 已到目标点
+目标位置:TakeOff:(0.0, 0.0, 0.0)-[TakeOff]-[MCU:False]-[POS:True]
+当前位置:(-0.00019348463683854789, -0.00031112603028304875, -0.000636265438515693)
+
+[INFO] [1775389935.292333870] [navNode]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+[INFO] [1775389935.330765474] [navNode]: 状态3：SetAim--[TakeOff]
+[INFO] [1775389935.431162241] [navNode]: 状态4：WaitAim--[TakeOff]
+[INFO] [1775389935.431577034] [navNode]: 已到目标点
+目标位置:TakeOff:(0.0, 0.0, 0.0)-[TakeOff]-[MCU:False]-[POS:True]
+当前位置:(-0.0001203368155984208, -0.0002180910378228873, -0.0012424876913428307)
+
+[INFO] [1775389935.531142212] [navNode]: 状态5：ArriveAim--[TakeOff]
+[INFO] [1775389935.631112724] [navNode]: 状态3：SetAim--[TakeOff]
+[INFO] [1775389935.731078471] [navNode]: 状态4：WaitAim--[TakeOff]
+[INFO] [1775389935.731446970] [navNode]: 已到目标点
+目标位置:TakeOff:(0.0, 0.0, 0.7)-[TakeOff]-[MCU:False]-[POS:True]
+当前位置:(-0.0001203368155984208, -0.0002180910378228873, -0.0012424876913428307)
+
+[INFO] [1775389935.830971819] [navNode]: 状态5：ArriveAim--[TakeOff]
+[INFO] [1775389935.933275417] [navNode]: 状态3：SetAim--[TakeOff]
+[INFO] [1775389936.031146372] [navNode]: 状态4：WaitAim--[A6]
+[INFO] [1775389936.031526391] [navNode]: 已到目标点
+目标位置:A6:(-0.25, 0.75, 0.8)-[A6]-[MCU:False]-[POS:True]
+当前位置:(-0.0001203368155984208, -0.0002180910378228873, -0.0012424876913428307)
+
+[INFO] [1775389936.132469614] [navNode]: 状态5：ArriveAim--[A6]
+[INFO] [1775389936.230655125] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.330817640] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.431132995] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.531136186] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.631380948] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.731154150] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.832975313] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389936.930928408] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.031655676] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.130827799] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.232010095] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.333501803] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.430804202] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.531117845] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.631008983] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.730982583] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.832490717] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389937.930845942] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389938.031921765] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389938.130815656] [navNode]: 状态6：Delay--[A6]
+[INFO] [1775389938.231431159] [navNode]: 状态6：Delay--[A6]

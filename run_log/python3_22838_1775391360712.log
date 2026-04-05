@@ -1,0 +1,214 @@
+[INFO] [1775391360.771558215] [Ground]: ros2 node launch success:Ground!
+[INFO] [1775391366.091723581] [Ground]: H+02000-00003-00002 发送成功 → 飞行站已调用：H+02000-00003-00002服务
+[INFO] [1775391367.591400971] [Ground]: H+01998-00012-00011 发送成功 → 飞行站已调用：H+01998-00012-00011服务
+[INFO] [1775391369.037868213] [Ground]: H+01999-00012-00014 发送成功 → 飞行站已调用：H+01999-00012-00014服务
+[INFO] [1775391371.940617660] [Ground]: H+02001-00014-00007 发送成功 → 飞行站已调用：H+02001-00014-00007服务
+[INFO] [1775391373.341329261] [Ground]: H+01998-00016-00007 发送成功 → 飞行站已调用：H+01998-00016-00007服务
+[INFO] [1775391377.925858968] [Ground]: H-00005+01988-00006 发送成功 → 飞行站已调用：H-00005+01988-00006服务
+[INFO] [1775391378.797231380] [Ground]: H-02003-00013-00011 发送成功 → 飞行站已调用：H-02003-00013-00011服务
+[INFO] [1775391379.290174341] [Ground]: H-00002-02013-00007 发送成功 → 飞行站已调用：H-00002-02013-00007服务
+[INFO] [1775391419.935746400] [Ground]: 发送 scan_all 成功
+[INFO] [1775391419.939662329] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775391494.703379203] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.732667725] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.763871777] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.800079043] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.832601683] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.866415797] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.902064631] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.932744662] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391494.968211075] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.000460577] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.031328556] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.068435748] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.099632673] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.131204773] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.167376389] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.200151877] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.235207396] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.265654979] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.298596363] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.333947530] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.367006196] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.403297251] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.434033175] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.465529196] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.504823891] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.534889762] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.569566760] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.601584792] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.634181476] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.670074643] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.702953656] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.733496544] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391495.772721301] [Ground]: qrcode 识别到QR码: 6
+[INFO] [1775391504.276694833] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.312365826] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.345451611] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.376218597] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.412101927] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.444496458] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.480760087] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.580422204] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.612609461] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.649009173] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.712208949] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.748234975] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.848488751] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391504.879964884] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391505.184322983] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391505.252727017] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775391505.284018154] [Ground]: qrcode2 识别到QR码: 22
+[INFO] [1775392082.430592325] [Ground]: 发送 scan_all 成功
+[INFO] [1775392082.433627081] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392084.468005408] [Ground]: 发送 scan_all 成功
+[INFO] [1775392084.470153142] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392085.888719146] [Ground]: 发送 scan_all 成功
+[INFO] [1775392085.890403891] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392086.559148041] [Ground]: 发送 scan_all 成功
+[INFO] [1775392086.562517234] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392087.197776271] [Ground]: 发送 scan_all 成功
+[INFO] [1775392087.203073443] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392090.798306969] [Ground]: H+01999-00003-00004 发送成功 → 飞行站已调用：H+01999-00003-00004服务
+[INFO] [1775392090.822338706] [Ground]: MCU2 send back: +01999-00003-00004
+[INFO] [1775392091.445343024] [Ground]: H+01994-00002-00005 发送成功 → 飞行站已调用：H+01994-00002-00005服务
+[INFO] [1775392091.478848944] [Ground]: MCU2 send back: +01994-00002-00005
+[INFO] [1775392093.101539830] [Ground]: H+01991-00000-00004 发送成功 → 飞行站已调用：H+01991-00000-00004服务
+[INFO] [1775392093.127363703] [Ground]: MCU2 send back: +01991-00000-00004
+[INFO] [1775392114.471719479] [Ground]: takeoff 发送成功 → 飞行站已调用：takeoff服务
+[INFO] [1775392114.496359253] [Ground]: MCU2 send back: Takeoffok
+[INFO] [1775392117.583902694] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392117.703640382] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392117.824431569] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392117.944438148] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.064873013] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.186361170] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.307937337] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.426836220] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.549391061] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.666575473] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.786205290] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392118.907301770] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.030024482] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.150437054] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.271398789] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.387729974] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.507369107] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.627982328] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.748680379] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.868236626] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392119.988634249] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.110415563] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.231573502] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.349443193] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.471622613] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.589427751] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.714049786] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.838615036] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392120.949926018] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.070159162] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.192775905] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.311318130] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.433792822] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.552472983] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.674646188] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.791832974] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392121.911626822] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.034318158] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.161924151] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.280811134] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.392593161] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.513591005] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.632936738] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.756613613] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.873648124] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392122.995442992] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.114781491] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.234536837] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.355326763] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.473613014] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.596027128] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.713540483] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.835003036] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392123.958408588] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.080775417] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.202583659] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.325368508] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.439728321] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.559916564] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.680166666] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.798234178] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392124.919924607] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.042266039] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.162006979] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.283489017] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.404128643] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.521186473] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.642707791] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.760581468] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392125.880449256] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.007577156] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.129548367] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.241773476] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.366389645] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.482424969] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.601595784] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.721961453] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.842823406] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392126.964462014] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.084135260] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.207210425] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.330286150] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.444436745] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.564099035] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.683833672] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.803387005] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392127.923767785] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.044694199] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.164736415] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.284099891] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.405962726] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.524617602] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.646472483] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.767734972] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392128.887685981] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.010326014] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.132382263] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.246486713] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.365657570] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.488345549] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.606382720] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.727148105] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.850489415] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392129.967384660] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.088516670] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.207865491] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.333162437] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.449211553] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.569425157] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.689491430] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.809845129] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392130.930461405] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.053214964] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.171743052] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.290124591] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.410620053] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.531004042] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.650926809] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.770580369] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392131.891457073] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.010903395] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.131359471] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.258427107] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.372553663] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.492071231] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.612468635] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.745404807] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.852789897] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392132.973774074] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392133.092515285] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392133.214089618] [Ground]: MCU2 send back: Gdoing*
+[INFO] [1775392147.897967622] [Ground]: 发送 scan_all 成功
+[INFO] [1775392147.901954944] [Ground]: scan_all 响应成功 → 回复：scan_all
+[INFO] [1775392149.343152427] [Ground]: 发送 scan_all 成功
+[INFO] [1775392149.345346221] [Ground]: scan_all 响应成功 → 回复：scan_all
