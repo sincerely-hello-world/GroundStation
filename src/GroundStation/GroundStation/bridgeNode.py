@@ -64,7 +64,7 @@ class ROS2_bridgeNode(Node, QObject):
 
         self.topic_uart4_sub_MCU2 = self.create_subscription(String, 'uart_reader4_data_topic', self.MCU2_callback,10)
 
-        self.talk2nav_client  = self.create_client(ControlService, 'talk_service')
+        self.talk_client  = self.create_client(ControlService, 'talk_service')
 
     def MCU2_callback(self, msg: String):
         self.MCU2msg = msg
@@ -76,6 +76,29 @@ class ROS2_bridgeNode(Node, QObject):
         self.get_logger().debug(info)
         self.pos = msg
         self.position.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
+
+    def send_talk(self, cmd:String):
+        if rclpy.ok() and self.talk_client.wait_for_service(timeout_sec = 0.1)==False:
+            err_msg = f"发送 {cmd} 失败: ROS2 服务 [ControlService] 未启动或超时"
+            self.get_logger().error(err_msg)
+            return # ！！！非常重要：必须 return，不要往下走 call_async
+        # 1️⃣ 先创建 future  # . 只有服务就
+        request = ControlService.Request()
+        request.req = cmd
+        future = self.talk_client.call_async(request)
+        future.add_done_callback(lambda fut: self.talk_future_done(fut, cmd))
+        self.get_logger().info(f"发送 {cmd} 成功")
+    
+
+    def talk_future_done(self, future, talk):
+        try:
+            response = future.result()  # 會 raise 如果有 exception
+            info_str = f"{talk} 响应成功 → {response.echo}"   
+            self.get_logger().info(info_str)
+        except Exception as e:
+            err_msg = f"{talk} 响应失败: {str(e)}"
+            self.cmd_result.emit(False, err_msg)
+            self.get_logger().error(err_msg)
 
     def send_command(self, cmd:String):
         if rclpy.ok() and self.command_client.wait_for_service(timeout_sec = 0.1)==False:

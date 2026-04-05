@@ -17,7 +17,7 @@
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
    </property>
-   <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,0,0" columnstretch="4,0">
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,0,0" columnstretch="1,1,0">
     <item row="0" column="0">
      <widget class="QFrame" name="frame_carmera">
       <property name="frameShape">
@@ -201,7 +201,7 @@
       </layout>
      </widget>
     </item>
-    <item row="0" column="1" rowspan="3">
+    <item row="0" column="1">
      <widget class="QFrame" name="frame">
       <property name="font">
        <font>
@@ -219,7 +219,27 @@
        <number>3</number>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="0">
+       <item row="3" column="0">
+        <widget class="QPushButton" name="pushButton_takeoff">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>24</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>起飞</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
         <layout class="QFormLayout" name="formLayout">
          <item row="0" column="0">
           <widget class="QLabel" name="label_status">
@@ -297,7 +317,7 @@
          </item>
         </layout>
        </item>
-       <item row="2" column="0">
+       <item row="2" column="0" colspan="2">
         <widget class="QPushButton" name="pushButton">
          <property name="font">
           <font>
@@ -309,27 +329,7 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QPushButton" name="pushButton_takeoff">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>24</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>起飞</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
+       <item row="4" column="0" colspan="2">
         <widget class="QPushButton" name="pushButton_land">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -349,7 +349,7 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="0">
+       <item row="5" column="0" colspan="2">
         <widget class="QPushButton" name="pushButton_runtask">
          <property name="text">
           <string>执行任务</string>

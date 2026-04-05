@@ -80,17 +80,45 @@ class testNode(Node):
         self.topic_qrcode2_pub = self.create_publisher(String,"qrcode2_data_topic",10 ,callback_group=self.topic_qrcode_cb_group)  
 
         self.get_logger().info('测试节点启动成功')
-        self.timer = self.create_timer(0.1, self.timer_to_publish)
- 
+        self.status = self.状态.INIT
+        self.delay_timer = None
+        self.path_index = 0
+        self.main_timer = self.create_timer(0.1, self.timer_to_publish)
+
     def timer_to_publish(self):
         self.pos.pos_x = self.aim.x
         self.pos.pos_y = self.aim.y
         self.pos.pos_z = self.aim.z
         self.pos.confidence = 3
         self.topic_t265_pub.publish(self.pos)
-        self.topic_uart4_pub_MCU2.publish(String(data='Gdone*'))
+        # self.topic_uart4_pub_MCU2.publish(String(data='Gdone*'))
         self.topic_qrcode_pub.publish(String(data='testQRcode'))
         self.topic_qrcode2_pub.publish(String(data='testQRcode'))
+
+        if self.status == self.状态.INIT:
+            self.get_logger().info(f"测试点：{self.status}--[{self.aim.label}]")
+            self.status = self.状态.SEND
+        if self.status == self.状态.SEND:
+            self.get_logger().info(f"测试点：{self.status}--[{self.aim.label}]")
+            if self.path_index == len(self.paths):
+                self.status = self.状态.END
+            else:
+                self.aim = self.paths[self.path_index]
+                self.path_index += 1
+                self.status = self.状态.DELAY
+        if self.status == self.状态.DELAY:
+            self.get_logger().info(f"测试点：{self.status}--[{self.aim.label}]")
+            if self.delay_timer is None or self.delay_timer.is_canceled():
+                self.delay_timer = self.create_timer(4.0, self.delay_ok_callback)
+        if self.status == self.状态.END:
+            self.get_logger().info(f"测试点：{self.status}--[{self.aim.label}]")
+            self.main_timer.cancel()
+            rclpy.shutdown()
+    def delay_ok_callback(self):
+        self.get_logger().info(f"测试点：{self.status}--[{self.aim.label}]")
+        self.status = self.状态.SEND
+        self.delay_timer.cancel()
+        self.delay_timer = None
 def main(args=None):
     rclpy.init(args=args)
     try:

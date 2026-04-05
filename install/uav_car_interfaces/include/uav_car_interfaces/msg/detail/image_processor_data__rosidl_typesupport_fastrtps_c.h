@@ -1,1 +1,0 @@
-/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces/rosidl_typesupport_fastrtps_c/uav_car_interfaces/msg/detail/image_processor_data__rosidl_typesupport_fastrtps_c.h

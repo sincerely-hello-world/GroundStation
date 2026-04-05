@@ -3,15 +3,15 @@ navNode:
     test: navNode
     paths_scan_all: |
       [
-        {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff","qrcode": ""},
-        {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"   ,"qrcode": ""},
-        {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"   ,"qrcode": ""},
-        {"x": 0.75, "y": 2.75, "z": 0.70, "label": "UpSide1","qrcode": ""},
-        {"x": 0.75, "y": 2.75, "z": 0.70, "label": "Landpos","qrcode": ""}
+        {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x": 0.00, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
       ]
 
 
@@ -20,17 +20,26 @@ testNode:
     test: testNode
     paths_scan_all: |
       [
-        {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff","qrcode": ""},
-        {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"   ,"qrcode": ""},
-        {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"   ,"qrcode": ""},
-        {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"   ,"qrcode": ""},
-        {"x": 0.75, "y": 2.75, "z": 0.70, "label": "UpSide1","qrcode": ""},
-        {"x": 0.75, "y": 2.75, "z": 0.70, "label": "Landpos","qrcode": ""}
+        {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
+        {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
       ]
 
 # yaml文件内的 JSON string 不支持尾随逗号（trailing comma），这是很多开发者（包括老手）都踩过的坑。
 # yaml文件内的 JSON string 不支持尾随逗号（trailing comma），这是很多开发者（包括老手）都踩过的坑。
 # yaml文件内的 JSON string 不支持尾随逗号（trailing comma），这是很多开发者（包括老手）都踩过的坑。
+
+
+# xyz 坐标点位置，单位：米 前x+ 左y+ 上z+, 初始状态：x=0,y=0,z=0 机头朝前
+
+# label 点位标签：机头前摄像头   
+# qrcode 点位二维码：二维码内容  
+
+# label2 点位标签：机尾后摄像头
+# qrcode2 点位二维码：二维码内容

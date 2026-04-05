@@ -1,1 +1,0 @@
-/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces/rosidl_generator_cpp/uav_car_interfaces/srv/detail/control_service__type_support.hpp

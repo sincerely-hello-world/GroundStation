@@ -1,7 +1,0 @@
-1775209395.4552634 [INFO] [launch]: All log files can be found below /home/focal/Desktop/2024_GroundStation/run_log/2026-04-03-02-43-15-450232-ubuntu-15804
-1775209395.4556541 [INFO] [launch]: Default logging verbosity is set to INFO
-1775209395.5874405 [INFO] [navNode-1]: process started with pid [15818]
-1775209396.2842469 [navNode-1] [INFO] [1775209396.283856213] [navNode]: test:2
-1775209396.2908735 [navNode-1] [INFO] [1775209396.290617201] [navNode]: 上位机导航节点启动成功
-1775209399.3831644 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
-1775209399.4094367 [INFO] [navNode-1]: process has finished cleanly [pid 15818]

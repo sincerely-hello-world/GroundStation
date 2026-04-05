@@ -10,18 +10,18 @@ def generate_launch_description():
     # 定义所有节点
     
     return LaunchDescription([
-        # Node(
-        #     package='GroundStation',
-        #     executable='myMain',
-        # ),
-        # Node(
-        #     package='GroundStation',
-        #     executable='navNode',
-        #     parameters=[ navNode_param_yaml ]
-        # ),
         Node(
             package='GroundStation',
-            executable='testNode',
+            executable='myMain',
+        ),
+        Node(
+            package='GroundStation',
+            executable='navNode',
             parameters=[ navNode_param_yaml ]
         ),
+        # Node(
+        #     package='GroundStation',
+        #     executable='testNode',
+        #     parameters=[ navNode_param_yaml ]
+        # ),
     ])

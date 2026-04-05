@@ -25,7 +25,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.setWindowTitle(name)
 
         self.subdialog1 = subDialog1() # 创建子窗口1类的实例
-        self.showdialog = showDialog()
 
         if not rclpy.ok():
             rclpy.init()
@@ -41,7 +40,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.pushButton_takeoff.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.pushButton_land.clicked.connect(lambda: self.bridge_node.send_command("land"))
 
-        self.pushButton_runtask.clicked.connect(self.showdialog.show)
+        self.pushButton_runtask.clicked.connect(lambda: self.bridge_node.send_talk("scan_all"))
         self.pushButton.clicked.connect(self.takeoff_confirm)
         
         self.actionHand.triggered.connect(self.subdialog1.show)
@@ -56,15 +55,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.subdialog1.pushButton_down.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y, self.pos.z-0.13,'')))
         self.subdialog1.pushButton_up.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y, self.pos.z+0.13,'')))
 
-
-        # ✅ 在这里连接：subDialog2界面的按钮 → ROS2节点的方法
-        self.showdialog.pushButton_ok.clicked.connect(self.close_temp)
-
-        # 固定二维码显示区域，避免图片刷新时 label 自发拉伸变化大小
-        ## self.label_qrcode_image.setFixedSize(800, 800)
-        ## self.label_qrcode_image.setSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        # self.label_qrcode_image.setScaledContents(True)
-        # self.label_qrcode_image.setAlignment(Qt.AlignCenter)
         self.showMaximized()
  
 
@@ -168,6 +158,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
     def closeEvent(self, event):
         if self.subdialog1.isVisible():
             self.subdialog1.close() # 关闭子窗口
+        self.bridge_node.send_talk('shutdown-navNode')
         self.ros2_thread.join(timeout=0.5)  # 最多等2秒
         event.accept()
 
@@ -177,13 +168,6 @@ class subDialog1(QDialog ,Ui_subDialog1):
         self.setupUi(self)  # 初始化运行B窗口类下的 setupUi 函数
         self.setWindowTitle(name)
         # self.pushButton_closeDialog.clicked.connect(self.close) #窗口2 中的关闭按钮
-
-class showDialog(QDialog ,Ui_showDialog):
-    def __init__(self,name="参数设置对话框"):
-        super().__init__()
-        self.setupUi(self)  # 初始化运行B窗口类下的 setupUi 函数
-        self.setWindowTitle(name)
-        self.pushButton_cannel.clicked.connect(self.close)
 
 def main():
   

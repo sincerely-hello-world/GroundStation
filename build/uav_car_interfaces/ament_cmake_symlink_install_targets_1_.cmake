@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/focal/Desktop/2024_GroundStation/build/uav_car_interfaces/libuav_car_interfaces__rosidl_typesupport_fastrtps_cpp.so" "TARGETS" "uav_car_interfaces__rosidl_typesupport_fastrtps_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

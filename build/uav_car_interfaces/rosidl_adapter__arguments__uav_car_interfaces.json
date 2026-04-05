@@ -1,8 +1,0 @@
-{
-  "package_name": "uav_car_interfaces",
-  "non_idl_tuples": [
-    "/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces:msg/T265Data.msg",
-    "/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces:msg/ImageProcessorData.msg",
-    "/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces:srv/ControlService.srv"
-  ]
-}

@@ -16,16 +16,18 @@ from dataclasses import dataclass
 from GroundStation.myFunction import *
 import json
 import os
-from typing import List
+from typing import List, Optional
 
 
 class Point:
-    def __init__(self, x: float = 0.0, y: float = 0.0, z: float = 0.7, label: str = '',qrcode: str = ''):
+    def __init__(self, x: float = 0.0, y: float = 0.0, z: float = 0.7, label: str = 'none',qrcode: str = 'none',label2: str = '', qrcode2: str = ''):
         self.x = x      # 单位：米
         self.y = y
         self.z = z
         self.label = label
         self.qrcode = qrcode
+        self.label2 = label2
+        self.qrcode2 = qrcode2
 
 @dataclass(frozen=True)  # frozen=True 开启只读模式
 class myStatus:
@@ -39,20 +41,16 @@ class myStatus:
     End :str = 'End' # 运行结束
     
 
-# @dataclass(frozen=True)  # frozen=True 开启只读模式
-# class myTask:
-#     SCAN_ALL :str = 'Scan_all'
-#     # FIND_LAEBL :str = 'Find_label'
-
-
 class navNode(Node):
     mcu_arrive = False
     pos_arrive = False
+    aim_arrive = False
+
+
     pos = T265Data()
     
-    aim = Point() # 路径目标点
-    find_label = '' # 要搜寻的标签位置
-
+    aim = Point() # 路径点
+    
     状态 = myStatus()
     status = ''
     task = ''
@@ -61,6 +59,8 @@ class navNode(Node):
     topic_cb_group =MutuallyExclusiveCallbackGroup()
     topic_t265_cb_group=MutuallyExclusiveCallbackGroup()
     topic_qrcode_cb_group=MutuallyExclusiveCallbackGroup()
+
+    shutdown_requested = False
     def __init__(self, name = 'navNode'):
         super().__init__(node_name=name)
         # parameters
@@ -79,14 +79,14 @@ class navNode(Node):
                     z=float(p['z']),
                     label=str(p['label']),
                     qrcode=str(p['qrcode']),
+                    label2=str(p['label2']),
+                    qrcode2=str(p['qrcode2']),
                 )
                 for p in self.path_scan_all_json
             ]
             self.get_logger().info(f'paths: {self.paths_scan_all_str}')
         # self.get_logger().info(f'{self.paths[0].x}, {self.paths[0].y}, {self.paths[0].z}')
         self.add_on_set_parameters_callback(self.param_callback)
-
-
 
         #----------------------
         self.talk2ui_server  = self.create_service(ControlService, 'talk_service', self.talk_callback)
@@ -98,30 +98,68 @@ class navNode(Node):
         self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_qrcode_cb_group)
         self.topic_qrcode2_sub = self.create_subscription(String,"qrcode2_data_topic",self.qrcode2_callback,10 ,callback_group=self.topic_qrcode_cb_group)  
 
+        self.topic_qrcode_result_pub = self.create_publisher(String,"qrcode_result_topic",10 ,callback_group=self.topic_qrcode_cb_group)
+
+        self.path_index = 0
+
         self.scan_all_timer = None 
-        self.find_label_timer = None 
+
+        self.scan_label = None # 要搜寻的标签位置
+        self.scan_path = None  # 要搜寻的路径
+        self.scan_label_timer = None 
 
         self.delay_timer = None
-        self.path_index = 0
         self.delay_ok = False
+
         self.get_logger().info('上位机导航节点启动成功')
+
+        ## 配合testNode debug测试用
+        # self.status = self.状态.TAKEOFF
+        # self.scan_all_timer = self.create_timer(0.1, self.scan_all_timer_callback)
+        # self.get_logger().warning(f'任务开始执行{self.task}' )
 
     def talk_callback(self, request, response):
         self.task = request.req
         self.get_logger().info(f"收到来自UI的请求：{request.req}")
-        if self.task == 'scan_all' and  self.scan_all_timer is None:
-            if self.scan_all_timer is None:
-                self.status = self.状态.TAKEOFF
-                self.path_index = 0
-                self.scan_all_timer = self.create_timer(0.1, self.scan_all_timer_callback)
+        if self.task == 'shutdown-navNode':
+            self.status = self.状态.End
+            self.get_logger().warning(f'{self.get_name()}{self.task}' )
+            self.shutdown_requested = True
+            response.echo = 'shutdown-navNode关闭节点'
+            return response
         
+        elif self.task == 'scan_all' and  self.scan_all_timer is None:
+            self.status = self.状态.TAKEOFF
+            self.path_index = 0
+            self.scan_all_timer = self.create_timer(0.1, self.scan_all_timer_callback)
+
+        elif len(self.task) == 2 and self.scan_label_timer is None:
+            self.get_logger().info(f"测试1{type(self.task)}")
+            self.status = self.状态.TAKEOFF
+            self.path_index = 0
+            self.scan_label = self.task
+            if self.task[0] == 'A':
+                self.scan_path = self.find_points_by_labels(self.paths, ['TakeOff',self.scan_label,'LandPos'])
+            elif self.task[0] == 'B' or self.task[0] == 'C':
+                self.scan_path = self.find_points_by_labels(self.paths, ['TakeOff','p1',self.scan_label,'LandPos'])
+            elif self.task[0] == 'D':
+                self.scan_path = self.find_points_by_labels(self.paths, ['TakeOff','p1',self.scan_label,'LandPos'])
+            
+            if self.scan_path is  None:
+                self.get_logger().error(f'未找到合适路径{self.task}')
+            else:
+                self.scan_label_timer = self.create_timer(0.1, self.scan_label_timer_callback)
+
         self.get_logger().warning(f'任务开始执行{self.task}' )
-    
-    
+        response.echo =f'回复：{self.task}'
+        return response
+
     def send_aim(self, aim:Point):
         self.send_command(TGformat(head='G',x=aim.x,y=aim.y,z=aim.z,end=''))
     def scan_all_timer_callback(self):#todo: 扫描所有二维码
         if self.status == self.状态.TAKEOFF:
+            self.path_index = 0
+            self.aim = self.paths[self.path_index]
             self.get_logger().info(f"状态1：{self.status}--[{self.aim.label}]")
             self.send_command('takeoff')
             self.status = self.状态.TAKEOFF_WAIT
@@ -135,7 +173,7 @@ class navNode(Node):
             self.get_logger().info(f"状态3：{self.status}--[{self.aim.label}]")
             if self.path_index == len(self.paths)-1: # MAX index + 1 = len !!!, 最后一点为降落点，但用降落指令
                 self.aim = self.paths[-1]
-                self.send_command('normalLand')
+                self.send_aim(self.aim)
                 self.status = self.状态.LAND
             else:
                 self.aim = self.paths[self.path_index]
@@ -150,7 +188,7 @@ class navNode(Node):
 
         elif self.status == self.状态.ArriveAim:
             self.get_logger().info(f"状态5：{self.status}--[{self.aim.label}]")
-            if len(self.aim.laebl) == 2:
+            if len(self.aim.label) == 2:
                 self.status = self.状态.Delay
             else:
                 self.status = self.状态.SetAim
@@ -158,16 +196,17 @@ class navNode(Node):
         elif self.status == self.状态.Delay:
             self.get_logger().info(f"状态6：{self.status}--[{self.aim.label}]")
             if self.delay_ok == True:
-                self.delay_ok = False
-                if self.delay_timer:
-                    self.delay_timer.cancel()  # 确保定时器只执行一次
+                self.delay_ok = False # 重置 在这里延迟结束，可以发送整理到的二维码
+                
                 self.status = self.状态.SetAim
             else:
                 if self.delay_timer is None or self.delay_timer.is_canceled():
                     self.delay_timer = self.create_timer(2.0, self.delay_ok_callback)
         elif self.status == self.状态.LAND:
-            self.get_logger().info(f"状态7：{self.status}--[降落开始]")
+            self.get_logger().info(f"状态7：{self.status}--[准备降落]")
             if self.check_arrive_aim():
+                self.get_logger().info(f"状态7：{self.status}--[到达降落点，降落]")
+                self.send_command('normalLand')
                 self.status = self.状态.End
 
         elif self.status == self.状态.End:
@@ -175,28 +214,37 @@ class navNode(Node):
             self.scan_all_timer.cancel()
             self.scan_all_timer = None
 
-    def find_label_timer_callback(self):#todo: 寻找指定位置的二维码
-        self.send_command('normalLand')
+    def scan_label_timer_callback(self):#todo: 寻找指定位置的二维码
         pass
 
     def delay_ok_callback(self):
+        self.get_logger().info(f"延时结束,QR识别结果:前{self.aim.qrcode}，后{self.aim.qrcode2}")
+        self.paths[self.path_index].qrcode = self.aim.qrcode
+        self.paths[self.path_index].qrcode2 = self.aim.qrcode2
         self.delay_ok = True
+        self.delay_timer.cancel()  # 确保定时器只执行一次
+        self.delay_timer = None
     def check_arrive_aim(self):
+        info_str = f"当前状态：[{self.status}],点位标签[{self.aim.label}:{self.aim.qrcode}|{self.aim.label2}:{self.aim.qrcode2}] 扫玛状态：前-后[{self.aim.qrcode}-{self.aim.qrcode2}],到达?:[MCU:{self.mcu_arrive}]-[POS:{self.pos_arrive}]"
+        aim_str = f"目标位置：({self.aim.x:.2f}, {self.aim.y:.2f}, {self.aim.z:.2f})-{self.aim.label}-{info_str}"
+        pos_str = f"当前位置：({self.pos.pos_x:.2f}, {self.pos.pos_y:.2f}, {self.pos.pos_z:.2f})"
+
         if  self.pos_arrive or self.mcu_arrive:
-            self.get_logger().info(f"已到目标点")
+            self.get_logger().info(f"已到目标点\n{aim_str}\n{pos_str}")
             return True
         else:
-            self.get_logger().info(f"未到目标点")
-            self.mcu_arrive = False
+            self.get_logger().info(f"未到目标点\n{aim_str}\n{pos_str}")
             return False
-
+    def set_aim(self, aim:Point):
+        cmd= TGformat(head='G',x=aim.x,y=aim.y,z=aim.z,end='')
+        self.send_command(cmd)
     def qrcode_callback(self, msg:String):
-        self.qrcode = msg.data
+        if  self.pos_arrive or self.mcu_arrive:
+            self.aim.qrcode = msg.data
     def qrcode2_callback(self, msg:String):
-        self.qrcode2 = msg.data
+        if  self.pos_arrive or self.mcu_arrive:
+            self.aim.qrcode2 = msg.data
     def position_callback(self, msg: T265Data): # topic_t265_sub的回调函数，接收T265Data消息并更新位置信息
-        # info = f"X:{msg.pos_x+0.0:+6.3f}m, Y:{msg.pos_y+0.0:+6.3f}m, Z:{msg.pos_z+0.0:+6.3f}m, C:{msg.confidence}, H:{msg.tof_z+0.0:+6.3f}m"
-        # self.get_logger().info(info)
         self.pos = msg
         within_tolerance = (
             max( # 切比雪夫距离（也叫最大值距离、L∞ 范数）就是取三个轴差值的最大值。
@@ -207,15 +255,12 @@ class navNode(Node):
         )
         self.pos_arrive = within_tolerance
 
-    def set_aim(self, aim:Point):
-        cmd= TGformat(head='G',x=aim.x,y=aim.y,z=aim.z,end='')
-        self.send_command(cmd)
-
     def MCU2_callback(self, msg: String):
         self.MCU2msg = msg
         self.get_logger().info(f'MCU2 send back: {msg.data}')
         if self.MCU2msg.data == "Gdone*":
             self.mcu_arrive = True
+            self.get_logger().info(f"mcu:已到目标点-[{self.aim.label}]")
         elif self.MCU2msg.data == "Gdoing*":
             self.mcu_arrive = False
         else:
@@ -246,24 +291,45 @@ class navNode(Node):
             if param.name == 'test':
                 self.test = param.value
                 self.get_logger().info(f'test: {self.test}')
-            if param.name == 'paths_scan_all':
-                self.paths_scan_all_str = param.value
-                self.path_scan_all_json = json.loads(self.paths_scan_all_str)
-                self.paths: List[Point] = [
-                    Point(
-                        x=float(p['x']),
-                        y=float(p['y']),
-                        z=float(p['z']),
-                        label=str(p['label']),
-                        qrcode=str(p['qrcode']),
-                    )
-                    for p in self.path_scan_all_json
-                ]
-                self.get_logger().info(f'paths: {self.paths_scan_all_str}')
-                # self.get_logger().info(f'{self.paths[0].x}, {self.paths[0].y}, {self.paths[0].z}')
             else:
                 self.get_logger().warn(f'unexpected parameter: {param.name}')
         return SetParametersResult(successful=True)
+
+    def find_point_by_label(self,paths: List[Point], label: str) -> Optional[Point]:
+        """
+        根据 label 查找 Point，支持精确匹配，未找到时返回 None
+        """
+        if not paths or not label:
+            return None
+        label = str(label).strip()
+        for p in paths:
+            if str(p.label).strip() == label or str(p.label2).strip() == label:
+                self.get_logger().info(f"Found point with label: [{p.label, p.label2}],{p.x, p.y, p.z}")
+                return p
+        return None
+
+    def find_points_by_labels(self,paths: List[Point], labels: List[str]) -> Optional [List[Point]]:
+        """
+        根据多个 label，返回对应的 Point 列表（按 labels 的顺序排列）
+        
+        参数:
+            paths: List[Point]      - 所有路径点的完整列表
+            labels: List[str]       - 想要的 label 列表（支持唯一label）
+            
+        返回:
+            List[Point]             - 按输入 labels 顺序排列的 Point 列表（找不到的 label 会返回 None,整体返回 None）
+        """
+        if not paths or not labels:
+            return []
+        result: List[Point] = []
+        for label in labels:
+            point = self.find_point_by_label(paths, label)
+            if point is not None:
+                result.append(point)
+            else:
+                self.get_logger().error(f"出错了: Label '{label}' 不在预设的路径列表内！")
+                return None
+        return result
 def main(args=None):
     rclpy.init(args=args)
     try:
@@ -272,14 +338,21 @@ def main(args=None):
         executor = MultiThreadedExecutor(num_threads = 2)
         executor.add_node(node)
         try:
-            executor.spin()
+            # executor.spin()
+            while rclpy.ok() and not node.shutdown_requested:
+                executor.spin_once(timeout_sec=0.1)   # 关键：改用 spin_once + 循环检查标志
+        # except SystemExit as e:               # ← 捕获服务中抛出的异常
+        #     node.get_logger().info(f"收到 SystemExit: {e}，正在关闭节点...")
         except KeyboardInterrupt:
             pass  # 正常退出，不打印 traceback
     finally:
         if node is not None:
+            executor.shutdown()
+        if node is not None:
             node.destroy_node()
         if rclpy.ok():
             rclpy.shutdown()
-    
+   
 if __name__ == '__main__':
     main()
+
