@@ -1,1 +1,0 @@
-/home/focal/Desktop/2024_GroundStation/src/uav_car_interfaces/msg/ImageProcessorData.msg

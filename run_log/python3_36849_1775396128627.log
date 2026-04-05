@@ -1,4 +1,0 @@
-[INFO] [1775396128.733553892] [Ground]: ros2 node launch success:Ground!
-[INFO] [1775396130.177379334] [Ground]: 发送 scan_all 成功
-[INFO] [1775396130.181670851] [Ground]: scan_all 响应成功 → 回复：scan_all
-[INFO] [1775396133.616387913] [Ground]: 发送 shutdown-navNode 成功
