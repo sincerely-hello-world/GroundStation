@@ -10,8 +10,23 @@ navNode:
         {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
         {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
         {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x": 0.00, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+        {"x":-0.25, "y": 2.75, "z": 1.20, "label": "LeftSideA", "qrcode": "", "label2": ""     , "qrcode2": "" },
+        {"x": 1.75, "y": 2.75, "z": 1.20, "label": "LeftSideBC", "qrcode": "", "label2": ""     , "qrcode2": "" },
+        {"x": 1.75, "y": 1.75, "z": 1.20, "label": "C1", "qrcode": "", "label2": "B3"     , "qrcode2": "" },
+        {"x": 1.75, "y": 1.75, "z": 0.80, "label": "C4", "qrcode": "", "label2": "B6"     , "qrcode2": "" },
+        {"x": 1.75, "y": 1.25, "z": 1.20, "label": "C5", "qrcode": "", "label2": "B5"     , "qrcode2": "" },
+        {"x": 1.75, "y": 1.25, "z": 0.80, "label": "C2", "qrcode": "", "label2": "B2"     , "qrcode2": "" },
+        {"x": 1.75, "y": 0.75, "z": 1.20, "label": "C6", "qrcode": "", "label2": "B1"     , "qrcode2": "" },
+        {"x": 1.75, "y": 0.75, "z": 0.80, "label": "C3", "qrcode": "", "label2": "B4"     , "qrcode2": "" },
+        {"x": 1.75, "y":-0.25, "z": 0.80, "label": "RightSideBC", "qrcode": "", "label2": ""     , "qrcode2": "" },
+        {"x": 3.75, "y":-0.25, "z": 0.80, "label": "RightSideD", "qrcode": "", "label2": ""     , "qrcode2": "" },
+        {"x": 3.75, "y": 0.75, "z": 0.80, "label": ""     , "qrcode": "", "label2": "D4"       , "qrcode2": "" },
+        {"x": 3.75, "y": 0.75, "z": 1.20, "label": ""     , "qrcode": "", "label2": "D1"       , "qrcode2": "" },
+        {"x": 3.75, "y": 1.25, "z": 1.20, "label": ""     , "qrcode": "", "label2": "D2"       , "qrcode2": "" },
+        {"x": 3.75, "y": 1.25, "z": 0.80, "label": ""     , "qrcode": "", "label2": "D5"       , "qrcode2": "" },
+        {"x": 3.75, "y": 1.75, "z": 0.80, "label": ""     , "qrcode": "", "label2": "D6"       , "qrcode2": "" },
+        {"x": 3.75, "y": 1.75, "z": 1.20, "label": ""     , "qrcode": "", "label2": "D3"       , "qrcode2": "" },
+        {"x": 3.75, "y": 2.50, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
       ]
 
 
@@ -21,15 +36,30 @@ testNode:
     test: testNode
     paths_scan_all: |
       [
-        {"x": 0.00, "y": 0.00, "z": 0.70, "label": "TakeOff", "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 0.75, "z": 0.80, "label": "A6"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 0.75, "z": 1.20, "label": "A3"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 1.25, "z": 1.20, "label": "A2"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 1.25, "z": 0.80, "label": "A5"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 1.75, "z": 0.80, "label": "A4"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 1.75, "z": 1.20, "label": "A1"     , "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x":-0.25, "y": 2.00, "z": 0.70, "label": "UpSide1", "qrcode": "", "label2": ""       , "qrcode2": "" },
-        {"x": 0.75, "y": 2.00, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+        {"x": 0.00, "y": 0.00, "z": 0.70,  "label": "TakeOff", "qrcode": "", "label2": ""        , "qrcode2": "" },
+        {"x":-0.25, "y": 0.75, "z": 0.80,  "label": "A6"     , "qrcode": "6", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 0.75, "z": 1.20,  "label": "A3"     , "qrcode": "3", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.25, "z": 1.20,  "label": "A2"     , "qrcode": "2", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.25, "z": 0.80,  "label": "A5"     , "qrcode": "5", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.75, "z": 0.80,  "label": "A4"     , "qrcode": "4", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 1.75, "z": 1.20,  "label": "A1"     , "qrcode": "1", "label2": ""       , "qrcode2": "" },
+        {"x":-0.25, "y": 2.75, "z": 1.20,  "label": "LeftSideA", "qrcode": "", "label2": ""      , "qrcode2": "" },
+        {"x": 1.75, "y": 2.75, "z": 1.20,  "label": "LeftSideBC", "qrcode": "", "label2": ""      , "qrcode2": "" },
+        {"x": 1.75, "y": 1.75, "z": 1.20, "label": "C1", "qrcode": "1", "label2": "B3"     , "qrcode2": "3" },
+        {"x": 1.75, "y": 1.75, "z": 0.80, "label": "C4", "qrcode": "4", "label2": "B6"     , "qrcode2": "6" },
+        {"x": 1.75, "y": 1.25, "z": 1.20, "label": "C5", "qrcode": "5", "label2": "B5"     , "qrcode2": "5" },
+        {"x": 1.75, "y": 1.25, "z": 0.80, "label": "C2", "qrcode": "2", "label2": "B2"     , "qrcode2": "2" },
+        {"x": 1.75, "y": 0.75, "z": 1.20, "label": "C6", "qrcode": "6", "label2": "B1"     , "qrcode2": "1" },
+        {"x": 1.75, "y": 0.75, "z": 0.80, "label": "C3", "qrcode": "3", "label2": "B4"     , "qrcode2": "4" },
+        {"x": 1.75, "y":-0.25, "z": 0.80,  "label": "RightSideBC", "qrcode": "", "label2": ""     , "qrcode2": "" },
+        {"x": 3.75, "y":-0.25, "z": 0.80,  "label": "RightSideD", "qrcode": "", "label2": ""     , "qrcode2": "" },
+        {"x": 3.75, "y": 0.75, "z": 0.80,  "label": ""     , "qrcode": "", "label2": "D4"       , "qrcode2": "4" },
+        {"x": 3.75, "y": 0.75, "z": 1.20,  "label": ""     , "qrcode": "", "label2": "D1"       , "qrcode2": "1" },
+        {"x": 3.75, "y": 1.25, "z": 1.20,  "label": ""     , "qrcode": "", "label2": "D2"       , "qrcode2": "2" },
+        {"x": 3.75, "y": 1.25, "z": 0.80,  "label": ""     , "qrcode": "", "label2": "D5"       , "qrcode2": "6" },
+        {"x": 3.75, "y": 1.75, "z": 0.80,  "label": ""     , "qrcode": "", "label2": "D6"       , "qrcode2": "3" },
+        {"x": 3.75, "y": 1.75, "z": 1.20,  "label": ""     , "qrcode": "", "label2": "D3"       , "qrcode2": "1" },
+        {"x": 3.75, "y": 2.50, "z": 0.70,  "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
       ]
 
 # yaml文件内的 JSON string 不支持尾随逗号（trailing comma），这是很多开发者（包括老手）都踩过的坑。

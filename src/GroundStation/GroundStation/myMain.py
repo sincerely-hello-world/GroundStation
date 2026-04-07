@@ -21,14 +21,25 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
     pos = Point()
     def __init__(self, name="无人机地面站GroundStation"):
         super().__init__()
+        if not rclpy.ok():
+            rclpy.init()
         self.setupUi(self)
         self.setWindowTitle(name)
 
         self.subdialog1 = subDialog1() # 创建子窗口1类的实例
-
-        if not rclpy.ok():
-            rclpy.init()
         self.bridge_node = ROS2_bridgeNode("Ground") # 创建ROS2节点类的实例，节点名称为"Ground" # 主窗口持有 ros2 node的实例，方便在主窗口中调用ROS2节点的方法
+
+
+        self.LED_blink_timer = QTimer()
+        self.LED_blink_timer.timeout.connect(self.LED_blink_timer_callback)
+        self.LED_stop_timer = QTimer()
+        self.LED_stop_timer.setSingleShot(True)      # 单次触发
+        self.LED_stop_timer.timeout.connect(self.LED_stop_timer_callback)
+        self.LED_toggle = False
+
+
+
+
 
         # self.label_qrcode_image.setScaledContents(True)          # ← 关键！让图片自动缩放填充 label
         # self.label_qrcode_image.setAlignment(Qt.AlignCenter)     # 可选：居中
@@ -39,13 +50,14 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         # self.pushButton_openDialog1.clicked.connect(self.subdialog1.show)
         self.pushButton_takeoff.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.pushButton_land.clicked.connect(lambda: self.bridge_node.send_command("land"))
-
         self.pushButton_runtask.clicked.connect(lambda: self.bridge_node.send_talk("scan_all"))
         self.pushButton.clicked.connect(self.takeoff_confirm)
+        self.pushButton_search.clicked.connect(self.search_qrcode) # todo 搜索功能
+
         
-        self.actionHand.triggered.connect(self.subdialog1.show)
         
         # ✅ 在这里连接：subDialog1界面的按钮 → ROS2节点的方法    手动遥控器界面 
+        self.actionHand.triggered.connect(self.subdialog1.show)
         self.subdialog1.pushButton_stopland.clicked.connect(lambda: self.bridge_node.send_command("land"))
         self.subdialog1.pushButton_forward.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x+0.2, self.pos.y, self.pos.z,'')))
         self.subdialog1.pushButton_back.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x-0.2, self.pos.y, self.pos.z,'')))
@@ -61,17 +73,35 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         # ✅ 在这里连接： ROS2发来的信号
         self.bridge_node.qrcode.connect(self.update_qrcode)
         self.bridge_node.qrcode_image.connect(self.update_qrcode_image)
-
         self.bridge_node.qrcode2.connect(self.update_qrcode2)
         self.bridge_node.qrcode2_image.connect(self.update_qrcode2_image)
 
         self.bridge_node.cmd_result.connect(self.info_cmd_result)
         self.bridge_node.position.connect(self.update_pos)
 
-        self.ros2_thread = QThread()
+        self.bridge_node.qrcode_result.connect(self.showQRresult) # todo 监听二维码结果
+        self.bridge_node.qrcode_result.connect(self.LED_trigger,) # todo 监听二维码结果
 
+        self.ros2_thread = QThread()
         self.ros2_thread = threading.Thread(target=start_ros2Node_spin, args=([self.bridge_node],),daemon=True,name="ROS2_Bridge_Spin_Thread")
         self.ros2_thread.start()
+
+    def LED_trigger(self):
+        print("触发LED闪烁（可重复触发重置）")
+        self.LED_blink_timer.setInterval(200)
+        self.LED_blink_timer.start()
+        self.LED_stop_timer.start(1700) # 1500毫秒后停止
+    def LED_blink_timer_callback(self):
+        self.LED_toggle = not self.LED_toggle
+        if self.LED_toggle:
+            self.pushButton_LED.setStyleSheet("background-color: gray; color: rgb(0, 0, 0);")
+        else:
+            self.pushButton_LED.setStyleSheet("background-color: green;  color: rgb(0, 0, 0);")
+    def LED_stop_timer_callback(self):
+        self.LED_blink_timer.stop()
+        self.pushButton_LED.setStyleSheet("background-color: gray; color: rgb(0, 0, 0);")
+
+
     def takeoff_confirm(self):
         if self.confidence > 0 and self.confidence < 3:
             QMessageBox.warning(self,'起飞确认',"请初始化惯性导航仪")
@@ -81,11 +111,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
             self.lineEdit_status.setText("无人机就绪，允许起飞")
             self.pushButton_takeoff.setEnabled(True)
         else:
-            QMessageBox.warning(self,'起飞确认',"请等待无人机初始化")
-    def close_temp(self):
-        self.showdialog.hide()
-        QMessageBox.information(self,'参数设置',"参数设置成功")
-        
+            QMessageBox.warning(self,'起飞确认',"请等待无人机初始化")        
     def update_pos(self, info, x,y,z,confidence):
         self.lineEdit_pos.setText(info)
         self.subdialog1.lineEdit_pos.setText(info)
@@ -101,12 +127,19 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
             QMessageBox.warning(self,'ros2指令发送失败',info)
         # else:
         #     QMessageBox.information(self,title='ros2指令发送成功',text=info)
-        
+    
+    def search_qrcode(self):
+        search = self.lineEdit_search.text()
+        result = self.bridge_node.qrcode_result_dict.get(search, f"查询失败，未找到{search}位置的QR码")
+        self.bridge_node.get_logger().info(f'查询到{search}位置放的二维码是:{result}')
+        self.lineEdit_search_result.setText(result)
+    def showQRresult(self,data:str):
+        self.textEdit_qrresult.append(data)
+        # 自动滚动到底部
+        scrollbar = self.textEdit_qrresult.verticalScrollBar()
+        scrollbar.setValue(scrollbar.maximum())
+
     def update_qrcode(self,qrcode:str,qrcode_order:list):
-        # if qrcode_order:
-        #     lines = [f"{i+1}. {item}" for i, item in enumerate(qrcode_order)]
-        #     text = "\n".join(lines)
-        #     self.plainTextEdit_qrcode_order.setPlainText(text)
         self.lineEdit_qrcode.setText(qrcode)
     def update_qrcode2(self,qrcode:str,qrcode_order:list):
         self.lineEdit_qrcode2.setText(qrcode)
