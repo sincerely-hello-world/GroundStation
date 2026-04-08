@@ -101,9 +101,11 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         elif task == 'reset':
             self.bridge_node.send_talk(task)
             self.bridge_node.qrcode_result_dict = dict()
+            self.textEdit_qrresult.setText('已重置，清除')
             self.lineEdit_task.setText('任务重置了，重新设置任务')
     def Run_Task(self):
         task = self.lineEdit_task.text()
+        self.textEdit_qrresult.setText(f'{task}任务开始执行')
         self.bridge_node.send_talk(task)
         
     def LED_trigger(self):
@@ -123,7 +125,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
 
 
     def takeoff_confirm(self):
-        if self.pos.confidence < 3 :
+        if self.pos.confidence < 3 and self.pos.z > 0 :
             QMessageBox.warning(self,'起飞确认',"请初始化惯性导航仪")
             self.lineEdit_status.setText("已成功连接无人机，等待起飞确认")
         elif self.pos.confidence == 3:

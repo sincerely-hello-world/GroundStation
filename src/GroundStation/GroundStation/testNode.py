@@ -88,9 +88,10 @@ class testNode(Node):
         self.delay_timer = None
         self.path_index = 0
 
-        # self.scan_label = 'A6'
+        self.scan_label = 'D6'
         # self.paths = self.find_points_by_labels(self.paths_all, ['TakeOff',self.scan_label,'LeftSideA','LandPos'])
         self.paths = self.paths_all
+
         self.main_timer = self.create_timer(0.4, self.timer_to_publish)
 
     def timer_to_publish(self):

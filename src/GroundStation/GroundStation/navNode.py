@@ -194,12 +194,12 @@ class navNode(Node):
             with self.state_lock:
                 self.path_index = 0
                 self.aim = self.paths[self.path_index]
-            self.get_logger().info(f"状态1：{self.status}--[{self.aim.label}]")
+            self.get_logger().info(f"状态1：{self.status}--[{self.aim.label}{self.aim.qrcode}][{self.aim.label2}{self.aim.qrcode2}]]")
             self.send_command('takeoff')
             self.status = self.状态.TAKEOFF_WAIT
 
         elif self.status == self.状态.TAKEOFF_WAIT:
-            self.get_logger().info(f"状态2：{self.status}--[{self.aim.label}]")
+            self.get_logger().info(f"状态2：{self.status}--[{self.aim.label}{self.aim.qrcode}][{self.aim.label2}{self.aim.qrcode2}]]")
             if self.check_arrive_aim():
                 self.status = self.状态.SetAim
 
@@ -211,30 +211,26 @@ class navNode(Node):
                 self.status = self.状态.LAND
             else:
                 with self.state_lock:
-                    self.get_logger().info(f"debug-setaim before=, aim={self.aim.label} {self.aim.qrcode}, id={id(self.aim)}")
-                    self.get_logger().info(f"debug-setaim before=, path next={self.paths[self.path_index].label} {self.paths[self.path_index].qrcode}, id={id(self.aim)}")
                     self.aim = self.paths[self.path_index]
-                    self.get_logger().info(f"debug-setaim after= aim={self.aim.label} {self.aim.qrcode}, id={id(self.aim)}")
-                    self.get_logger().info(f"debug-setaim after=, path next={self.paths[self.path_index].label} {self.paths[self.path_index].qrcode}, id={id(self.aim)}")
-                    self.get_logger().info(f"状态3：{self.status}--[{self.aim.label}-{self.aim.qrcode}]")
+                    self.get_logger().info(f"状态3：{self.status}--[{self.aim.label}{self.aim.qrcode}][{self.aim.label2}{self.aim.qrcode2}]")
                     self.path_index += 1
                 self.send_aim(self.aim)
                 self.status = self.状态.WaitAim
-                          
+
         elif self.status == self.状态.WaitAim:  
-            self.get_logger().info(f"状态4：{self.status}--[{self.aim.label}]")
+            self.get_logger().info(f"状态4：{self.status}--[{self.aim.label}{self.aim.qrcode}][{self.aim.label2}{self.aim.qrcode2}]]")
             if self.check_arrive_aim():
                 self.status = self.状态.ArriveAim
 
         elif self.status == self.状态.ArriveAim:
-            self.get_logger().info(f"状态5：{self.status}--[{self.aim.label}]")
-            if len(self.aim.label) == 2:
+            self.get_logger().info(f"状态5：{self.status}--[{self.aim.label}{self.aim.qrcode}][{self.aim.label2}{self.aim.qrcode2}]]")
+            if len(self.aim.label) == 2 or len(self.aim.label2) == 2: # 进入delay状态
                 self.status = self.状态.Delay
             else:
                 self.status = self.状态.SetAim
 
         elif self.status == self.状态.Delay:
-            self.get_logger().info(f"状态6：{self.status}--[{self.aim.label}]")
+            self.get_logger().info(f"状态6：{self.status}--[{self.aim.label}{self.aim.qrcode}][{self.aim.label2}{self.aim.qrcode2}]]")
             if self.delay_ok == True:
                 self.delay_ok = False # 重置 在这里延迟结束，可以发送整理到的二维码
                 self.status = self.状态.SetAim
@@ -255,10 +251,10 @@ class navNode(Node):
 
     def delay_timer_callback(self): 
         '''延时完成的回调： 发送单个位置二维码结果'''
-        if re.fullmatch(r'[A-Z][0-9]', self.aim.label):
+        if re.fullmatch(r'[A-D][0-9]', self.aim.label):
             self.aim.qrcode = self.qrcode
             self.send_qrcode_json(self.aim.label, self.aim.qrcode)
-        if re.fullmatch(r'[A-Z][0-9]', self.aim.label2):
+        if re.fullmatch(r'[A-D][0-9]', self.aim.label2):
             self.aim.qrcode2 = self.qrcode2
             self.send_qrcode_json(self.aim.label2, self.aim.qrcode2)
         self.get_logger().info(f"延时结束,QR识别结果:[{self.aim.label} 前{self.aim.qrcode}], [{self.aim.label2} 后{self.aim.qrcode2}]")
