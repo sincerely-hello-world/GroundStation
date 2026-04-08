@@ -26,7 +26,7 @@ navNode:
         {"x": 3.75, "y": 1.25, "z": 0.80, "label": ""     , "qrcode": "", "label2": "D5"       , "qrcode2": "" },
         {"x": 3.75, "y": 1.75, "z": 0.80, "label": ""     , "qrcode": "", "label2": "D6"       , "qrcode2": "" },
         {"x": 3.75, "y": 1.75, "z": 1.20, "label": ""     , "qrcode": "", "label2": "D3"       , "qrcode2": "" },
-        {"x": 3.75, "y": 2.50, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+        {"x": 3.50, "y": 2.50, "z": 0.70, "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
       ]
 
 
@@ -59,7 +59,7 @@ testNode:
         {"x": 3.75, "y": 1.25, "z": 0.80,  "label": ""     , "qrcode": "", "label2": "D5"       , "qrcode2": "6" },
         {"x": 3.75, "y": 1.75, "z": 0.80,  "label": ""     , "qrcode": "", "label2": "D6"       , "qrcode2": "3" },
         {"x": 3.75, "y": 1.75, "z": 1.20,  "label": ""     , "qrcode": "", "label2": "D3"       , "qrcode2": "1" },
-        {"x": 3.75, "y": 2.50, "z": 0.70,  "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
+        {"x": 3.50, "y": 2.50, "z": 0.70,  "label": "LandPos", "qrcode": "", "label2": ""       , "qrcode2": "" }
       ]
 
 # yaml文件内的 JSON string 不支持尾随逗号（trailing comma），这是很多开发者（包括老手）都踩过的坑。

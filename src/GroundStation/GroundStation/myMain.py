@@ -38,9 +38,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.LED_toggle = False
 
 
-
-
-
         # self.label_qrcode_image.setScaledContents(True)          # ← 关键！让图片自动缩放填充 label
         # self.label_qrcode_image.setAlignment(Qt.AlignCenter)     # 可选：居中
         self.lineEdit_status.setText("等待无人机上线")
@@ -50,9 +47,15 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         # self.pushButton_openDialog1.clicked.connect(self.subdialog1.show)
         self.pushButton_takeoff.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.pushButton_land.clicked.connect(lambda: self.bridge_node.send_command("land"))
-        self.pushButton_runtask.clicked.connect(lambda: self.bridge_node.send_talk("scan_all"))
+        
         self.pushButton.clicked.connect(self.takeoff_confirm)
         self.pushButton_search.clicked.connect(self.search_qrcode) # todo 搜索功能
+        
+        self.pushButton_scanall.clicked.connect(lambda: self.Set_Task('scan_all'))
+        self.pushButton_goQR0.clicked.connect(lambda: self.Set_Task('go_qrcode0'))
+        self.pushButton_goQR2.clicked.connect(lambda: self.Set_Task('go_qrcode2'))
+        self.pushButton_runtask.clicked.connect(self.Run_Task)
+        self.pushButton_reset_task.clicked.connect(lambda: self.Set_Task('reset'))
 
         
         
@@ -68,7 +71,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.subdialog1.pushButton_up.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y, self.pos.z+0.13,'')))
 
         self.showMaximized()
- 
 
         # ✅ 在这里连接： ROS2发来的信号
         self.bridge_node.qrcode.connect(self.update_qrcode)
@@ -86,6 +88,24 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.ros2_thread = threading.Thread(target=start_ros2Node_spin, args=([self.bridge_node],),daemon=True,name="ROS2_Bridge_Spin_Thread")
         self.ros2_thread.start()
 
+
+    def Set_Task(self, task:str):
+        text0=self.lineEdit_qrcode.text()
+        text2=self.lineEdit_qrcode2.text()
+        if text0 != '' and task == 'go_qrcode0':
+            self.lineEdit_task.setText(text0)
+        elif text2 != '' and task == 'go_qrcode2':
+            self.lineEdit_task.setText(text2)
+        elif task == 'scan_all':
+            self.lineEdit_task.setText(task)
+        elif task == 'reset':
+            self.bridge_node.send_talk(task)
+            self.bridge_node.qrcode_result_dict = dict()
+            self.lineEdit_task.setText('任务重置了，重新设置任务')
+    def Run_Task(self):
+        task = self.lineEdit_task.text()
+        self.bridge_node.send_talk(task)
+        
     def LED_trigger(self):
         print("触发LED闪烁（可重复触发重置）")
         self.LED_blink_timer.setInterval(200)
@@ -103,13 +123,15 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
 
 
     def takeoff_confirm(self):
-        if self.confidence > 0 and self.confidence < 3:
+        if self.pos.confidence < 3 :
             QMessageBox.warning(self,'起飞确认',"请初始化惯性导航仪")
             self.lineEdit_status.setText("已成功连接无人机，等待起飞确认")
-        elif self.confidence == 3:
+        elif self.pos.confidence == 3:
             QMessageBox.information(self,'起飞确认',"无人机就绪，允许起飞")
             self.lineEdit_status.setText("无人机就绪，允许起飞")
-            self.pushButton_takeoff.setEnabled(True)
+            self.pushButton_takeoff.setEnabled(False)
+            self.pushButton_takeoff.setText("可以起飞")
+            self.pushButton_takeoff.setStyleSheet("background-color: green; color: rgb(0, 0, 0);")
         else:
             QMessageBox.warning(self,'起飞确认',"请等待无人机初始化")        
     def update_pos(self, info, x,y,z,confidence):
@@ -118,13 +140,13 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.pos.x = x
         self.pos.y = y
         self.pos.z = z
-        self.confidence = confidence
+        self.pos.confidence = confidence
         
 
     def info_cmd_result(self, success:bool, info:str):
-        self.bridge_node.get_logger().error('fail')
+        self.bridge_node.get_logger().error(f'控制指令信息：{info}')
         if not success:
-            QMessageBox.warning(self,'ros2指令发送失败',info)
+            QMessageBox.warning(self,'警告',info)
         # else:
         #     QMessageBox.information(self,title='ros2指令发送成功',text=info)
     
@@ -139,11 +161,11 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         scrollbar = self.textEdit_qrresult.verticalScrollBar()
         scrollbar.setValue(scrollbar.maximum())
 
-    def update_qrcode(self,qrcode:str,qrcode_order:list):
+    def update_qrcode(self,qrcode:str):
         self.lineEdit_qrcode.setText(qrcode)
-    def update_qrcode2(self,qrcode:str,qrcode_order:list):
+        
+    def update_qrcode2(self,qrcode:str):
         self.lineEdit_qrcode2.setText(qrcode)
-    
         
     def update_qrcode_image(self, cv_img):
         if cv_img is None:

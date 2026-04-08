@@ -20,12 +20,12 @@ class ROS2_bridgeNode(Node, QObject):
     bridge = CvBridge()
 
     qrcode_image = pyqtSignal(object)
-    qrcode  = pyqtSignal(str,list)
+    qrcode  = pyqtSignal(str)
     qr_set = set()                  # 用于快速去重
     qr_order = list()
 
     qrcode2_image = pyqtSignal(object)
-    qrcode2 = pyqtSignal(str,list)
+    qrcode2 = pyqtSignal(str)
     qr_set2 = set()                  # 用于快速去重
     qr_order2 = list()
 
@@ -40,10 +40,10 @@ class ROS2_bridgeNode(Node, QObject):
     topic_qrcode_cb_group =MutuallyExclusiveCallbackGroup()
     topic_t265_cb_group=MutuallyExclusiveCallbackGroup()
  
-    def __init__(self,name='Ground'):
+    def __init__(self,name='Bridge'):
         # super().__init__(name)
         QObject.__init__(self)
-        Node.__init__(self, name)
+        Node.__init__(self, node_name=name)
         self.get_logger().info("ros2 node launch success:%s!" % name)
         
   
@@ -81,25 +81,30 @@ class ROS2_bridgeNode(Node, QObject):
         self.pos = msg
         self.position.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
 
-    def send_talk(self, cmd:String):
+    def send_talk(self, task:String):
         if rclpy.ok() and self.talk_client.service_is_ready()==False:
-            err_msg = f"发送 {cmd} 失败: ROS2 服务 [ControlService] 未启动或超时"
+            err_msg = f"发送 {task} 失败: ROS2 服务 [ControlService] 未启动或超时"
             self.get_logger().error(err_msg)
             return # ！！！非常重要：必须 return，不要往下走 call_async
         # 1️⃣ 先创建 future  # . 只有服务就
         request = ControlService.Request()
-        request.req = cmd
+        request.req = task
         future = self.talk_client.call_async(request)
-        future.add_done_callback(lambda fut: self.talk_future_done(fut, cmd))
-        self.get_logger().info(f"发送 {cmd} 成功")
+        future.add_done_callback(lambda fut: self.talk_future_done(fut, task))
+        self.get_logger().info(f"发送 {task} 成功")
     
-    def talk_future_done(self, future, talk):
+    def talk_future_done(self, future, task):
         try:
             response = future.result()  # 會 raise 如果有 exception
-            info_str = f"{talk} 响应成功 → {response.echo}"   
+            info_str = f"{task} 响应成功 → {response.echo}"   
             self.get_logger().info(info_str)
+            if response.echo == 'undefined task':
+                self.cmd_result.emit(False, f'无效任务{task},请重置任务')
+            elif response.echo == 'reset task':
+                self.cmd_result.emit(False, f'任务重置完成')
+
         except Exception as e:
-            err_msg = f"{talk} 响应失败: {str(e)}"
+            err_msg = f"{task} 响应失败: {str(e)}"
             self.cmd_result.emit(False, err_msg)
             self.get_logger().error(err_msg)
 
@@ -129,17 +134,12 @@ class ROS2_bridgeNode(Node, QObject):
 
     def qrcode_callback(self, msg:String):
         qrcode = msg.data
-        # if self.pos is not None:
-        #     if self.pos.pos_x > 1.35 :
-        #         if qrcode not in self.qr_set:
-        #             self.qr_set.add(qrcode)
-        #             self.qr_order.append(qrcode)
         self.get_logger().info(f"qrcode 识别到QR码: {qrcode}")
-        self.qrcode.emit(qrcode, self.qr_order)
+        self.qrcode.emit(qrcode)
     def qrcode2_callback(self, msg:String):
         qrcode = msg.data
         self.get_logger().info(f"qrcode2 识别到QR码: {qrcode}")
-        self.qrcode2.emit(qrcode, self.qr_order2)
+        self.qrcode2.emit(qrcode)
     def qrcode_compressedimage_callback(self, msg):
         ## compressedimage bridge method
         # cv_qrimage=self.bridge.compressed_imgmsg_to_cv2(msg)

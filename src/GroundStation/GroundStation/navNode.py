@@ -5,7 +5,7 @@ from rclpy.executors import MultiThreadedExecutor
 from rcl_interfaces.msg import SetParametersResult
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.parameter import Parameter
-from std_srvs.srv import Empty
+from std_srvs.srv import Empty,Trigger
 from std_msgs.msg import String
 # 自定义消息和服务的数据类型
 from uav_car_interfaces.msg import T265Data
@@ -20,7 +20,7 @@ from typing import List, Optional
 
 
 class Point:
-    def __init__(self, x: float = 0.0, y: float = 0.0, z: float = 0.7, label: str = 'none',qrcode: str = 'none',label2: str = '', qrcode2: str = ''):
+    def __init__(self, x: float = 0.0, y: float = 0.0, z: float = 0.7, label: str = 'none',qrcode: str = 'none',label2: str = 'none', qrcode2: str = 'none'):
         self.x = x      # 单位：米
         self.y = y
         self.z = z
@@ -50,7 +50,8 @@ class navNode(Node):
 
     pos = T265Data()
     
-    aim = Point() # 路径点
+    aim = Point() # 当前路径点
+    paths = None # 路径
     state_lock = threading.Lock()
 
     状态 = myStatus()
@@ -101,8 +102,10 @@ class navNode(Node):
         self.topic_qrcode2_sub = self.create_subscription(String,"qrcode2_data_topic",self.qrcode2_callback,10 ,callback_group=self.topic_cb_group)  
         self.topic_qrcode_result_pub = self.create_publisher(String,"qrcode_result_topic",10 ,callback_group=self.topic_cb_group)
 
-        
+        self.client_led1_trigger = self.create_client(Trigger,"led1_trigger")
+        self.client_led2_trigger = self.create_client(Trigger,"led2_trigger")
 
+        
         self.task_timer = None 
         self.delay_timer = None
         self.delay_ok = False
@@ -113,14 +116,11 @@ class navNode(Node):
         # 配合testNode debug测试用
         self.status = self.状态.TAKEOFF
         self.path_index = 0
-        self.paths = self.path_scan_all
-        # for i, p in enumerate(self.paths):
-        #     self.get_logger().info(f"Path[{i}]: label={p.label}, qr={p.qrcode}, id={id(p)}")
-        
+        # self.paths = self.path_scan_all
         # self.scan_label = 'A6'
         # self.paths = self.find_points_by_labels(self.path_scan_all, ['TakeOff',self.scan_label,'LeftSideA','LandPos'])
-        self.task_timer = self.create_timer(0.1, self.task_timer_callback)
-        self.get_logger().warning(f'任务开始执行{self.task}' )
+        # self.task_timer = self.create_timer(0.1, self.task_timer_callback)
+        # self.get_logger().warning(f'任务开始执行{self.task}' )
 
 
         # self.testtimer = self.create_timer(0.5, self.test_callback)
@@ -141,7 +141,18 @@ class navNode(Node):
             self.shutdown_requested = True
             response.echo = 'shutdown-navNode关闭节点'
             return response
-        
+        elif self.task == 'reset':
+            self.get_logger().warning(f'{self.task}重置任务状态为初始状态！' )
+            self.status = self.状态.TAKEOFF
+            self.path_index = 0
+            self.paths =None
+            if self.task_timer is not None:
+                self.task_timer.cancel()
+                self.task_timer = None
+            self.get_logger().warning(f'任务重置{self.task}' )
+            response.echo =f'reset task'
+            return response
+
         elif self.task == 'scan_all' and  self.task_timer is None:
             self.get_logger().info(f'扫描全部货架：{self.task}')
             self.status = self.状态.TAKEOFF
@@ -167,7 +178,10 @@ class navNode(Node):
                 self.get_logger().error(f'未找到合适路径{self.task}')
             else:
                 self.task_timer = self.create_timer(0.1, self.task_timer_callback,callback_group=self.topic_cb_group)
-
+        else:
+            self.get_logger().error(f'未定义的任务{self.task}' )
+            response.echo =f'undefined task'
+            return response
         self.get_logger().warning(f'任务开始执行{self.task}' )
         response.echo =f'回复：{self.task}'
         return response
@@ -271,9 +285,12 @@ class navNode(Node):
     def qrcode_callback(self, msg:String):
         if  self.check_arrive_aim():
             self.qrcode = msg.data
+        self.client_led1_trigger.call_async(Trigger.Request())
+
     def qrcode2_callback(self, msg:String):
         if  self.check_arrive_aim():
             self.qrcode2 = msg.data
+        self.client_led2_trigger.call_async(Trigger.Request())
 
     def is_pos_arrive(self):
         within_tolerance = (
