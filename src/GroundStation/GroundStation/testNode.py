@@ -88,9 +88,9 @@ class testNode(Node):
         self.delay_timer = None
         self.path_index = 0
 
-        self.scan_label = 'A6'
-        self.paths = self.find_points_by_labels(self.paths_all, ['TakeOff',self.scan_label,'LeftSideA','LandPos'])
-        # self.paths = self.paths_all
+        # self.scan_label = 'A6'
+        # self.paths = self.find_points_by_labels(self.paths_all, ['TakeOff',self.scan_label,'LeftSideA','LandPos'])
+        self.paths = self.paths_all
         self.main_timer = self.create_timer(0.4, self.timer_to_publish)
 
     def timer_to_publish(self):
@@ -115,7 +115,7 @@ class testNode(Node):
                 self.path_index += 1
                 self.status = self.状态.DELAY
             self.get_logger().info(f"测试点：{self.status}--[{self.status}--[{self.aim.label}]")
-            
+
         if self.status == self.状态.DELAY:
             self.get_logger().info(f"测试点：{self.status}--[{self.status}--[{self.aim.label}]")
             if self.delay_timer is None or self.delay_timer.is_canceled():
