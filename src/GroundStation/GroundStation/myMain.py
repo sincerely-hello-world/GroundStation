@@ -123,7 +123,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.LED_blink_timer.stop()
         self.pushButton_LED.setStyleSheet("background-color: gray; color: rgb(0, 0, 0);")
 
-
     def takeoff_confirm(self):
         if self.pos.confidence < 3 and self.pos.z > 0 :
             QMessageBox.warning(self,'起飞确认',"请初始化惯性导航仪")
