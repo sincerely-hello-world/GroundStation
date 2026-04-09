@@ -251,12 +251,19 @@ class navNode(Node):
 
     def delay_timer_callback(self): 
         '''延时完成的回调： 发送单个位置二维码结果'''
-        if re.fullmatch(r'[A-D][0-9]', self.aim.label):
-            self.aim.qrcode = self.qrcode
-            self.send_qrcode_json(self.aim.label, self.aim.qrcode)
-        if re.fullmatch(r'[A-D][0-9]', self.aim.label2):
-            self.aim.qrcode2 = self.qrcode2
-            self.send_qrcode_json(self.aim.label2, self.aim.qrcode2)
+        if self.task == 'scan_all':
+            if re.fullmatch(r'[A-D][0-9]', self.aim.label):
+                self.aim.qrcode = self.qrcode
+                self.send_qrcode_json(self.aim.label, self.aim.qrcode)
+            if re.fullmatch(r'[A-D][0-9]', self.aim.label2):
+                self.aim.qrcode2 = self.qrcode2
+                self.send_qrcode_json(self.aim.label2, self.aim.qrcode2)
+                
+        elif self.task ==  self.aim.label:
+            self.send_qrcode_json(self.aim.label, self.qrcode)
+        elif self.task ==  self.aim.label2:
+            self.send_qrcode_json(self.aim.label2, self.qrcode2)
+
         self.get_logger().info(f"延时结束,QR识别结果:[{self.aim.label} 前{self.aim.qrcode}], [{self.aim.label2} 后{self.aim.qrcode2}]")
         self.delay_ok = True
         self.delay_timer.cancel()  # 确保定时器只执行一次
