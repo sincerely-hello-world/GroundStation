@@ -346,54 +346,7 @@ p, li { white-space: pre-wrap; }
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <layout class="QGridLayout" name="gridLayout_4">
-         <item row="0" column="1">
-          <widget class="QLabel" name="label_2">
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-             <underline>true</underline>
-            </font>
-           </property>
-           <property name="text">
-            <string>video2画面浏览-机身头部</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="label_qrcode2_image">
-           <property name="font">
-            <font>
-             <pointsize>20</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>video2画面浏览</string>
-           </property>
-           <property name="scaledContents">
-            <bool>true</bool>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-           <property name="margin">
-            <number>1</number>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-             <underline>true</underline>
-            </font>
-           </property>
-           <property name="text">
-            <string>video0画面浏览-机身尾部</string>
-           </property>
-          </widget>
-         </item>
+        <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,10">
          <item row="1" column="0">
           <widget class="QLabel" name="label_qrcode_image">
            <property name="sizePolicy">
@@ -417,7 +370,7 @@ p, li { white-space: pre-wrap; }
             <enum>QFrame::NoFrame</enum>
            </property>
            <property name="text">
-            <string>video0画面浏览</string>
+            <string>航迹浏览图</string>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -427,6 +380,22 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="margin">
             <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>航迹浏览</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -450,7 +419,7 @@ p, li { white-space: pre-wrap; }
             </font>
            </property>
            <property name="text">
-            <string>video2识别到的QR码</string>
+            <string>video2头部识别到的QR码</string>
            </property>
           </widget>
          </item>
@@ -534,7 +503,7 @@ p, li { white-space: pre-wrap; }
             </font>
            </property>
            <property name="text">
-            <string>video0识别到的QR码</string>
+            <string>video0尾部识别到的QR码</string>
            </property>
           </widget>
          </item>

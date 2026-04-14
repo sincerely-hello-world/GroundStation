@@ -13,6 +13,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         # ← 关键：添加这一行，让 param 目录被安装
+        (os.path.join('share', package_name, 'imgs'), glob('imgs/img_*.png')),
         (os.path.join('share', package_name, 'param'), glob('param/*.yaml')),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch.py'))),
         

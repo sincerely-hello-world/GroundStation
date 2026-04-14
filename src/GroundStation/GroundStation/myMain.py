@@ -10,6 +10,14 @@ from GroundStation.myFunction import *
 
 from GroundStation.bridgeNode import *
 
+
+from ament_index_python.packages import get_package_share_directory
+import os
+def get_image_path(img_name: str) -> str:
+    """获取安装后的图片绝对路径"""
+    pkg_share = get_package_share_directory('GroundStation')   # 你的包名
+    return os.path.join(pkg_share, 'imgs', img_name)
+
 class Point:
     def __init__(self, x=0.0, y=0.0, z=0.0, confidence=0):
         self.x = x
@@ -28,8 +36,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
 
         self.subdialog1 = subDialog1() # 创建子窗口1类的实例
         self.bridge_node = ROS2_bridgeNode("Ground") # 创建ROS2节点类的实例，节点名称为"Ground" # 主窗口持有 ros2 node的实例，方便在主窗口中调用ROS2节点的方法
-
-
         self.LED_blink_timer = QTimer()
         self.LED_blink_timer.timeout.connect(self.LED_blink_timer_callback)
         self.LED_stop_timer = QTimer()
@@ -37,11 +43,9 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.LED_stop_timer.timeout.connect(self.LED_stop_timer_callback)
         self.LED_toggle = False
 
-
-        # self.label_qrcode_image.setScaledContents(True)          # ← 关键！让图片自动缩放填充 label
-        # self.label_qrcode_image.setAlignment(Qt.AlignCenter)     # 可选：居中
         self.lineEdit_status.setText("等待无人机上线")
         self.pushButton_takeoff.setEnabled(False)
+        # self.update_label_img(self.label_qrcode_image,get_image_path('img_map.png'))
 
         # ✅ 在这里连接：主界面的按钮 → 子窗口的 show
         # self.pushButton_openDialog1.clicked.connect(self.subdialog1.show)
@@ -52,11 +56,10 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.pushButton_search.clicked.connect(self.search_qrcode) # todo 搜索功能
         
         self.pushButton_scanall.clicked.connect(lambda: self.Set_Task('scan_all'))
-        self.pushButton_goQR0.clicked.connect(lambda: self.Set_Task('go_qrcode0'))
-        self.pushButton_goQR2.clicked.connect(lambda: self.Set_Task('go_qrcode2'))
+        self.pushButton_goQR0.clicked.connect(lambda: self.Set_Task(self.lineEdit_qrcode.text()))
+        self.pushButton_goQR2.clicked.connect(lambda: self.Set_Task(self.lineEdit_qrcode2.text()))
         self.pushButton_runtask.clicked.connect(self.Run_Task)
         self.pushButton_reset_task.clicked.connect(lambda: self.Set_Task('reset'))
-
         
         
         # ✅ 在这里连接：subDialog1界面的按钮 → ROS2节点的方法    手动遥控器界面 
@@ -70,13 +73,13 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.subdialog1.pushButton_down.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y, self.pos.z-0.13,'')))
         self.subdialog1.pushButton_up.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y, self.pos.z+0.13,'')))
 
-        self.showMaximized()
+        
 
         # ✅ 在这里连接： ROS2发来的信号
         self.bridge_node.qrcode.connect(self.update_qrcode)
-        self.bridge_node.qrcode_image.connect(self.update_qrcode_image)
+        # self.bridge_node.qrcode_image.connect(self.update_qrcode_image)
         self.bridge_node.qrcode2.connect(self.update_qrcode2)
-        self.bridge_node.qrcode2_image.connect(self.update_qrcode2_image)
+        # self.bridge_node.qrcode2_image.connect(self.update_qrcode2_image)
 
         self.bridge_node.cmd_result.connect(self.info_cmd_result)
         self.bridge_node.position.connect(self.update_pos)
@@ -88,21 +91,50 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.ros2_thread = threading.Thread(target=start_ros2Node_spin, args=([self.bridge_node],),daemon=True,name="ROS2_Bridge_Spin_Thread")
         self.ros2_thread.start()
 
+    def showEvent(self, event):
+        # 窗口显示出来后，再加载图片 → 图片就是高清的！
+        # 立即固定窗口大小（放在图片更新之后）
+        screen = QApplication.primaryScreen()
+        avail = screen.availableGeometry()
+        self.resize(avail.width(), avail.height())
+        self.setMaximumSize(avail.width(), avail.height())   # 限制最大不能超过屏幕
+        self.update_label_img(self.label_qrcode_image, get_image_path('img_map.png'))
+        super().showEvent(event)
 
+    def update_label_img(self, qt_label:object, img_path:str ):
+        if img_path is not None:
+            # 从文件路径加载（最常用、最推荐）
+            pixmap = QPixmap(img_path)
+            if pixmap.isNull():
+                self.bridge_node.get_logger().warning(f"警告：无法加载图像 {img_path}")
+                return
+        # 可選：縮放到 label 大小，保持比例
+        pixmap = pixmap.scaled(
+            qt_label.width(),
+            qt_label.height(),
+            Qt.KeepAspectRatio,
+            Qt.SmoothTransformation
+        )
+        qt_label.setPixmap(pixmap)
     def Set_Task(self, task:str):
-        text0=self.lineEdit_qrcode.text()
-        text2=self.lineEdit_qrcode2.text()
-        if text0 != '' and task == 'go_qrcode0':
-            self.lineEdit_task.setText(text0)
-        elif text2 != '' and task == 'go_qrcode2':
-            self.lineEdit_task.setText(text2)
+        if len(task) == 2:
+            self.lineEdit_task.setText(task)
+            if task[0] == 'A':
+                self.update_label_img(self.label_qrcode_image, get_image_path('img_A.png'))
+            elif task[0] == 'B' or task[0] == 'C':
+                self.update_label_img(self.label_qrcode_image, get_image_path('img_BC.png'))
+            elif task[0] == 'D':
+                self.update_label_img(self.label_qrcode_image, get_image_path('img_D.png'))
         elif task == 'scan_all':
             self.lineEdit_task.setText(task)
+            self.update_label_img(self.label_qrcode_image, get_image_path('img_scan_all.png'))
         elif task == 'reset':
             self.bridge_node.send_talk(task)
             self.bridge_node.qrcode_result_dict = dict()
             self.textEdit_qrresult.setText('已重置，清除')
             self.lineEdit_task.setText('任务重置了，重新设置任务')
+            self.update_label_img(self.label_qrcode_image, get_image_path('img_map.png'))
+    
     def Run_Task(self):
         task = self.lineEdit_task.text()
         self.textEdit_qrresult.setText(f'{task}任务开始执行')
@@ -167,47 +199,52 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         
     def update_qrcode2(self,qrcode:str):
         self.lineEdit_qrcode2.setText(qrcode)
-        
-    def update_qrcode_image(self, cv_img):
-        if cv_img is None:
-            return
-        # 做一次 copy （雖然 emit 後通常已經是新的物件）
-        arr = cv_img
-        height, width, channels = arr.shape
-        bytes_per_line = channels * width
-        qimage = QImage(
-            arr.data, width, height, bytes_per_line,
-            QImage.Format_RGB888
-        )
-        pixmap = QPixmap.fromImage(qimage)
-        # 可選：縮放到 label 大小，保持比例
-        pixmap = pixmap.scaled(
-            self.label_qrcode_image.width(),
-            self.label_qrcode_image.height(),
-            Qt.KeepAspectRatio,
-            Qt.SmoothTransformation
-        )
-        self.label_qrcode_image.setPixmap(pixmap)
-    def update_qrcode2_image(self, cv_img):
-        if cv_img is None:
-            return
-        # 做一次 copy （雖然 emit 後通常已經是新的物件）
-        arr = cv_img
-        height, width, channels = arr.shape
-        bytes_per_line = channels * width
-        qimage = QImage(
-            arr.data, width, height, bytes_per_line,
-            QImage.Format_RGB888
-        )
-        pixmap = QPixmap.fromImage(qimage)
-        # 可選：縮放到 label 大小，保持比例
-        pixmap = pixmap.scaled(
-            self.label_qrcode_image.width(),
-            self.label_qrcode_image.height(),
-            Qt.KeepAspectRatio,
-            Qt.SmoothTransformation
-        )
-        self.label_qrcode2_image.setPixmap(pixmap)
+
+
+  
+    # def update_qrcode_image(self, cv_img):
+    #     if cv_img is None:
+    #         return
+    #     # 做一次 copy （雖然 emit 後通常已經是新的物件）
+    #     arr = cv_img
+    #     height, width, channels = arr.shape
+    #     bytes_per_line = channels * width
+    #     qimage = QImage(
+    #         arr.data, width, height, bytes_per_line,
+    #         QImage.Format_RGB888
+    #     )
+    #     pixmap = QPixmap.fromImage(qimage)
+    #     # 可選：縮放到 label 大小，保持比例
+    #     pixmap = pixmap.scaled(
+    #         self.label_qrcode_image.width(),
+    #         self.label_qrcode_image.height(),
+    #         Qt.KeepAspectRatio,
+    #         Qt.SmoothTransformation
+    #     )
+    #     self.label_qrcode_image.setPixmap(pixmap)
+    #     # self.label_qrcode_image.setScaledContents(True)          # 图片自动缩放填充，容易有问题，还是别了
+    #     # self.label_qrcode_image.setAlignment(Qt.AlignCenter)     # 可选：居
+    # def update_qrcode2_image(self, cv_img):
+    #     if cv_img is None:
+    #         return
+    #     # 做一次 copy （雖然 emit 後通常已經是新的物件）
+    #     arr = cv_img
+    #     height, width, channels = arr.shape
+    #     bytes_per_line = channels * width
+    #     qimage = QImage(
+    #         arr.data, width, height, bytes_per_line,
+    #         QImage.Format_RGB888
+    #     )
+    #     pixmap = QPixmap.fromImage(qimage)
+    #     # 可選：縮放到 label 大小，保持比例
+    #     pixmap = pixmap.scaled(
+    #         self.label_qrcode2_image.width(),
+    #         self.label_qrcode2_image.height(),
+    #         Qt.KeepAspectRatio,
+    #         Qt.SmoothTransformation
+    #     )
+    #     self.label_qrcode2_image.setPixmap(pixmap)
+    
     def updatePosition(self, strings: str):
         self.lineEdit_pos.setText(strings)
 
