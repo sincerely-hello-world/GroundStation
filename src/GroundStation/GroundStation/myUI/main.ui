@@ -391,6 +391,11 @@ p, li { white-space: pre-wrap; }
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>航迹浏览</string>
            </property>
@@ -419,7 +424,7 @@ p, li { white-space: pre-wrap; }
             </font>
            </property>
            <property name="text">
-            <string>video2头部识别到的QR码</string>
+            <string>video2头部识别到的QR码-尾</string>
            </property>
           </widget>
          </item>
@@ -503,7 +508,7 @@ p, li { white-space: pre-wrap; }
             </font>
            </property>
            <property name="text">
-            <string>video0尾部识别到的QR码</string>
+            <string>video0识别到的QR码-头</string>
            </property>
           </widget>
          </item>

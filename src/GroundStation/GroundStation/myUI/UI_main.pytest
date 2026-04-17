@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/focal/Desktop/b2024_GroundStation/src/GroundStation/GroundStation/myUI/main.ui'
+# Form implementation generated from reading ui file 'main.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.1
 #
@@ -235,9 +235,6 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
         self.label.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.gridLayout_4.addWidget(self.label, 0, 0, 1, 1)
@@ -381,13 +378,23 @@ class Ui_MainWindow(object):
         self.pushButton_LED.setText(_translate("MainWindow", "盘点状态指示灯"))
         self.label_qrcode_image.setText(_translate("MainWindow", "航迹浏览图"))
         self.label.setText(_translate("MainWindow", "航迹浏览"))
-        self.label_qrtitle_2.setText(_translate("MainWindow", "video2头部识别到的QR码-尾"))
+        self.label_qrtitle_2.setText(_translate("MainWindow", "video2头部识别到的QR码"))
         self.pushButton_goQR0.setText(_translate("MainWindow", "设置video0识别到的任务"))
         self.pushButton_goQR2.setText(_translate("MainWindow", "设置video2识别到的任务"))
-        self.label_qrtitle.setText(_translate("MainWindow", "video0识别到的QR码-头"))
+        self.label_qrtitle.setText(_translate("MainWindow", "video0尾部识别到的QR码"))
         self.pushButton_scanall.setText(_translate("MainWindow", "设置扫描全部货架任务"))
         self.menu_1.setTitle(_translate("MainWindow", "菜单1"))
         self.menu_test.setTitle(_translate("MainWindow", "其他"))
         self.actionClose.setText(_translate("MainWindow", "关闭/退出程序"))
         self.actionOpenSub.setText(_translate("MainWindow", "打开手动控制界面"))
         self.actionHand.setText(_translate("MainWindow", "手动操作面板"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

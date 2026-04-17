@@ -260,8 +260,10 @@ class navNode(Node):
                 self.send_qrcode_json(self.aim.label2, self.aim.qrcode2)
                 
         elif self.task ==  self.aim.label:
+            self.aim.qrcode = self.qrcode
             self.send_qrcode_json(self.aim.label, self.qrcode)
         elif self.task ==  self.aim.label2:
+            self.aim.qrcode2 = self.qrcode2
             self.send_qrcode_json(self.aim.label2, self.qrcode2)
 
         self.get_logger().info(f"延时结束,QR识别结果:[{self.aim.label} 前{self.aim.qrcode}], [{self.aim.label2} 后{self.aim.qrcode2}]")
@@ -286,14 +288,16 @@ class navNode(Node):
         self.topic_qrcode_result_pub.publish(String(data=json_var))
         self.get_logger().info(f"已发送二维码数据:{json_var}")
     def qrcode_callback(self, msg:String):
-        if  self.check_arrive_aim():
-            self.qrcode = msg.data
+        # if  self.check_arrive_aim():
+        self.qrcode = msg.data
         self.client_led1_trigger.call_async(Trigger.Request())
+        self.get_logger().info(f"识别到qrcode0二维码是:{self.qrcode}")
 
     def qrcode2_callback(self, msg:String):
-        if  self.check_arrive_aim():
-            self.qrcode2 = msg.data
+        # if  self.check_arrive_aim():
+        self.qrcode2 = msg.data
         self.client_led2_trigger.call_async(Trigger.Request())
+        self.get_logger().info(f"识别到qrcode2二维码是:{self.qrcode2}")
 
     def is_pos_arrive(self):
         within_tolerance = (
