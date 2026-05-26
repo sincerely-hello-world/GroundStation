@@ -97,10 +97,14 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         screen = QApplication.primaryScreen()
         avail = screen.availableGeometry()
         self.resize(avail.width(), avail.height())
-        #self.setMaximumSize(avail.width(), avail.height())   # 限制最大不能超过屏幕
-        #self.setMaximumSize( )   # 限制最大不能超过屏幕
+        self.setMaximumSize(avail.width(), avail.height())   # 限制最大不能超过屏幕
+        
+        # self.showMaximized()  
+      
+
         self.update_label_img(self.label_qrcode_image, get_image_path('img_map.png'))
-        super().showEvent(event)
+        super().showEvent(event)  
+        pass
 
     def update_label_img(self, qt_label:object, img_path:str ):
         if img_path is not None:
