@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/focal/Desktop/b2024_GroundStation/src/GroundStation/GroundStation/myUI/main.ui'
+# Form implementation generated from reading ui file '/home/focal/Desktop/GroundStation/src/GroundStation/GroundStation/myUI/main.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.1
 #
