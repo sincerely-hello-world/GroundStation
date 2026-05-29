@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>820</width>
-    <height>655</height>
+    <width>722</width>
+    <height>658</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <widget class="QLabel" name="label_pos">
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
      <property name="text">
@@ -30,7 +30,7 @@
     <widget class="QLineEdit" name="lineEdit_pos">
      <property name="font">
       <font>
-       <pointsize>11</pointsize>
+       <pointsize>16</pointsize>
       </font>
      </property>
     </widget>
@@ -109,18 +109,6 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
-      <widget class="QPushButton" name="pushButton_flyagain">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>再次起飞</string>
-       </property>
-      </widget>
-     </item>
      <item row="3" column="1">
       <widget class="QPushButton" name="pushButton_back">
        <property name="font">
@@ -147,6 +135,11 @@
      </item>
      <item row="6" column="2">
       <widget class="QPushButton" name="pushButton_closeDialog">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>关闭此页面</string>
        </property>
@@ -180,7 +173,7 @@
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <pointsize>19</pointsize>
+         <pointsize>16</pointsize>
         </font>
        </property>
        <property name="lineWidth">
@@ -188,6 +181,30 @@
        </property>
        <property name="text">
         <string>手动控制模式</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="pushButton_flyagain">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>再次起飞</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QPushButton" name="pushButton_fly">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>首次起飞</string>
        </property>
       </widget>
      </item>

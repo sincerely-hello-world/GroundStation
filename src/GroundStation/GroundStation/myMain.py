@@ -18,7 +18,7 @@ def get_image_path(img_name: str) -> str:
     pkg_share = get_package_share_directory('GroundStation')   # 你的包名
     return os.path.join(pkg_share, 'imgs', img_name)
 
-class Point:
+class Point: # 飞机的座标点
     def __init__(self, x=0.0, y=0.0, z=0.0, confidence=0):
         self.x = x
         self.y = y
@@ -45,7 +45,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
 
         self.lineEdit_status.setText("等待无人机上线")
         self.pushButton_takeoff.setEnabled(False)
-        # self.update_label_img(self.label_qrcode_image,get_image_path('img_map.png'))
 
         # ✅ 在这里连接：主界面的按钮 → 子窗口的 show
         # self.pushButton_openDialog1.clicked.connect(self.subdialog1.show)
@@ -53,17 +52,18 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.pushButton_land.clicked.connect(lambda: self.bridge_node.send_command("land"))
         
         self.pushButton.clicked.connect(self.takeoff_confirm)
-        self.pushButton_search.clicked.connect(self.search_qrcode) # todo 搜索功能
-        
+        self.pushButton_runtask.clicked.connect(self.Run_Task)
+        self.pushButton_reset_task.clicked.connect(lambda: self.Set_Task('reset'))
+
+        self.pushButton_search.clicked.connect(self.search_qrcode) # 
         self.pushButton_scanall.clicked.connect(lambda: self.Set_Task('scan_all'))
         self.pushButton_goQR0.clicked.connect(lambda: self.Set_Task(self.lineEdit_qrcode.text()))
         self.pushButton_goQR2.clicked.connect(lambda: self.Set_Task(self.lineEdit_qrcode2.text()))
-        self.pushButton_runtask.clicked.connect(self.Run_Task)
-        self.pushButton_reset_task.clicked.connect(lambda: self.Set_Task('reset'))
         
         
-        # ✅ 在这里连接：subDialog1界面的按钮 → ROS2节点的方法    手动遥控器界面 
+        # ✅ 在这里连接：subDialog1界面的按钮 → ROS2节点的方法    飞机手动遥控器界面 
         self.actionHand.triggered.connect(self.subdialog1.show)
+        self.subdialog1.pushButton_fly.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.subdialog1.pushButton_stopland.clicked.connect(lambda: self.bridge_node.send_command("land"))
         self.subdialog1.pushButton_forward.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x+0.2, self.pos.y, self.pos.z,'')))
         self.subdialog1.pushButton_back.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x-0.2, self.pos.y, self.pos.z,'')))
@@ -97,7 +97,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         screen = QApplication.primaryScreen()
         avail = screen.availableGeometry()
         self.resize(avail.width(), avail.height())
-        self.setMaximumSize(avail.width(), avail.height())   # 限制最大不能超过屏幕
+        # self.setMaximumSize(avail.width(), avail.height())   # 限制最大不能超过屏幕
         
         # self.showMaximized()  
       
@@ -205,52 +205,8 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
     def update_qrcode2(self,qrcode:str):
         self.lineEdit_qrcode2.setText(qrcode)
 
-
-  
-    # def update_qrcode_image(self, cv_img):
-    #     if cv_img is None:
-    #         return
-    #     # 做一次 copy （雖然 emit 後通常已經是新的物件）
-    #     arr = cv_img
-    #     height, width, channels = arr.shape
-    #     bytes_per_line = channels * width
-    #     qimage = QImage(
-    #         arr.data, width, height, bytes_per_line,
-    #         QImage.Format_RGB888
-    #     )
-    #     pixmap = QPixmap.fromImage(qimage)
-    #     # 可選：縮放到 label 大小，保持比例
-    #     pixmap = pixmap.scaled(
-    #         self.label_qrcode_image.width(),
-    #         self.label_qrcode_image.height(),
-    #         Qt.KeepAspectRatio,
-    #         Qt.SmoothTransformation
-    #     )
-    #     self.label_qrcode_image.setPixmap(pixmap)
-    #     # self.label_qrcode_image.setScaledContents(True)          # 图片自动缩放填充，容易有问题，还是别了
-    #     # self.label_qrcode_image.setAlignment(Qt.AlignCenter)     # 可选：居
-    # def update_qrcode2_image(self, cv_img):
-    #     if cv_img is None:
-    #         return
-    #     # 做一次 copy （雖然 emit 後通常已經是新的物件）
-    #     arr = cv_img
-    #     height, width, channels = arr.shape
-    #     bytes_per_line = channels * width
-    #     qimage = QImage(
-    #         arr.data, width, height, bytes_per_line,
-    #         QImage.Format_RGB888
-    #     )
-    #     pixmap = QPixmap.fromImage(qimage)
-    #     # 可選：縮放到 label 大小，保持比例
-    #     pixmap = pixmap.scaled(
-    #         self.label_qrcode2_image.width(),
-    #         self.label_qrcode2_image.height(),
-    #         Qt.KeepAspectRatio,
-    #         Qt.SmoothTransformation
-    #     )
-    #     self.label_qrcode2_image.setPixmap(pixmap)
     
-    def updatePosition(self, strings: str):
+    def updatePosition(self, strings: str): # 更新飞机的位置
         self.lineEdit_pos.setText(strings)
 
     def closeEvent(self, event):
