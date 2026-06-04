@@ -3,9 +3,11 @@ from PyQt5.QtCore import pyqtSignal, QObject
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup,ReentrantCallbackGroup
-from std_msgs.msg import String
 from sensor_msgs.msg import Image,CompressedImage
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
 
 # 自定义消息和服务的数据类型
 from uav_car_interfaces.msg import T265Data
@@ -25,17 +27,14 @@ class ROS2_bridgeNode(Node, QObject):
     qr_order = list()
 
     qrcode2_image = pyqtSignal(object)
-    qrcode2 = pyqtSignal(str)
-    qr_set2 = set()                  # 用于快速去重
-    qr_order2 = list()
+    log_signal = pyqtSignal(str)
 
-    qrcode_result = pyqtSignal(str)
-    qrcode_result_dict = dict()
-   
-    cmd_result = pyqtSignal(bool,str)
-    position = pyqtSignal(str,float,float,float,int)
-    pos = None
     
+    cmd_result = pyqtSignal(bool,str)
+    flyOdom = pyqtSignal(str,float,float,float,int)
+    carOdom = pyqtSignal(float,float)
+
+    pos = None
     img_cb_group =MutuallyExclusiveCallbackGroup()
     topic_qrcode_cb_group =MutuallyExclusiveCallbackGroup()
     topic_t265_cb_group=MutuallyExclusiveCallbackGroup()
@@ -46,40 +45,72 @@ class ROS2_bridgeNode(Node, QObject):
         Node.__init__(self, node_name=name)
         self.get_logger().info("ros2 node launch success:%s!" % name)
         
-  
-        self.command_client = self.create_client(ControlService,"command_service")
-        self.topic_t265_sub = self.create_subscription(T265Data,"t265_data_topic", self.position_callback, 10,callback_group=self.topic_t265_cb_group)
-        self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_qrcode_cb_group)
-        self.topic_qrcode2_sub = self.create_subscription(String,"qrcode2_data_topic",self.qrcode2_callback,10 ,callback_group=self.topic_qrcode_cb_group)
-
-        self.topic_qrcode_compressedimage_sub   =self.create_subscription(CompressedImage,"/image/image_qrcode/compressed",self.qrcode_compressedimage_callback,10 ,callback_group=self.img_cb_group)
-        self.topic_qrcode2_compressedimage_sub =self.create_subscription(CompressedImage,"/image/image_qrcode2/compressed",self.qrcode_compressedimage2_callback,10 ,callback_group=self.img_cb_group)
-
-        self.topic_qrcode_result_sub = self.create_subscription(String,"qrcode_result_topic",self.qrcode_result_callback,10 ,callback_group=self.topic_qrcode_cb_group)
-        # self.topic_qrcode_image_sub =self.create_subscription(Image,"/image/image_qrcode",self.qrcode_image_callback,10 ,callback_group=self.img_cb_group)
-            # def qrcode_image_callback(self, msg):
-            #     cv_qrimage = self.bridge.imgmsg_to_cv2(msg,desired_encoding="rgb8")
-            #     self.qrcode_image.emit(cv_qrimage)
-
+        # 服务
+        self.command_client = self.create_client(ControlService,"command_service")# 无人机的控制服务
+        self.talk_client  = self.create_client(ControlService, 'talk_service') #无人机的控制节点的服务
+        
+        # 订阅
         self.topic_uart4_sub_MCU2 = self.create_subscription(String, 'uart_reader4_data_topic', self.MCU2_callback,10)
+        self.topic_t265_sub = self.create_subscription(T265Data,"t265_data_topic", self.fly_odom_callback, 10,callback_group=self.topic_t265_cb_group)
+        self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_qrcode_cb_group)
+        self.topic_fly_camera_sub = self.create_subscription(String, 'fly/camera/data', self.fly_camera_callback, 10,  callback_group=self.topic_qrcode_cb_group)
+        self.car_odom_sub = self.create_subscription(Odometry, 'car/odom', self.car_odom_callback, 10) # 消防车里程计 
+            # debug
+        self.log_topic_sub = self.create_subscription(String,"log_topic",self.log_topic_callback,10 ,callback_group=self.topic_qrcode_cb_group)
 
-        self.talk_client  = self.create_client(ControlService, 'talk_service')
+        # self.topic_qrcode_compressedimage_sub   =self.create_subscription(CompressedImage,"/image/image_qrcode/compressed",self.qrcode_compressedimage_callback,10 ,callback_group=self.img_cb_group)
+        # self.topic_qrcode_image_sub =self.create_subscription(Image,"/image/image_qrcode",self.qrcode_image_callback,10 ,callback_group=self.img_cb_group)
+        # def qrcode_image_callback(self, msg):
+        #     cv_qrimage = self.bridge.imgmsg_to_cv2(msg,desired_encoding="rgb8")
+        #     self.qrcode_image.emit(cv_qrimage)
 
+ 
+        # 发布
+        self.car_cmd_vel_pub = self.create_publisher(Twist, 'car/driver/cmd_vel', 10) #线速度控制，仅手动
+        self.topic_flyServo_pub = self.create_publisher(String,'fly/servo10',  10) # 投放用的duoji #10外侧 # 30内侧
+ 
+    def fly_camera_callback(self, msg: String):
+        self.flycamera_msg = msg
+        self.get_logger().info(f'flycam: {msg.data}')
+    def qrcode_callback(self, msg:String):
+        return
+        qrcode = msg.data
+        self.get_logger().info(f"qrcode 识别到QR码: {qrcode}")
+        self.qrcode.emit(qrcode)
     def MCU2_callback(self, msg: String):
         self.MCU2msg = msg
-        self.get_logger().info(f'MCU2 send back: {msg.data}')
+        # self.get_logger().info(f'MCU2 send back: {msg.data}')
 
-    def qrcode_result_callback(self, msg: String):
-        self.get_logger().info(f'qrcode_result_callback: {msg.data}')
-        json_decoded = json.loads(msg.data)
-        self.qrcode_result_dict[json_decoded['label']] = json_decoded['qrcode']
-        self.qrcode_result.emit(f"货架位置: {json_decoded['label']},  对应的QR码: {json_decoded['qrcode']}")
+    def car_odom_callback(self, msg: Odometry):
+        # 接收里程计数据，更新位置即可
+        x = msg.pose.pose.position.x
+        y = msg.pose.pose.position.y
+        self.carOdom.emit(x, y)
+        # self.get_logger().info(f'car_odom_callback: {x:6.3f}, {y:6.3f}')
 
-    def position_callback(self, msg: T265Data): # topic_t265_sub的回调函数，接收T265Data消息并更新位置信息
-        info = f"X:{msg.pos_x+0.0:+6.3f}m, Y:{msg.pos_y+0.0:+6.3f}m, Z:{msg.pos_z+0.0:+6.3f}m, C:{msg.confidence}" #H:{msg.tof_z+0.0:+6.3f}"
-        self.get_logger().debug(info)
+    def log_topic_callback(self, msg: String):
+        var_json = json.loads(msg.data)
+        label = var_json.get('label', '没有label这个键值对')
+        info = var_json.get('info', '没有info这个键值对')
+
+        self.get_logger().info(f'log_topic: 标签: {label}, 信息: {info}')
+
+        if label=='fly' and info =='over':
+            self.log_signal.emit(f"无人机: 无人机巡航结束")
+        elif label=='fly' and info =='start':
+            self.log_signal.emit(f"无人机: 无人机巡航开始")
+        elif label=='car' and info =='over':
+            self.log_signal.emit(f"消防车: 消防车灭火结束")
+        elif label=='car' and info =='start':
+            self.log_signal.emit(f"消防车: 消防车灭火开始")
+        else:
+            self.log_signal.emit(f"{label}: {info}")
+        
+    def fly_odom_callback(self, msg: T265Data): # topic_t265_sub的回调函数，接收T265Data消息并更新位置信息
+        info = f"X:{msg.pos_x+0.0:+6.3f}m, Y:{msg.pos_y+0.0:+6.3f}m, Z:{msg.pos_z+0.0:+6.3f}m, C:{msg.confidence}"
+        # self.get_logger().debug(info)
         self.pos = msg
-        self.position.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
+        self.flyOdom.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
 
     def send_talk(self, task:String):
         if rclpy.ok() and self.talk_client.service_is_ready()==False:
@@ -100,8 +131,12 @@ class ROS2_bridgeNode(Node, QObject):
             self.get_logger().info(info_str)
             if response.echo == 'undefined task':
                 self.cmd_result.emit(False, f'无效任务{task},请重置任务')
-            elif response.echo == 'reset task':
-                self.cmd_result.emit(False, f'任务重置完成')
+            elif response.echo == 'task is running':
+                self.cmd_result.emit(False, f'任务{task}正在执行中,请勿重复执行')
+            elif response.echo == 'task is shutdown': # 地面站通知飞机退出程序shitdown-navNode
+                self.cmd_result.emit(False, f'任务{task}已退出')
+            # elif response.echo == 'reset task':
+            #     self.cmd_result.emit(False, f'任务重置完成')
 
         except Exception as e:
             err_msg = f"{task} 响应失败: {str(e)}"
@@ -132,14 +167,7 @@ class ROS2_bridgeNode(Node, QObject):
             self.cmd_result.emit(False, err_msg)
             self.get_logger().error(err_msg)
 
-    def qrcode_callback(self, msg:String):
-        qrcode = msg.data
-        self.get_logger().info(f"qrcode 识别到QR码: {qrcode}")
-        self.qrcode.emit(qrcode)
-    def qrcode2_callback(self, msg:String):
-        qrcode = msg.data
-        self.get_logger().info(f"qrcode2 识别到QR码: {qrcode}")
-        self.qrcode2.emit(qrcode)
+
     def qrcode_compressedimage_callback(self, msg):
         ## compressedimage bridge method
         # cv_qrimage=self.bridge.compressed_imgmsg_to_cv2(msg)

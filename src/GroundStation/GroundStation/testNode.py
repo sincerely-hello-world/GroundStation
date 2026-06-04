@@ -77,6 +77,7 @@ class testNode(Node):
         
         time.sleep(3)
         
+
         self.topic_t265_pub = self.create_publisher(T265Data,"t265_data_topic", 10,callback_group=self.topic_t265_cb_group)
         self.topic_uart4_pub_MCU2 = self.create_publisher(String, 'uart_reader4_data_topic',10)
 
@@ -92,8 +93,15 @@ class testNode(Node):
         # self.paths = self.find_points_by_labels(self.paths_all, ['TakeOff',self.scan_label,'LeftSideA','LandPos'])
         self.paths = self.paths_all
 
-        self.main_timer = self.create_timer(0.4, self.timer_to_publish)
+        self.topic_sub = self.create_subscription(String,"log_topic", self.start_call, 10)
+        self.main_timer = None
 
+    def start_call(self, msg: String):
+        var_json = json.loads(msg.data)
+        label = var_json.get('label', '没有label这个键值对')
+        info = var_json.get('info', '没有info这个键值对')
+        if  label=='fly' and info =='start':
+            self.main_timer=self.create_timer(0.4, self.timer_to_publish)
     def timer_to_publish(self):
         self.pos.pos_x = self.aim.x
         self.pos.pos_y = self.aim.y
@@ -120,7 +128,7 @@ class testNode(Node):
         if self.status == self.状态.DELAY:
             self.get_logger().info(f"测试点：{self.status}--[{self.status}--[{self.aim.label}]")
             if self.delay_timer is None or self.delay_timer.is_canceled():
-                self.delay_timer = self.create_timer(3.5, self.delay_ok_callback)
+                self.delay_timer = self.create_timer(3, self.delay_ok_callback)
         if self.status == self.状态.END:
             self.get_logger().info(f"测试点：{self.status}--[{self.status}--[{self.aim.label}]")
             self.main_timer.cancel()
