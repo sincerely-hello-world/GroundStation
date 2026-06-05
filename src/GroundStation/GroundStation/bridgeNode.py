@@ -57,6 +57,7 @@ class ROS2_bridgeNode(Node, QObject):
         self.car_odom_sub = self.create_subscription(Odometry, 'car/odom', self.car_odom_callback, 10) # 消防车里程计 
             # debug
         self.log_topic_sub = self.create_subscription(String,"log_topic",self.log_topic_callback,10 ,callback_group=self.topic_qrcode_cb_group)
+        
 
         # self.topic_qrcode_compressedimage_sub   =self.create_subscription(CompressedImage,"/image/image_qrcode/compressed",self.qrcode_compressedimage_callback,10 ,callback_group=self.img_cb_group)
         # self.topic_qrcode_image_sub =self.create_subscription(Image,"/image/image_qrcode",self.qrcode_image_callback,10 ,callback_group=self.img_cb_group)
@@ -66,9 +67,11 @@ class ROS2_bridgeNode(Node, QObject):
 
  
         # 发布
-        self.car_cmd_vel_pub = self.create_publisher(Twist, 'car/driver/cmd_vel', 10) #线速度控制，仅手动
         self.topic_flyServo_pub = self.create_publisher(String,'fly/servo10',  10) # 投放用的duoji #10外侧 # 30内侧
- 
+        self.car_control_pub = self.create_publisher(String, 'car/driver/control', 10)# stopCar, unlockCar 前往某个目标点 等指令,暂时不写手动控制了，没必要，只留个停止/启动即可
+        self.car_cmd_vel_pub = self.create_publisher(Twist, 'car/driver/cmd_vel', 10) #线速度控制，仅手动 比较抽象不写了
+        self.car_fireArea_pub = self.create_publisher(String,'fire/area',  10) # 
+
     def fly_camera_callback(self, msg: String):
         self.flycamera_msg = msg
         self.get_logger().info(f'flycam: {msg.data}')
@@ -93,7 +96,7 @@ class ROS2_bridgeNode(Node, QObject):
         label = var_json.get('label', '没有label这个键值对')
         info = var_json.get('info', '没有info这个键值对')
 
-        self.get_logger().info(f'log_topic: 标签: {label}, 信息: {info}')
+        self.get_logger().info(f'bridge-log: 标签: {label}, 信息: {info}')
 
         if label=='fly' and info =='over':
             self.log_signal.emit(f"无人机: 无人机巡航结束")
@@ -130,13 +133,14 @@ class ROS2_bridgeNode(Node, QObject):
             info_str = f"{task} 响应成功 → {response.echo}"   
             self.get_logger().info(info_str)
             if response.echo == 'undefined task':
-                self.cmd_result.emit(False, f'无效任务{task},请重置任务')
+                self.cmd_result.emit(False, f'无人机无效任务{task},请重置任务')
             elif response.echo == 'task is running':
-                self.cmd_result.emit(False, f'任务{task}正在执行中,请勿重复执行')
+                self.cmd_result.emit(False, f'无人机任务{task}正在执行中,请勿重复执行')
             elif response.echo == 'task is shutdown': # 地面站通知飞机退出程序shitdown-navNode
-                self.cmd_result.emit(False, f'任务{task}已退出')
-            # elif response.echo == 'reset task':
-            #     self.cmd_result.emit(False, f'任务重置完成')
+                # self.cmd_result.emit(False, f'任务{task}已退出')
+                pass
+            elif response.echo == 'task is reset ':
+                self.cmd_result.emit(False, f'无人机任务重置完成')
 
         except Exception as e:
             err_msg = f"{task} 响应失败: {str(e)}"

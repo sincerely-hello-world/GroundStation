@@ -68,6 +68,14 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.subdialog1.checkBox.setChecked(True) 
         self.subdialog1.checkBox.stateChanged.connect(self.on_servo_state_changed)
         
+        # ✅ 在这里连接：subDialog2界面的按钮 → ROS2节点的方法    消防车手控界面
+        self.subdialog2 = subDialog2()
+        self.subdialog2.pushButton_runTask.clicked.connect(self.carTaskSet)
+        self.subdialog2.pushButton_setTask.clicked.connect(self.carTaskSet)
+        self.subdialog2.pushButton_stop.clicked.connect(self.carTaskSet)
+        self.subdialog2.pushButton_unlock.clicked.connect(self.carTaskSet)
+
+
         # ✅ 在这里连接：主界面的按钮
         # self.pushButton_takeoff.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.pushButton_land.clicked.connect(lambda: self.bridge_node.send_command("land"))
@@ -86,7 +94,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         # ✅ 在这里连接：tab界面的按钮   子窗体界面的画面 
         self.tabWidget.removeTab(0)         # 删除Designer里的"其他"页面 样板空页面
         self.tabWidget.addTab(self.subdialog1, "无人机手控")
-        # self.tabWidget.addTab(self.subdialog2, "消防车手控")
+        self.tabWidget.addTab(self.subdialog2, "消防车手控")
         self.tabWidget.addTab(self.flyMap, "无人机航迹图")
         self.tabWidget.addTab(self.carMap, "消防车路径图")
         self.tabWidget.setCurrentIndex(2)  # 索引从0开始
@@ -107,6 +115,44 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.bridge_node.carOdom.connect(self.updateCarPos)
 
         # ✅  初始化结束# ✅  初始化结束# ✅  初始化结束
+    def carTaskSet(self):
+        """统一处理消防车控制事件"""
+        sender = self.sender()
+        sender_name = sender.objectName()
+               
+        if sender_name == "pushButton_unlock":
+            self.bridge_node.car_control_pub.publish(String(data="unlockCar"))
+            QtWidgets.QMessageBox.warning(self, "提示", "正在让小车暂停运动")
+ 
+        if sender_name == "pushButton_stop":
+            self.bridge_node.car_control_pub.publish(String(data="stopCar"))
+            QtWidgets.QMessageBox.warning(self, "提示", "正在让小车停下运动")
+ 
+        if sender_name in ("pushButton_runTask", "pushButton_setTask"):
+            # 用列表推导式收集被勾选的任务
+            checked_tasks = [
+                task for task, checkbox in [
+                    ("A", self.subdialog2.checkBoxA),
+                    ("B", self.subdialog2.checkBoxB),
+                    ("C", self.subdialog2.checkBoxC),
+                    ("D", self.subdialog2.checkBoxD),
+                    ("E", self.subdialog2.checkBoxE),
+                    ("F", self.subdialog2.checkBoxF),
+                ] if checkbox.isChecked()
+            ]
+            if not checked_tasks:
+                QtWidgets.QMessageBox.warning(self, "提示", "请先勾选小车要执行的任务")
+                return
+            if sender_name == "pushButton_setTask":
+                QtWidgets.QMessageBox.information(self, "提示", f"小车设置了任务{checked_tasks}")
+                return
+            
+            QtWidgets.QMessageBox.information(self, "提示", f"小车执行任务{checked_tasks}")
+            for task in checked_tasks:
+                self.bridge_node.car_fireArea_pub.publish(String(data=task))
+            self.bridge_node.car_fireArea_pub.publish(String(data='fireListEnd'))
+        
+
     def Set_Task(self, task:str):
         if task == 'scan_all':
             self.lineEdit_task.setText("无人机:巡航灭火点任务") # 重要，起始信号
@@ -202,8 +248,9 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
     def closeEvent(self, event):
         if self.subdialog1.isVisible():
             self.subdialog1.close() # 关闭子窗口
-        self.bridge_node.send_talk('shutdown-navNode')
-        self.ros2_thread.join(timeout=0.5)  # 最多等2秒
+        self.bridge_node.send_talk('shutdown-navNode') # 停止navNode节点 无人机控制节点
+        self.bridge_node.car_control_pub.publish(String(data="stopCar")) # 停止小车控制，让车停下来即可
+        self.ros2_thread.join(timeout=0.5)  # 最多等0.5秒
         event.accept()
     def showEvent(self, event):
         # 窗口显示出来后，再加载图片 → 图片就是高清的！
@@ -246,12 +293,20 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         qt_label.setPixmap(pixmap)
 
 
-class subDialog1(QDialog ,Ui_subDialog1):
+
+## 多重继承 自窗口类 和 窗口类
+class subDialog1(QWidget ,Ui_subDialog1):
     def __init__(self,name="地面站-手动控制对话框"):
         super().__init__()
         self.setupUi(self)  # 初始化运行B窗口类下的 setupUi 函数
         self.setWindowTitle(name)
         # self.pushButton_closeDialog.clicked.connect(self.close) #窗口2 中的关闭按钮
+
+class subDialog2(QWidget ,Ui_carControl):
+    def __init__(self,name="小车控制窗口"):
+        super().__init__()
+        self.setupUi(self)  # 运行B窗口类下的 setupUi 函数
+        self.setWindowTitle(name)
 
 def main():
   

@@ -54,12 +54,6 @@ class Ui_subDialog1(object):
         self.pushButton_landnormal.setFont(font)
         self.pushButton_landnormal.setObjectName("pushButton_landnormal")
         self.gridLayout.addWidget(self.pushButton_landnormal, 3, 2, 1, 1)
-        self.pushButton_closeDialog = QtWidgets.QPushButton(subDialog1)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.pushButton_closeDialog.setFont(font)
-        self.pushButton_closeDialog.setObjectName("pushButton_closeDialog")
-        self.gridLayout.addWidget(self.pushButton_closeDialog, 4, 2, 1, 1)
         self.pushButton_left = QtWidgets.QPushButton(subDialog1)
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -123,7 +117,6 @@ class Ui_subDialog1(object):
         self.gridLayout_2.addLayout(self.gridLayout, 2, 0, 1, 2)
 
         self.retranslateUi(subDialog1)
-        self.pushButton_closeDialog.clicked.connect(subDialog1.hide)
         QtCore.QMetaObject.connectSlotsByName(subDialog1)
 
     def retranslateUi(self, subDialog1):
@@ -134,7 +127,6 @@ class Ui_subDialog1(object):
         self.pushButton_forward.setText(_translate("subDialog1", "前"))
         self.pushButton_turn_left.setText(_translate("subDialog1", "左转"))
         self.pushButton_landnormal.setText(_translate("subDialog1", "正常降落"))
-        self.pushButton_closeDialog.setText(_translate("subDialog1", "关闭此页面"))
         self.pushButton_left.setText(_translate("subDialog1", "左"))
         self.pushButton_hover.setText(_translate("subDialog1", "悬停"))
         self.pushButton_right.setText(_translate("subDialog1", "右"))

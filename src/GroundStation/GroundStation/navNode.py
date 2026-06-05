@@ -93,7 +93,7 @@ class navNode(Node):
         # 订阅话题
         self.topic_t265_sub = self.create_subscription(T265Data,"t265_data_topic", self.position_callback, 10,callback_group=self.topic_t265_cb_group)
         self.topic_uart4_sub_MCU2 = self.create_subscription(String, 'uart_reader4_data_topic', self.MCU2_callback,10)
-        self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_cb_group)
+        # self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_cb_group)
         self.topic_fly_camera_sub = self.create_subscription(String, 'fly/camera/data', self.fly_camera_callback, 10,  callback_group=self.topic_cb_group)
         # 发布话题
         self.log_topic_pub = self.create_publisher(String,"log_topic",10 ,callback_group=self.topic_cb_group)
@@ -128,7 +128,7 @@ class navNode(Node):
         # self.fire_topic_pub.publish(String(data='C'))
         # self.fire_topic_pub.publish(String(data='D'))
         # time.sleep(0.1)
-        # self.fire_topic_pub.publish(String(data='over'))
+        # self.fire_topic_pub.publish(String(data='fireListEnd'))
 
 
     def clear_fly_status(self):
@@ -206,7 +206,7 @@ class navNode(Node):
 
         elif self.status == self.状态.WaitAim:  
             self.get_logger().info(f"状态4：{self.status}--[{self.aim.label}{self.aim.qrcode}]]")
-            if self.check_arrive_aim():
+            if self.check_arrive_aim(): # TODO: 状态分支：进行物体检测，逼近物体上方
                 self.status = self.状态.ArriveAim
 
         elif self.status == self.状态.ArriveAim:
@@ -238,20 +238,14 @@ class navNode(Node):
             self.get_logger().info(f"状态8：{self.status}--[任务结束]")
             self.task_timer.cancel()
             self.send_log_json(label='fly',info='over')
+            self.send_log_json(label='无人机',info='巡航结束')
             self.task_timer = None
 
-    def qrcode_callback(self, msg:String): # 来自飞机摄像机的数据
-        return
-        self.qrcode = msg.data
-        self.client_led1_trigger.call_async(Trigger.Request())
-        if self.pos_arrive:
-            self.get_logger().info(f"二维码识别器:{self.qrcode}")
     def fly_camera_callback(self, msg: String):
         pass
     def delay_timer_callback(self): 
         '''延时完成的回调： 发送识别结果'''
         self.send_log_json(f"无人机",f"{self.aim.label}航点完成")# 当前识别到qr】码【{self.aim.qrcode}】
-        self.get_logger().info(f"无人机{self.aim.label}航点完成")
         self.delay_ok = True
         self.delay_timer.cancel()  # 确保定时器只执行一次
         self.delay_timer = None
@@ -267,9 +261,9 @@ class navNode(Node):
         else:
             return False    
     def send_log_json(self, label:str, info:str):
-        json_str = json.dumps({'label':label,'info':info})
-        self.log_topic_pub.publish(String(data=json_str))
-        self.get_logger().info(f"飞机向地面站发送数据------:{json_str}")
+        self.get_logger().info(f"{label}:{info}")
+        json_dumps = json.dumps({'label':label,'info':info})
+        self.log_topic_pub.publish(String(data=json_dumps))
 
     
     def is_pos_arrive(self):

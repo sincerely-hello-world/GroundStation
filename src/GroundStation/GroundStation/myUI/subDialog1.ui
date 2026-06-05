@@ -85,18 +85,6 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="2">
-      <widget class="QPushButton" name="pushButton_closeDialog">
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>关闭此页面</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="pushButton_left">
        <property name="font">
@@ -222,22 +210,5 @@
   </layout>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton_closeDialog</sender>
-   <signal>clicked()</signal>
-   <receiver>subDialog1</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>555</x>
-     <y>305</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>326</x>
-     <y>172</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
