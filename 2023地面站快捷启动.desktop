@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-Exec=/bin/bash -c '/home/orangepi/Desktop/2024_GroundStation/start.sh'
+Exec=/bin/bash -c '/home/orangepi/Desktop/GroundStation/start.sh'
 Hidden=false
 NoDisplay=false
 Terminal=true
-Name=Gound站开机自启
+Name=2023地面站快捷启动
 StartupNotify=false
 
