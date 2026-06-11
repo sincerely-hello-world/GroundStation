@@ -57,7 +57,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.subdialog1.pushButton_fly.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.subdialog1.pushButton_flyagain.clicked.connect(lambda: self.bridge_node.send_command("takeoff"))
         self.subdialog1.pushButton_stopland.clicked.connect(lambda: self.bridge_node.send_command("land"))
-        self.subdialog1.pushButton_landnormal.clicked.connect(lambda: self.bridge_node.send_command("normalland"))
+        self.subdialog1.pushButton_landnormal.clicked.connect(lambda: self.bridge_node.send_command("normalLand"))
         self.subdialog1.pushButton_forward.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x+0.2, self.pos.y, self.pos.z,'')))
         self.subdialog1.pushButton_back.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x-0.2, self.pos.y, self.pos.z,'')))
         self.subdialog1.pushButton_left.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y+0.2, self.pos.z,'')))
@@ -67,6 +67,9 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.subdialog1.pushButton_up.clicked.connect(lambda: self.bridge_node.send_command(TGformat('H',self.pos.x, self.pos.y, self.pos.z+0.13,'')))
         self.subdialog1.checkBox.setChecked(True) 
         self.subdialog1.checkBox.stateChanged.connect(self.on_servo_state_changed)
+
+        self.pushButton_land.setStyleSheet("background-color: orange; color: rgb(0, 0, 0);")
+        # self.pushButton_takeoff.setStyleSheet("background-color: green; color: rgb(0, 0, 0);")
         
         # ✅ 在这里连接：subDialog2界面的按钮 → ROS2节点的方法    消防车手控界面
         self.subdialog2 = subDialog2()
@@ -82,7 +85,6 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         
         self.pushButton.clicked.connect(self.takeoff_confirm)
         self.pushButton_reset_task.clicked.connect(lambda: self.Set_Task('reset'))
-        self.pushButton_scanall.clicked.connect(lambda: self.Set_Task('scan_all'))
         self.pushButton_runtask.clicked.connect(self.Fly_RunTask)
 
         # ✅ 在这里连接：tab界面的按钮   子窗体界面的画面 
@@ -105,11 +107,14 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.ros2_thread = threading.Thread(target=start_ros2Node_spin, args=([self.bridge_node],),daemon=True,name="ROS2_Bridge_Spin_Thread")
         self.ros2_thread.start()
         
-        self.bridge_node.qrcode.connect(self.update_qrcode)
+        # self.bridge_node.qrcode.connect(self.update_qrcode)
+        self.bridge_node.flycamera_signal.connect(self.update_flycam_data)
+
         self.bridge_node.cmd_result.connect(self.info_cmd_result)
         self.bridge_node.log_signal.connect(self.showLoggerCallback) # 监听状态信息显示
         self.bridge_node.log_signal.connect(self.LED_trigger)  
         self.bridge_node.log_signal.connect(self.DroneStatus)
+
 
         self.bridge_node.flyOdom.connect(self.updateFlyPos)
         self.bridge_node.carOdom.connect(self.updateCarPos)
@@ -122,7 +127,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
                
         if sender_name == "pushButton_unlock":
             self.bridge_node.car_control_pub.publish(String(data="unlockCar"))
-            QtWidgets.QMessageBox.warning(self, "提示", "正在让小车暂停运动")
+            QtWidgets.QMessageBox.warning(self, "提示", "正在让小车开始运动")
  
         if sender_name == "pushButton_stop":
             self.bridge_node.car_control_pub.publish(String(data="stopCar"))
@@ -161,14 +166,16 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
             self.bridge_node.send_talk(task)
             self.lineEdit_task.setText('任务重置了，重新设置任务')
     def Fly_RunTask(self):
-        if "scan_all" == self.flyTask: # and self.pushButton_takeoff.text() == "可以起飞":
+        self.lineEdit_task.setText("无人机:巡航灭火点任务") # 重要，起始信号
+        self.flyTask = 'scan_all'
+        if "scan_all" == self.flyTask  and self.pushButton_takeoff.text() == "可以起飞":
             self.bridge_node.send_talk(self.flyTask)
             self.flyTask = 'scan_all_running'
         elif "scan_all_running" == self.flyTask:
             QMessageBox.warning(self,'警告',"已经启动巡航任务了，请勿重复执行")
         else:
             self.flyTask = None
-            QMessageBox.warning(self,'警告',"请设置正确的任务")
+            QMessageBox.warning(self,'警告',"请确认飞机状态再起飞")
 
     def takeoff_confirm(self):
         if self.pos.confidence < 3 and self.pos.z > 0 :
@@ -214,6 +221,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
             self.flyMap.startUpdate()
             self.bridge_node.get_logger().info("重新更新无人机地图")
             self.bridge_node.log_signal.emit("重新更新无人机地图")
+
         elif "消防车灭火结束" in log:
             self.carMap.stopUpdate()
             self.bridge_node.get_logger().info("停止更新消防车地图")
@@ -225,7 +233,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
             self.bridge_node.get_logger().info("重新更新消防车地图")
             self.bridge_node.log_signal.emit("重新更新消防车地图")
     def updateCarPos(self, x, y):
-        self.carMap.update_position(x+1.4, y+0.3)
+        self.carMap.update_position(x+1.5, y+0.35)
  
     def updateFlyPos(self, info, x,y,z,confidence):
         self.lineEdit_pos.setText(info)
@@ -234,7 +242,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
         self.pos.y = y
         self.pos.z = z
         self.pos.confidence = confidence
-        self.flyMap.update_position(x+0.3,y+0.3)
+        self.flyMap.update_position(x+0.4,y+0.4)
     def showLoggerCallback(self,data:str):
         self.textEdit_qrresult.append(data)
         # 自动滚动到底部
@@ -243,6 +251,8 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
 
     def update_qrcode(self,qrcode:str):
         self.lineEdit_qrcode.setText(qrcode)
+    def update_flycam_data(self,camData:str):
+        self.lineEdit_qrcode.setText(camData)
  
 
     def closeEvent(self, event):

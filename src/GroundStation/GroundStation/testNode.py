@@ -1,4 +1,10 @@
-
+import os,sys
+# 自动获取当前文件所在目录的上一级目录，并强行加入 Python 的搜索路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+    
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
@@ -18,15 +24,7 @@ import json,time
 from typing import List, Optional
 
 
-class Point:
-    def __init__(self, x: float = 0.0, y: float = 0.0, z: float = 0.7, label: str = 'none',qrcode: str = 'none',label2: str = '', qrcode2: str = ''):
-        self.x = x      # 单位：米
-        self.y = y
-        self.z = z
-        self.label = label
-        self.qrcode = qrcode
-        self.label2 = label2
-        self.qrcode2 = qrcode2
+from GroundStation.navPoints import *
 
 @dataclass(frozen=True)  # frozen=True 开启只读模式
 class myStatus:
@@ -39,7 +37,7 @@ class myStatus:
 class testNode(Node):
 
     pos = T265Data()
-    aim = Point() # 路径目标点
+    aim = myPoint() # 路径目标点
 
     状态 = myStatus()
     status = ''
@@ -58,24 +56,27 @@ class testNode(Node):
         self.test = self.get_parameter('test').value
         self.paths_scan_all_str = self.get_parameter('paths_scan_all').value
 
-        if self.paths_scan_all_str is not None:
-            self.path_scan_all_json = json.loads(self.paths_scan_all_str)
-            self.paths_all: List[Point] = [
-                Point(
-                    x=float(p['x']),
-                    y=float(p['y']),
-                    z=float(p['z']),
-                    label=str(p['label']),
-                    qrcode=str(p['qrcode']),
-                    label2=str(p['label2']),
-                    qrcode2=str(p['qrcode2']),
-                )
-                for p in self.path_scan_all_json
-            ]
-            self.get_logger().info(f'paths: {self.paths_scan_all_str}')
+        # if self.paths_scan_all_str is not None:
+        #     self.path_scan_all_json = json.loads(self.paths_scan_all_str)
+        #     self.path_scan_all: List[Point] = [
+        #         Point(
+        #             x=float(p['x']),
+        #             y=float(p['y']),
+        #             z=float(p['z']),
+        #             label=str(p['label']),
+        #             qrcode=str(p['qrcode']),
+        #             label2=str(p['label2']),
+        #             qrcode2=str(p['qrcode2']),
+        #         )
+        #         for p in self.path_scan_all_json
+        #     ]
+        #     self.get_logger().info(f'paths: {self.paths_scan_all_str}')
         #----------------------
-        
-        time.sleep(3)
+        self.path_scan_all   = points  
+        # for point in points:
+        #     print(point)
+
+        # time.sleep(3)
         
 
         self.topic_t265_pub = self.create_publisher(T265Data,"t265_data_topic", 10,callback_group=self.topic_t265_cb_group)
@@ -83,24 +84,32 @@ class testNode(Node):
 
         self.topic_qrcode_pub = self.create_publisher(String,"qrcode_data_topic",10 ,callback_group=self.topic_qrcode_cb_group)
         self.topic_qrcode2_pub = self.create_publisher(String,"qrcode2_data_topic",10 ,callback_group=self.topic_qrcode_cb_group)  
+        self.topic_qrcode2_pub = self.create_publisher(String,"qrcode2_data_topic",10 ,callback_group=self.topic_qrcode_cb_group)  
 
+        self.log_topic_pub = self.create_publisher(String,"log_topic",10 ,callback_group=self.topic_cb_group)
         self.get_logger().info('测试节点启动成功')
+
         self.status = self.状态.INIT
         self.delay_timer = None
         self.path_index = 0
 
-        self.scan_label = 'D6'
+        # self.scan_label = 'D6'
         # self.paths = self.find_points_by_labels(self.paths_all, ['TakeOff',self.scan_label,'LeftSideA','LandPos'])
-        self.paths = self.paths_all
+        self.paths = self.path_scan_all
 
         self.topic_sub = self.create_subscription(String,"log_topic", self.start_call, 10)
         self.main_timer = None
+        
+    def send_log_json(self, label:str, info:str):
+        self.get_logger().info(f"{label}:{info}")
+        json_dumps = json.dumps({'label':label,'info':info})
+        self.log_topic_pub.publish(String(data=json_dumps))
 
     def start_call(self, msg: String):
         var_json = json.loads(msg.data)
         label = var_json.get('label', '没有label这个键值对')
         info = var_json.get('info', '没有info这个键值对')
-        if  label=='fly' and info =='start':
+        if  label=='fly' and info =='teststart':
             self.main_timer=self.create_timer(0.4, self.timer_to_publish)
     def timer_to_publish(self):
         self.pos.pos_x = self.aim.x
@@ -138,7 +147,7 @@ class testNode(Node):
         self.status = self.状态.SEND
         self.delay_timer.cancel()
         self.delay_timer = None
-    def find_point_by_label(self,paths: List[Point], label: str) -> Optional[Point]:
+    def find_point_by_label(self,paths: List[myPoint], label: str) -> Optional[myPoint]:
         """
         根据 label 查找 Point，支持精确匹配，未找到时返回 None
         """
@@ -151,7 +160,7 @@ class testNode(Node):
                 return p
         return None
 
-    def find_points_by_labels(self,paths: List[Point], labels: List[str]) -> Optional [List[Point]]:
+    def find_points_by_labels(self,paths: List[myPoint], labels: List[str]) -> Optional [List[myPoint]]:
         """
         根据多个 label，返回对应的 Point 列表（按 labels 的顺序排列）
         
@@ -164,7 +173,7 @@ class testNode(Node):
         """
         if not paths or not labels:
             return []
-        result: List[Point] = []
+        result: List[myPoint] = []
         for label in labels:
             point = self.find_point_by_label(paths, label)
             if point is not None:

@@ -21,12 +21,8 @@ def generate_launch_description():
         parameters=[ navNode_param_yaml ]
     )
 
-    navTestNode = Node(
-        package='GroundStation',
-        executable='testNode',
-        parameters=[ navNode_param_yaml ]
-    )
 
+ 
     node_CarControl=Node(
         package='carStation',
         executable='carNode',
@@ -34,7 +30,7 @@ def generate_launch_description():
 
     # 3. 使用 TimerAction 包裹节点 
     node_FlyControl_delay = TimerAction(
-        period=3.0,                     # 延迟3秒
+        period=3.5,                     # 延迟3秒
         actions=[node_FlyControl]       # 延迟执行的动作
     )
     node_CarControl_delay = TimerAction(
@@ -45,20 +41,38 @@ def generate_launch_description():
     # 4. 注册事件处理器：当节点A启动完成后，启动定时器
     reg_FlyControl = RegisterEventHandler(
         OnProcessStart(
-            target_action=node_GroundStation,
-            on_start=[node_FlyControl_delay]  # 节点A启动完成后，开始计时4秒
+            target_action=node_GroundStation, # 地面站先启动
+            on_start=[node_FlyControl_delay]  # 飞行控制节点后启动
         )
     )
     # reg_CarControl = RegisterEventHandler(
     #     OnProcessStart(
-    #         target_action=node_FlyControl_delay,
-    #         on_start=[node_CarControl_delay]  # 节点A启动完成后，开始计时4秒
+    #         target_action=node_FlyControl_delay, 
+    #         on_start=[node_CarControl_delay]  # 最后启动小车控制节点
     #     )
     # )
+    node_TestNode = Node(
+        package='GroundStation',
+        executable='testNode',
+        parameters=[ navNode_param_yaml ]
+    )
+ 
+    reg_FlyTestNode = RegisterEventHandler(
+        OnProcessStart(
+            target_action=node_TestNode, # 启动测试节点先启动
+            on_start=[node_FlyControl_delay] # 然后飞行控制节点
+        )
+    )
     
     return LaunchDescription([
+
+        # 实际用
         node_GroundStation,
         reg_FlyControl,
         # reg_CarControl
+
+        # # 测试用
+        # node_TestNode,
+        # reg_FlyTestNode
     ])
-# node_CarControl_delay4s
+ 

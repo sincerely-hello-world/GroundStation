@@ -8,6 +8,9 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Point
+
+from GroundStation.navPoints import *
 
 # 自定义消息和服务的数据类型
 from uav_car_interfaces.msg import T265Data
@@ -27,9 +30,12 @@ class ROS2_bridgeNode(Node, QObject):
     qr_order = list()
 
     qrcode2_image = pyqtSignal(object)
+
+    flycamera_signal = pyqtSignal(str)
+
     log_signal = pyqtSignal(str)
 
-    
+
     cmd_result = pyqtSignal(bool,str)
     flyOdom = pyqtSignal(str,float,float,float,int)
     carOdom = pyqtSignal(float,float)
@@ -53,7 +59,7 @@ class ROS2_bridgeNode(Node, QObject):
         self.topic_uart4_sub_MCU2 = self.create_subscription(String, 'uart_reader4_data_topic', self.MCU2_callback,10)
         self.topic_t265_sub = self.create_subscription(T265Data,"t265_data_topic", self.fly_odom_callback, 10,callback_group=self.topic_t265_cb_group)
         self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_qrcode_cb_group)
-        self.topic_fly_camera_sub = self.create_subscription(String, 'fly/camera/data', self.fly_camera_callback, 10,  callback_group=self.topic_qrcode_cb_group)
+        self.topic_fly_camera_sub = self.create_subscription(Point, 'fly/camera/data', self.fly_camera_callback, 10,  callback_group=self.topic_qrcode_cb_group)
         self.car_odom_sub = self.create_subscription(Odometry, 'car/odom', self.car_odom_callback, 10) # 消防车里程计 
             # debug
         self.log_topic_sub = self.create_subscription(String,"log_topic",self.log_topic_callback,10 ,callback_group=self.topic_qrcode_cb_group)
@@ -72,9 +78,12 @@ class ROS2_bridgeNode(Node, QObject):
         self.car_cmd_vel_pub = self.create_publisher(Twist, 'car/driver/cmd_vel', 10) #线速度控制，仅手动 比较抽象不写了
         self.car_fireArea_pub = self.create_publisher(String,'fire/area',  10) # 
 
-    def fly_camera_callback(self, msg: String):
-        self.flycamera_msg = msg
-        self.get_logger().info(f'flycam: {msg.data}')
+    def fly_camera_callback(self, msg: Point):
+        # Point 类型的坐标直接访问
+        # self.flycamera_data = msg  # 或者保存整个 msg
+        data_str = f'火源偏移: x={msg.x:4.2f},y={msg.y:4.2f}'  # ✅ 直接使用 msg.x, msg.y
+        self.flycamera_signal.emit(data_str)
+        self.get_logger().info(f'bridgenode-无人机flycam_data: {data_str}')
     def qrcode_callback(self, msg:String):
         return
         qrcode = msg.data

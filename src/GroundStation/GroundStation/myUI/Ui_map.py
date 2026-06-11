@@ -143,13 +143,14 @@ class DroneMapWidget(QGraphicsView):
         self.view_width = self.size().width()
         self.view_height = self.size().height()
         # 确保 hud_label 已经初始化
-        self.update_hud_display( self.now_x, self.now_y, self.pathlength,self.title)
-        # if hasattr(self, 'hud_label'):
-        #     margin = 15  # 距离右边和下边的边距
-        #     # 计算右下角坐标
-        #     x = self.width() - self.hud_label.width() - margin
-        #     y = self.height() - self.hud_label.height() - margin
-        #     self.hud_label.move(x, y)
+        # self.update_hud_display( self.now_x, self.now_y, self.pathlength,self.title)
+        if hasattr(self, 'hud_label'):
+            margin = 15  # 距离右边和下边的边距
+            # 计算右下角坐标
+            x = self.width() - self.hud_label.width() - margin
+            y = self.height() - self.hud_label.height() - margin
+            self.hud_label.move(x, y)
+            self.update_hud_display( self.now_x, self.now_y, self.pathlength,self.title)
  
 
         if hasattr(self, 'original_pixmap') and self.original_pixmap and not self.original_pixmap.isNull():
@@ -323,38 +324,51 @@ if __name__ == '__main__':
     # 实例化子窗口
     drone_window = DroneMapWidget(map_image_path="/home/focal/Desktop/2024_GroundStation/src/GroundStation/imgs/2023map.png")
     drone_window.setWindowTitle("无人机实时轨迹监控")
-    # drone_window.resize(1000, 700)
+    drone_window.resize(1000, 700)
     drone_window.show()
+    drone_window.stopUpdate()
+    drone_window.clear_trajectory()
 
+    drone_window.update_position(0.0, 0.5)
+    drone_window.startUpdate()
     # 模拟实时数据流
     simulated_x = 0.0
     simulated_y = 0.5
+    cnt = 20
+    import random
+    def mock_data_stream():
+            global simulated_x, simulated_y, cnt
+            # 每次移动 0.01~0.15m
+            simulated_x += random.uniform(-0.05, 0.15)
+            simulated_y += random.uniform(-0.05, 0.15)
 
-    # def mock_data_stream():
-    #     global simulated_x, simulated_y
-    #     import random
+            # 边界限制
+            simulated_x = max(0.0, min(4.8, simulated_x))
+            simulated_y = max(0.0, min(4.0, simulated_y))
 
-    #     # 每次移动 0.01~0.15m
-    #     simulated_x += random.uniform(-0.05, 0.15)
-    #     simulated_y += random.uniform(-0.05, 0.15)
+            drone_window.update_position(simulated_x, simulated_y)
+            
+            cnt -= 1
+            if cnt <= 0:
+                drone_window.stopUpdate()
+                timer.stop()  # 停止定时器
+                drone_window.update_position(simulated_x, simulated_y)
+                print("测试完成")
+                print(f"总里程{drone_window.pathLength():.2f}米")
 
-    #     # 边界限制
-    #     simulated_x = max(0.0, min(4.8, simulated_x))
-    #     simulated_y = max(0.0, min(4.0, simulated_y))
+    timer = QTimer()
+    timer.timeout.connect(mock_data_stream)
+    timer.start(100)
 
-    #     drone_window.update_position(
-    #         simulated_x,
-    #         simulated_y
-    #     )
-    # timer = QTimer()
-    # timer.timeout.connect(mock_data_stream)
-    # timer.start(100)
+    timer2 = QTimer()
+    timer2.timeout.connect(lambda: drone_window.update_position(        0.8,        0.8,    ))
+    timer2.start(101)
 
-    drone_window.update_position(        0.8,        0.8,    )
+    # drone_window.update_position(        0.8,        0.8,    )
     # drone_window.clear_trajectory()
     # drone_window.update_position(        0.0,        2.4,    )
     # drone_window.startUpdate()
     # drone_window.update_position(        3.6,        3.6,    )
-    # print(f"总里程{drone_window.pathLength():.2f}米")
+    
 
     sys.exit(app.exec_())
