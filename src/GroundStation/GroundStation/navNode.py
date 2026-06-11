@@ -55,7 +55,7 @@ class navNode(Node):
     fireOffset = myPoint() # 当前正在检测的】火源目标点 - 实时刷新
     fireAim = myPoint() # 实际前往的灭火点
     fireAimList: List[myPoint] = [] # 标记的】火源坐标
-    fireAreaList = []  # 标记的】火源区域
+    fireAreaList: List[str] = [] # 标记的】火源区域
 
 
     状态 = myStatus()
@@ -323,14 +323,6 @@ class navNode(Node):
                 self.send_command('normalLand')
                 self.status = self.状态.LandWait
 
-        elif self.status == self.状态.End:
-            self.get_logger().info(f"状态8：{self.status}--[任务结束]")
-            self.task_timer.cancel()
-            self.fire_topic_pub.publish(String(data='fireListEnd')) # 停止识别，让消防车开始动作
-            self.send_log_json(label='fly',info='over')
-            self.send_log_json(label='无人机',info='巡航结束')
-            self.task_timer = None
-
         elif self.status == self.状态.LandWait:
             self.get_logger().info(f"状态：{self.status}--[降落中]")
             if self.delay_here_timer is None and self.delay_here_ok == False:
@@ -338,6 +330,22 @@ class navNode(Node):
             if self.delay_here_ok == True:
                 self.delay_here_ok = False
                 self.status = self.状态.End
+
+        elif self.status == self.状态.End:
+            self.get_logger().info(f"状态8：{self.status}--[任务结束]")
+            self.task_timer.cancel()
+            if len(self.fireAreaList) > 0:
+                self.send_log_json(label='火源区域列表',info=self.fireAreaList)
+                for fire in self.fireAreaList:
+                    self.fire_topic_pub.publish(String(data=fire))
+            self.fire_topic_pub.publish(String(data='fireListEnd')) # 停止识别，让消防车开始动作
+            self.send_log_json(label='fly',info='over')
+            self.send_log_json(label='无人机',info='巡航结束')
+            self.task_timer = None
+        else:
+            self.get_logger().info(f"状态：{self.status}--[未知状态]")
+            pass
+
 
     def check_target_detected(self): # TODO 判别是否有物体检测到了
         '''检查是否检测到目标物体''' 
