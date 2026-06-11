@@ -21,11 +21,15 @@ def generate_launch_description():
         parameters=[ navNode_param_yaml ]
     )
 
-
- 
     node_CarControl=Node(
         package='carStation',
         executable='carNode',
+    )
+
+    node_TestNode = Node(
+        package='GroundStation',
+        executable='testNode',
+        parameters=[ navNode_param_yaml ]
     )
 
     # 3. 使用 TimerAction 包裹节点 
@@ -42,21 +46,16 @@ def generate_launch_description():
     reg_FlyControl = RegisterEventHandler(
         OnProcessStart(
             target_action=node_GroundStation, # 地面站先启动
-            on_start=[node_FlyControl_delay]  # 飞行控制节点后启动
+            on_start=[node_FlyControl_delay]  # 延迟三秒，飞行控制节点后启动, 
         )
     )
-    # reg_CarControl = RegisterEventHandler(
-    #     OnProcessStart(
-    #         target_action=node_FlyControl_delay, 
-    #         on_start=[node_CarControl_delay]  # 最后启动小车控制节点
-    #     )
-    # )
-    node_TestNode = Node(
-        package='GroundStation',
-        executable='testNode',
-        parameters=[ navNode_param_yaml ]
+    reg_CarControl = RegisterEventHandler(
+        OnProcessStart(
+            target_action=node_FlyControl,    # 飞行控制节点先启动
+            on_start=[node_CarControl_delay]  # 最后启动小车控制节点
+        )
     )
- 
+
     reg_FlyTestNode = RegisterEventHandler(
         OnProcessStart(
             target_action=node_TestNode, # 启动测试节点先启动
@@ -69,10 +68,13 @@ def generate_launch_description():
         # 实际用
         node_GroundStation,
         reg_FlyControl,
-        # reg_CarControl
+        reg_CarControl,
 
-        # # 测试用
+        # # 测试飞机用
         # node_TestNode,
         # reg_FlyTestNode
+
+        # # 单测试小车用
+        # node_CarControl_delay
     ])
  

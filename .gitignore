@@ -4,4 +4,7 @@ log/*
 run_log/*
 src/ros2_pyqt_turtlesim_key/*
 
+
+__pycache__/
+*.pyc
 #  git rm -r --cached build install log run_log src/ros2_pyqt_turtlesim_key
