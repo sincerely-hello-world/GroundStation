@@ -131,6 +131,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
  
         if sender_name == "pushButton_stop":
             self.bridge_node.car_control_pub.publish(String(data="stopCar"))
+            self.bridge_node.car_fireArea_pub.publish(String(data="reset")) 
             QtWidgets.QMessageBox.warning(self, "提示", "正在让小车停下运动")
  
         if sender_name in ("pushButton_runTask", "pushButton_setTask"):
@@ -260,6 +261,7 @@ class UIController(QMainWindow, Ui_MainWindow):   # UIController类同时继承�
             self.subdialog1.close() # 关闭子窗口
         self.bridge_node.send_talk('shutdown-navNode') # 停止navNode节点 无人机控制节点
         self.bridge_node.car_control_pub.publish(String(data="stopCar")) # 停止小车控制，让车停下来即可
+        
         self.ros2_thread.join(timeout=0.5)  # 最多等0.5秒
         event.accept()
     def showEvent(self, event):

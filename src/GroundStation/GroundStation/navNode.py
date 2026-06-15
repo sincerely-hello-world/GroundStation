@@ -149,8 +149,10 @@ class navNode(Node):
     def start_task(self):
         self.get_logger().info(f'全部航点扫描任务：{self.task}')
         self.clear_fly_status()
+
         self.paths = self.path_scan_all
         self.status = self.状态.TAKEOFF
+
         if self.paths is None:
             self.get_logger().error(f'未找到合适路径{self.task}')
         else:
@@ -164,10 +166,16 @@ class navNode(Node):
         self.path_index = 0
 
         self.status = self.状态.TAKEOFF
+        if self.task_timer is not None:
+            self.task_timer.cancel()
         self.task_timer = None
 
         self.delay_timer = None
         self.delay_ok = False
+
+        if self.delay_here_timer is not None:
+            self.delay_here_timer = None
+        self.delay_here_ok = False
 
         self.mcu_arrive = False
         self.pos_arrive = False
@@ -178,12 +186,16 @@ class navNode(Node):
         self.task = request.req
         self.get_logger().info(f"收到来自UI的请求：{self.task}")
         if self.task == 'shutdown-navNode':
-            self.get_logger().info(f'关闭该节点运行：{self.task}')
             self.status = self.状态.End
-            self.clear_fly_status()
             self.send_command('land') #紧急降落
+            self.clear_fly_status()
+            self.send_log_json('无人机',"控制节点已关闭")
             self.shutdown_requested = True
             response.echo =f'task is shutdown'
+        elif self.task == 'reset':
+            self.clear_fly_status()
+            self.send_log_json('无人机',"已经重置任务")
+            response.echo =f'task is reset'
         elif self.task_timer is not None:
             response.echo =f'task is running'
         elif self.task == 'scan_all' and  self.task_timer is None:
@@ -274,11 +286,10 @@ class navNode(Node):
             self.get_logger().info(f"状态11 解锁投放")
             if self.check_arrive_aim(onlyMCU=True) : 
                 if self.delay_here_timer is None and self.delay_here_ok == False:
-                    self.topic_flyServo_pub.publish(String(data = 'unlock' ))
                     self.delay_here_timer = self.create_timer(3.0, self.delay_here_callback)
             if self.delay_here_ok == True:
                 self.delay_here_ok = False
-                self.topic_flyServo_pub.publish(String(data = 'lock' ))
+                self.topic_flyServo_pub.publish(String(data = 'unlock' ))
                 self.fireAim.z = self.fireAim.z +0.3 # 上升0.3m
                 self.send_aim(self.fireAim)
                 self.status = self.状态.FireUp
@@ -287,6 +298,7 @@ class navNode(Node):
             self.get_logger().info(f"状态12 上升40cm 中... ")
             # if self.check_arrive_aim(onlyMCU=True): 
             if self.check_arrive_aim(): 
+                self.topic_flyServo_pub.publish(String(data = 'lock' ))
                 self.get_logger().info(f"状态12.1 上升40cm 完成，回归航线 ")
                 self.send_aim(self.aim) # 回归航点，继续巡视
                 self.status = self.状态.WaitAim

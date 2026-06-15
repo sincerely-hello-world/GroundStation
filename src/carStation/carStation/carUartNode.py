@@ -196,7 +196,7 @@ def main(args=None):
         debug_recv=False,
     )
     # 使用多线程执行器，让节点并发运行
-    executor = MultiThreadedExecutor(num_threads=4)
+    executor = MultiThreadedExecutor(num_threads=5)
     executor.add_node(car_uart_node)
 
     from carStation.car_odom import CarOdomPublisher
