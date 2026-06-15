@@ -155,12 +155,12 @@ def compute_pose_to_pose_command(current_x: float, current_y: float, current_yaw
      
  
 
-    print(f"当前角度{math.degrees(current_yaw):.2f}°,目标角度{math.degrees(target_yaw):.2f}°,实际{math.degrees(angle_to_target):.2f},误差{math.degrees(angle_error):.2f}°,")
-    print(f"当前位置{current_x:.2f},{current_y:.2f},目标位置{target_x:.2f},{target_y:.2f}")
+    # print(f"当前角度{math.degrees(current_yaw):.2f}°,目标角度{math.degrees(target_yaw):.2f}°,实际{math.degrees(angle_to_target):.2f},误差{math.degrees(angle_error):.2f}°,")
+    # print(f"当前位置{current_x:.2f},{current_y:.2f},目标位置{target_x:.2f},{target_y:.2f}")
 
     # 2. 判断任务完成
     if distance <= dist_to_target_thresh and abs(final_yaw_error) < yaw_to_target_thresh+0.05:
-        print("00000,任务完成！")
+        # print("00000,任务完成！")
         return 0.0, 0.0, True
     
 

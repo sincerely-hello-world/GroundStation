@@ -29,7 +29,7 @@ car_route_data = [
     {"x": +l2_x, "y": d1_y,  "deg": 0,     "label": "node1" }, 
     {"x": +l2_x, "y": d2_y,  "deg": 0,     "label": "node2" },
     {"x": +l3_x, "y": d2_y,  "deg": 0,     "label": "node3" }, 
-    {"x": +l3_x, "y": d1_y-0.1,  "deg": 0,     "label": "node4" }, 
+    {"x": +l3_x, "y": d1_y-0.15,  "deg": 0,     "label": "node4" }, 
     {"x": +l2_x+0.4, "y": d2_y,  "deg": 0,     "label": "node5" }, 
     {"x": +l1_x,     "y": d2_y,  "deg": 0,     "label": "node6" }, 
     {"x": +l2_x+0.3, "y": d3_y,  "deg": 0,     "label": "node7" }, 
@@ -40,7 +40,7 @@ car_route_data = [
     {"x": +l4_x, "y": d2_y,  "deg": 0,     "label": "node12" },
     {"x": +l4_x, "y": 0.00,  "deg": 0,     "label": "node13" },
     {"x": +l3_x, "y": 0.00,  "deg": 0,     "label": "node14" },
-    {"x": +0.00, "y": d1_y-0.1,  "deg": 0,     "label": "node15" },
+    {"x": +0.00, "y": d1_y-0.15,  "deg": 0,     "label": "node15" },
     {"x": -0.20, "y": -0.20,  "deg": 0,     "label": "node00" },
 
 
