@@ -1,9 +1,11 @@
 [Desktop Entry]
 Type=Application
+Name=2023地面站快捷启动
 Exec=/bin/bash -c '/home/orangepi/Desktop/GroundStation/start.sh'
+X-GNOME-Autostart-Phase=Applications
+X-GNOME-Autostart-Notify=true
+StartupNotify=false
 Hidden=false
 NoDisplay=false
 Terminal=true
-Name=2023地面站快捷启动
-StartupNotify=false
 

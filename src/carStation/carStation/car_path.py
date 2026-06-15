@@ -11,12 +11,12 @@ from carStation.car_uart_parse import car_aim
 
 d1_y = 0.60
 d2_y = 0.40+1.5
-d3_y = 0.40+1.5+1.4
+d3_y = 0.40+1.5+1.45
 
 l1_x = 0.25-1.44
 l2_x = 0.25
-l3_x = 0.25+1.57
-l4_x = 0.25+1.5+0.8
+l3_x = 0.25+1.6
+l4_x = 0.25+1.6+0.8
 
 path_C = ["init", "init_1", "node1", "node2","node3","node4","back1", "back2", "over"]
 # path_
@@ -29,7 +29,7 @@ car_route_data = [
     {"x": +l2_x, "y": d1_y,  "deg": 0,     "label": "node1" }, 
     {"x": +l2_x, "y": d2_y,  "deg": 0,     "label": "node2" },
     {"x": +l3_x, "y": d2_y,  "deg": 0,     "label": "node3" }, 
-    {"x": +l3_x, "y": d1_y,  "deg": 0,     "label": "node4" }, 
+    {"x": +l3_x, "y": d1_y-0.1,  "deg": 0,     "label": "node4" }, 
     {"x": +l2_x+0.4, "y": d2_y,  "deg": 0,     "label": "node5" }, 
     {"x": +l1_x,     "y": d2_y,  "deg": 0,     "label": "node6" }, 
     {"x": +l2_x+0.3, "y": d3_y,  "deg": 0,     "label": "node7" }, 
@@ -40,8 +40,8 @@ car_route_data = [
     {"x": +l4_x, "y": d2_y,  "deg": 0,     "label": "node12" },
     {"x": +l4_x, "y": 0.00,  "deg": 0,     "label": "node13" },
     {"x": +l3_x, "y": 0.00,  "deg": 0,     "label": "node14" },
-    {"x": +0.00, "y": d1_y,  "deg": 0,     "label": "node15" },
-    {"x": -0.30, "y": -0.30,  "deg": 0,     "label": "node00" },
+    {"x": +0.00, "y": d1_y-0.1,  "deg": 0,     "label": "node15" },
+    {"x": -0.20, "y": -0.20,  "deg": 0,     "label": "node00" },
 
 
 
@@ -107,7 +107,7 @@ def find_car_paths(fire_list:list):
             
     labels.append("node3")
 
-    if 'C' in fire_list and "node10" in fire_list:
+    if 'C' in fire_list and "node10" in labels:
         labels.extend(["node5","node3"])
     labels.append("node4")
 

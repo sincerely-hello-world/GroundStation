@@ -2,7 +2,9 @@
 #!/bin/bash
 ## 启动脚本start.sh
 
- 
+source /opt/ros/foxy/setup.bash
+export PYTHONPATH="/usr/lib/python3/dist-packages/pyrealsense2:$PYTHONPATH"
+
 # 获取当前脚本所在目录的绝对路径（处理软链接等情况更健壮）
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo '脚本所在目录: '$SCRIPT_DIR

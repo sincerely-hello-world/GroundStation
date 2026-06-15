@@ -71,13 +71,13 @@ class CarLogicalNode(Node):
             self.car_paths = find_car_paths(['test'])
             self.pathsLen = len(self.car_paths)
             self.recvOKFlag = True
-        elif fireInfo == 'reset':
-            self.car_paths = None
-            self.fireList = []
-            self.carTaskOK = False
-            self.recvOKFlag = False
-            self.aim = pick_aim_by_label(car_route_data,"init")
-            pass
+        # elif fireInfo == 'reset':
+        #     self.car_paths = None
+        #     self.fireList = []
+        #     self.carTaskOK = False
+        #     self.recvOKFlag = False
+        #     self.aim = pick_aim_by_label(car_route_data,"init")
+        #     pass
 
 
     def status_callback(self, msg: String):
