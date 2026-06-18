@@ -112,14 +112,14 @@ def is_target_front(current_x, current_y, current_yaw, target_x, target_y):
 def compute_pose_to_pose_command(current_x: float, current_y: float, current_yaw: float,
                                  target_x: float, target_y: float, target_yaw: float,
                                  # 运动参数
-                                 max_linear: float = 0.18,
-                                 min_linear: float = 0.05,
-                                 max_angular: float = 1.2,
-                                 min_angular: float = 0.85,
+                                 max_linear: float = 0.25,
+                                 min_linear: float = 0.06,
+                                 max_angular: float = 1.3,
+                                 min_angular: float = 0.9,
                                  # 控制阈值
-                                 angle_to_target_thresh: float = 0.05,   # 朝向目标点的角度容差(rad)
+                                 angle_to_target_thresh: float = 0.07,   # 朝向目标点的角度容差(rad)
                                  dist_to_target_thresh: float = 0.05,    # 离目标点距离容差(m)
-                                 yaw_to_target_thresh: float = 0.04,    # 最终朝向容差(rad)
+                                 yaw_to_target_thresh: float = 0.05,    # 最终朝向容差(rad)
                                  kp_angular: float = 0.9,
                                  kp_linear: float = 0.5,
                                  turn_flag = False,
@@ -176,11 +176,11 @@ def compute_pose_to_pose_command(current_x: float, current_y: float, current_yaw
             cmd_w, _ = compute_rotation_cmd(current_yaw, angle_to_target,
                                             max_angular=max_angular, min_angular=min_angular,
                                             tolerance_yaw=0.03, kp=kp_angular) # tolerance让其持续微调
-            print(f"222222,阶段2:前向移动,边走边微调{linear_vel:.2f},{cmd_w:.2f}")
+            # print(f"222222,阶段2:前向移动,边走边微调{linear_vel:.2f},{cmd_w:.2f}")
             if angle_error > angle_to_target_thresh and distance > dist_to_target_thresh + 0.15:
                 # 【新增判断逻辑】角度偏差过大，强制线速度为 0，只进行原地旋转纠偏
                 linear_vel = 0.0
-                print(f"前进，暂停移动，原地纠偏中{linear_vel:.2f},{cmd_w:.2f}...")
+                # print(f"前进，暂停移动，原地纠偏中{linear_vel:.2f},{cmd_w:.2f}...")
             return linear_vel, cmd_w*1.2, False
             
         else:
@@ -232,7 +232,7 @@ def my_init_car_parameters(my_ser, baudrate=115200):
     my_ser_write(my_ser, "$mphase:20#")  # 配置减速比 Configure the reduction ratio
     my_ser_write(my_ser, "$mline:13#")  # 配置磁环线 Configure the magnetic ring wire
     my_ser_write(my_ser, "$wdiameter:46.60#")  # 配置轮子直径 Configure the wheel diameter
-    my_ser_write(my_ser, "$deadzone:2100#")  # 配置电机死区 Configure the motor dead zone # 1700~2400合适
+    my_ser_write(my_ser, "$deadzone:2250#")  # 配置电机死区 Configure the motor dead zone # 1700~2400合适
     # my_ser_write(my_ser, "$MPID:1.15,0.06,0.5#")  # 配置PID参数 Configure PID parameters
 
 def my_control_speed(my_ser, m1, m2, m3, m4):

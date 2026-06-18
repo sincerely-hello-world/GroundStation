@@ -23,8 +23,10 @@ class CarToFPublisher(Node):
         self.obs_thred_min = 0.07 #米
 
         self.uart3 = serial.Serial("/dev/ttyS3",921600)
+        sleep(0.3) # 等待串口稳定，确保ToF传感器初始化完成
         self.uart4 = serial.Serial("/dev/ttyS4",921600)
-        sleep(0.5) # 等待串口稳定，确保ToF传感器初始化完成
+        sleep(0.3) # 等待串口稳定，确保ToF传感器初始化完成
+
         self.TOF3 = TOFSense_M(self.uart3)
         self.TOF4 = TOFSense_M(self.uart4)
 
@@ -74,7 +76,7 @@ class CarToFPublisher(Node):
             self.dis[index] =  0.35
             publisher.publish(Float32(data=self.dis[index]))
             if self.init_tof_ok[index] == False: # 没有链接成功才打印，连接成功后一般是误读
-                self.get_logger().warning(f"ToFsensor{index} 掉电/错误连接/读取数据错误, failed")
+                self.get_logger().warning(f"ToFsensor{index} 掉电/错误连接/读取数据错误, failed",throttle_duration_sec=1.0)
         else:
             if self.init_tof_ok[index] == False: # 一次连接成功 打印一次日志
                 self.init_tof_ok[index]= True

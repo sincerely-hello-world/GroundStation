@@ -5,7 +5,7 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from sensor_msgs.msg import Image,CompressedImage
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
-from std_msgs.msg import String
+from std_msgs.msg import String,Empty
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Point
@@ -35,15 +35,14 @@ class ROS2_bridgeNode(Node, QObject):
 
     log_signal = pyqtSignal(str)
 
-
     cmd_result = pyqtSignal(bool,str)
     flyOdom = pyqtSignal(str,float,float,float,int)
     carOdom = pyqtSignal(float,float)
 
-    pos = None
     img_cb_group =MutuallyExclusiveCallbackGroup()
     topic_qrcode_cb_group =MutuallyExclusiveCallbackGroup()
     topic_t265_cb_group=MutuallyExclusiveCallbackGroup()
+ 
  
     def __init__(self,name='Bridge'):
         # super().__init__(name)
@@ -61,7 +60,7 @@ class ROS2_bridgeNode(Node, QObject):
         self.topic_qrcode_sub = self.create_subscription(String,"qrcode_data_topic",self.qrcode_callback,10 ,callback_group=self.topic_qrcode_cb_group)
         self.topic_fly_camera_sub = self.create_subscription(Point, 'fly/camera/data', self.fly_camera_callback, 10,  callback_group=self.topic_qrcode_cb_group)
         self.car_odom_sub = self.create_subscription(Odometry, 'car/odom', self.car_odom_callback, 10) # 消防车里程计 
-            # debug
+        # debug
         self.log_topic_sub = self.create_subscription(String,"log_topic",self.log_topic_callback,10 ,callback_group=self.topic_qrcode_cb_group)
         
 
@@ -78,17 +77,24 @@ class ROS2_bridgeNode(Node, QObject):
         self.car_cmd_vel_pub = self.create_publisher(Twist, 'car/driver/cmd_vel', 10) #线速度控制，仅手动 比较抽象不写了
         self.car_fireArea_pub = self.create_publisher(String,'fire/area',  10) # 
 
+        # 安全机制：心跳包确认
+        self.topic_heartbeat_pub = self.create_publisher(Empty,'/GroundStation/heartbeat',10 ) # 地面站心跳发布
+        self.last_heartbeat_time = self.get_clock().now()
+        self.heartbeat_interval = 0.3
+
     def fly_camera_callback(self, msg: Point):
         # Point 类型的坐标直接访问
         # self.flycamera_data = msg  # 或者保存整个 msg
         data_str = f'火源偏移: x={msg.x:4.2f},y={msg.y:4.2f}'  # ✅ 直接使用 msg.x, msg.y
         self.flycamera_signal.emit(data_str)
         self.get_logger().info(f'bridgenode-无人机flycam_data: {data_str}')
+
     def qrcode_callback(self, msg:String):
         return
         qrcode = msg.data
         self.get_logger().info(f"qrcode 识别到QR码: {qrcode}")
         self.qrcode.emit(qrcode)
+
     def MCU2_callback(self, msg: String):
         self.MCU2msg = msg
         # self.get_logger().info(f'MCU2 send back: {msg.data}')
@@ -118,11 +124,21 @@ class ROS2_bridgeNode(Node, QObject):
         else:
             self.log_signal.emit(f"{label}: {info}")
         
-    def fly_odom_callback(self, msg: T265Data): # topic_t265_sub的回调函数，接收T265Data消息并更新位置信息
+    def fly_odom_callback(self, msg: T265Data): # topic_t265_sub的回调函数，接收T265Data消息并更新飞机的位置信息
         info = f"X:{msg.pos_x+0.0:+6.3f}m, Y:{msg.pos_y+0.0:+6.3f}m, Z:{msg.pos_z+0.0:+6.3f}m, C:{msg.confidence}"
         # self.get_logger().debug(info)
-        self.pos = msg
         self.flyOdom.emit(info, msg.pos_x, msg.pos_y, msg.pos_z, msg.confidence)
+
+        # 2. 控频心跳发布逻辑
+        current_time = self.get_clock().now()
+        # 计算距离上一次发送心跳过去了多少秒
+        elapsed_time = (current_time - self.last_heartbeat_time).nanoseconds / 1e9
+        if elapsed_time >= self.heartbeat_interval:
+            # 触发心跳发布
+            self.topic_heartbeat_pub.publish(Empty())
+            # 更新上一次发布的时间
+            self.last_heartbeat_time = current_time
+            self.get_logger().info("地面站心跳正常发布~",throttle_duration_sec=1.0) # 调试日志
 
     def send_talk(self, task:String):
         if rclpy.ok() and self.talk_client.service_is_ready()==False:

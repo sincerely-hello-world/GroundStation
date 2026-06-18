@@ -46,7 +46,7 @@ class DiffDriveController(Node):
  
 
         self.aim = car_aim(label='init',status='NO') # 目标位姿状态
-        self.create_timer(0.04, self.timer_pub_car_control) # 定时发布控制命令（需要持续发送，控制改变频率）
+        self.create_timer(0.05, self.timer_pub_car_control) # 定时发布控制命令（需要持续发送，控制改变频率）
 
         # ===== ROS2接口 =====
         
@@ -103,7 +103,7 @@ class DiffDriveController(Node):
             # 正确做法：只同步 X 和 Y 的数值，保持对象和 label 的独立性
             self.obs[0].x = self.obs[1].x
             self.obs[0].y = self.obs[1].y
-            self.timer_obs_wait = self.create_timer(2.0, self.obstacle_wait)
+            self.timer_obs_wait = self.create_timer(3.8, self.obstacle_wait)
 
     def obstacle_wait(self):
         self.wait_obs_flag=False
