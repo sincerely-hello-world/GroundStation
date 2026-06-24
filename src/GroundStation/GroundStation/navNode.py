@@ -135,10 +135,9 @@ class navNode(Node):
         self.fire_detected = False
         self.delay_here_timer = None
         self.delay_here_ok = False
-
         self.scan_label = None # 要搜寻的标签位置
+
         self.get_logger().info('无人机导航控制节点启动成功')
-        
         self.send_log_json(label='无人机',info='地面站控制节点启动成功')
 
         

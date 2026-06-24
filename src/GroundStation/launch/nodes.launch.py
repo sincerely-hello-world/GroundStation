@@ -34,11 +34,11 @@ def generate_launch_description():
 
     # 3. 使用 TimerAction 包裹节点 
     node_FlyControl_delay = TimerAction(
-        period=3.5,                     # 延迟3秒
+        period=5.0,                       # 延迟5秒 # 必须是float类型，不能是整数
         actions=[node_FlyControl]       # 延迟执行的动作
     )
     node_CarControl_delay = TimerAction(
-        period=3.0,                     # 延迟3秒
+        period=3.0,                     # 延迟3秒  # 必须是float类型，不能是整数
         actions=[node_CarControl]       # 延迟执行的动作
     )
 

@@ -254,7 +254,7 @@ class DroneMapWidget(QGraphicsView):
         else:
             self.flight_path.lineTo(scene_x, scene_y)
             pathtemp = math.sqrt((x - self.last_x) ** 2 + (y - self.last_y) ** 2)
-            if pathtemp > 0.007:
+            if pathtemp > 0.003: # 过滤掉过短的路径段，避免GPS噪声导致里程过长
                 self.pathlength += pathtemp
             # self.pathlength += math.sqrt((x - self.last_x) ** 2 + (y - self.last_y) ** 2)
         self.path_item.setPath(self.flight_path)

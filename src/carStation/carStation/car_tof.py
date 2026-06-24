@@ -32,7 +32,7 @@ class CarToFPublisher(Node):
 
         self.lock_ = threading.Lock()
 
-        self.dis = [0,0]
+        self.dis = [0.0,0.0]
         self.init_tof_ok= [False,False]
         self.LED = [GPIO(35, "out"), GPIO(54, "out")]
         self.LED[0].write(False)
@@ -42,14 +42,27 @@ class CarToFPublisher(Node):
         self.pub1 = self.create_publisher(Float32, 'car/tof3', 10)
         self.pub2 = self.create_publisher(Float32, 'car/tof4', 10)
         self.pub_obs  = self.create_publisher(String, 'car/obstacle', 10)
+        # 发布log
+        self.log_topic_pub = self.create_publisher(String,"log_topic",10 )
+
+        self.LED_ON_flag = True  # 记录sub_car_LEDcmd最后一次命令状态，控制是否需要LED亮起！
+        self.sub_car_LEDcmd = self.create_subscription(String, 'car/led/cmd', self.car_LEDcmd_callback, 10)
+        
 
         self.timer_ToFsensor0 = self.create_timer(0.05, partial(self.ToFsensor_read, TOF=self.TOF3, index=0, publisher=self.pub1), callback_group=self.cb_g1) # 定时器，负责读取ToF传感器数据并发布
 
         self.timer_ToFsensor1 = self.create_timer(0.05, partial(self.ToFsensor_read, TOF=self.TOF4, index=1, publisher=self.pub2), callback_group=self.cb_g2) # 定时器，负责读取ToF传感器数据并发布
 
         self.timer_ToF_obstacle = self.create_timer(0.04 , self.ToF_obstacle) # 定时器，负责读取ToF传感器数据并发布
-        # 发布log
-        self.log_topic_pub = self.create_publisher(String,"log_topic",10 )
+    def car_LEDcmd_callback(self, msg: String):
+        if msg.data == 'L_on' or msg.data == 'R_on' or msg.data == 'on':
+            self.LED_ON_flag = True
+        elif msg.data == 'L_off' or msg.data == 'R_off' or msg.data == 'off':
+            self.LED_ON_flag = False
+        else:
+            self.get_logger().warning(f"未知的carLED命令: {msg.data}")
+
+
     def send_log_json(self, label:str, info:str):
         self.get_logger().info(f"{label}:{info}")
         json_dumps = json.dumps({'label':label,'info':info})
@@ -107,7 +120,8 @@ class CarToFPublisher(Node):
             publisher.publish(Float32(data=float(self.dis[index])))
 
             if  self.obs_thred_min <self.dis[index] and self.dis[index] < self.obs_thred_max:
-                self.shutdown_led_delay(index)
+                if self.LED_ON_flag:  # 只有在LED命令状态为ON时才触发LED亮起
+                    self.shutdown_led_delay(index)
 
 #   data = TOF.get_data()  # P_F 系列读取距离值
 #   if isinstance(data, dict) and (dis := data.get("dis", 0)) > 0:

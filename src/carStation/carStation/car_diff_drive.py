@@ -18,6 +18,40 @@ best_effort_qos = QoSProfile(
     depth=2  # 保留最近2条消息
 )
 
+class ObstaclePoint:
+    """障碍物坐标点"""
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+class ObstacleManager:
+    def __init__(self, distance_threshold=0.08): # 阈值距离10cm
+        self.obstacle_list = []  # 存储 ObstaclePoint 对象列表
+        self.distance_threshold = distance_threshold
+    
+    def add_obstacle(self, x, y):
+        """添加障碍物坐标到列表"""
+        self.obstacle_list.append(ObstaclePoint(x, y))
+    
+    def is_similar_coordinate(self, x, y):
+        """
+        检查坐标是否与列表中任一坐标相似（切比雪夫距离 <= threshold）
+        返回: True 表示相似，False 表示不相似
+        """
+        if  len(self.obstacle_list) == 0:
+            return False  # 列表为空，直接返回 False
+        for obs in self.obstacle_list:
+            # 计算切比雪夫距离：max(|x1-x2|, |y1-y2|)
+            chebyshev_distance = max(abs(obs.x - x), abs(obs.y - y))
+            if chebyshev_distance <= self.distance_threshold:
+                return True
+        return False
+    
+    def clear_list(self):
+        """清空列表"""
+        self.obstacle_list.clear()
+
+
 class DiffDriveController(Node):
     def __init__(self):
         super().__init__('diff_drive')
@@ -43,6 +77,7 @@ class DiffDriveController(Node):
         self.wait_obs_flag = False
         self.timer_obs_wait = None
         self.obs = [car_aim(x=0,y=0,label='上一次火源位置'),car_aim(x=0,y=0,label='现在火源位置')] # 本地检测到火源位置,上一次火源位置
+        self.obs_manager = ObstacleManager(distance_threshold=0.10) # 管理障碍物位置，避免重复停车
  
 
         self.aim = car_aim(label='init',status='NO') # 目标位姿状态
@@ -56,6 +91,9 @@ class DiffDriveController(Node):
         self.cmd_vel_pub = self.create_publisher(Twist, 'car/driver/cmd_vel', 10)
         # 状态发布：当前已执行到位
         self.car_pos_status_pub = self.create_publisher(String, 'car/pos/status', 10 )
+        # 控制发布： 是否需要闪烁LED
+        self.car_LEDcmd_pub = self.create_publisher(String, 'car/led/cmd', 10)
+
         # 发布log
         self.log_topic_pub = self.create_publisher(String,"log_topic",10 )
 
@@ -84,15 +122,26 @@ class DiffDriveController(Node):
 
             
     def obstacle_callback(self, msg:String):
-        if msg.data != 'N':
-            self.obs[1].x = self.x # 更新现在检测到的位置
-            self.obs[1].y = self.y #
-            dis = max(abs( (self.obs[0].x - self.obs[1].x)) , abs((self.obs[0].y - self.obs[1].y)) )
-            if dis > 0.10:  # 两次触发位置 > 10cm ，进行停车
+        if msg.data != 'N' and self.wait_obs_flag == False :  # 只有在没有等待停车的情况下才触发
+            if self.obs_manager.is_similar_coordinate(self.x, self.y):
+                if self.aim.label != 'init':
+                    self.car_LEDcmd_pub.publish(String(data='off'))  
+                self.get_logger().info(f'火源位置重复，忽略停车',throttle_duration_sec=1.0)
+                pass
+            else:
+                self.car_LEDcmd_pub.publish(String(data='on'))  # 允许LED亮起
+                self.obs_manager.add_obstacle(self.x, self.y) # 添加当前坐标到障碍物列表
                 self.wait_obs_flag = True
                 self.obs_wait_2s()
-            # self.get_logger().info(f'xy={self.obs[0].x:.2f},{self.obs[0].y:.2f},x1y={self.obs[1].x:.2f},{self.obs[1].y:.2f},dis:{dis:.2f}m, flag:{self.wait_osb_flag}')
-        pass
+                
+            # if msg.data != 'N':
+            #     self.obs[1].x = self.x # 更新现在检测到的位置
+            #     self.obs[1].y = self.y #
+            #     dis = max(abs( (self.obs[0].x - self.obs[1].x)) , abs((self.obs[0].y - self.obs[1].y)) )
+            #     if dis > 0.10:  # 两次触发位置 > 10cm ，进行停车
+            #         self.wait_obs_flag = True
+            #         self.obs_wait_2s()
+
     def obs_wait_2s(self):
         # self.get_logger().info(f'停车任务触发======')
         if self.timer_obs_wait is not None:
@@ -101,8 +150,8 @@ class DiffDriveController(Node):
             # self.get_logger().info(f'停车定时器启动*******')
             # ⚠️ 绝对不要写 self.obs[0] = self.obs[1]
             # 正确做法：只同步 X 和 Y 的数值，保持对象和 label 的独立性
-            self.obs[0].x = self.obs[1].x
-            self.obs[0].y = self.obs[1].y
+            # self.obs[0].x = self.obs[1].x
+            # self.obs[0].y = self.obs[1].y
             self.timer_obs_wait = self.create_timer(3.8, self.obstacle_wait)
 
     def obstacle_wait(self):
@@ -110,7 +159,6 @@ class DiffDriveController(Node):
         if self.timer_obs_wait is not None:
             self.timer_obs_wait.cancel()
             self.timer_obs_wait = None
-        # self.get_logger().info(f'停车结束，继续行驶------------')
 
 
 
